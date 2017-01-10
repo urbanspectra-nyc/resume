@@ -2,37 +2,39 @@
 # Example resume
 
 profile:
-    name: Sebastian Hanula
-    label: Software engineer
-    email: sebastian.hanula@gmail.com
-    phone: +48 693 320 358
-    birth: 10-02-1983
-    address: Myślenice, Poland
+    name: Jeremy Donson
+    label: Dev Ops Automation Engineer
+    email: jjdonson@gmail.com
+    phone: 718-710-9434
+    birth: 12-11-1967
+    address: New York City, NY
     summary: >
-        Software engineer focused on performant web systems. Skilled Python programmer.
-        More than 10 years of professional web development.
+        Dev Ops Engineer focused on performant development teams, workflows and tools.
+        More than 10 years of professional systems, data and web engineering.
 
-    image: "https://avatars2.githubusercontent.com/u/446998?v=2&s=460"
-    website: http://www.hanula.com
+    image: ""
+    website: http://www.urbanspectra.com
 
     networks:
-        -   provider: twitter
-            username: hanula
-            url: https://twitter.com/hanula
-
         -   provider: github
-            username: hanula
-            url: https://github.com/hanula
+            username: jjdonson
+            url: https://github.com/jjdonson
 
         -   provider: linkedin
-            username: sebastianhanula
-            url: https://www.linkedin.com/in/sebastianhanula
+            username: jjdonson
+            url: https://www.linkedin.com/in/jjdonson
 
         -   provider: google+
             username: SebastianHanula
-            url: https://plus.google.com/+SebastianHanula
+            url: https://plus.google.com/+??
 
 skills:
+    -   area: Languages
+        skills:
+            - Bash 10+ Years 
+            - PHP, 10+ Years 
+            - MySQL, 10+ Years 
+
     -   area: Programming
         skills:
             - Python, +10 years
@@ -41,7 +43,6 @@ skills:
             - C/C++, intermediate, +8 years
             - Bash, intermediate, +5 years,
             - Go, novice, +2 years
-            - Rust, novice, +1 year
             - PHP, not used anymore
 
     -   area: Technology
@@ -55,12 +56,6 @@ skills:
             - Memcached
             - MongoDB
             - Docker
-
-    -   area: Languages
-        skills:
-            - Polish, Mother tongue
-            - English, Fluent
-            - German, Basic
 
 work:
     -   company: Thingr
@@ -205,5 +200,5 @@ interests:
 
 config:
     theme: simple
-    github_source: https://github.com/hanula/resume
-    pdf_file: Sebastian_Hanula_Resume.pdf
+    github_source: https://github.com/urbanspectra/resume
+    pdf_file: Jeremy Donson_Resume.pdf

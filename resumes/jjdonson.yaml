@@ -1,7 +1,7 @@
 ---
 profile:
     name: Jeremy Donson
-    label: Team Dev Ops Support Engineer
+    label: Development Team Operations Support Engineer
     email: jjdonson@gmail.com
     phone: 718-710-9434
     birth: 12-11-1967
@@ -14,23 +14,28 @@ profile:
     website: http://www.urbanspectra.com
 
     networks:
-        -   provider: twitter
-            username: jjdonson
-            url: https://twitter.com/jjdonson
-
         -   provider: github
             username: jjdonson
             url: https://github.com/jjdonson
 
         -   provider: linkedin
-            username: sebastianhanula
+            username: jjdonson
             url: https://www.linkedin.com/in/jjdonson
 
         -   provider: google+
-            username: SebastianHanula
+            username: jjdonson
             url: https://plus.google.com/+jjdonson
 
 skills:
+    -   area: Emerging Trend Per Tier
+        skills:
+            - User Interface Development: svg
+            - Processing: go
+            - Data: ceph
+            - Network: software-defined-networking
+            - Operating Systems: ansible, CoreOS
+            - Hardware: bare-metal provisioning, clustering 
+
     -   area: Programming
         skills:
             - Python, 5+ years
@@ -192,7 +197,8 @@ education:
 
 interests:
     - Web scalability and performance.
-    - Logical data architecture and physical storage engineering.
+    - Dev ops.
+    - Logical data nodeling, architecture and physical storage engineering.
     - Science
     - Jazz
     - Cooking

@@ -1,14 +1,14 @@
 ---
 profile:
     name: Jeremy Donson
-    label: Development Team Operations Support Engineer
+    label: Dev Ops Support Engineer
     email: jjdonson@gmail.com
     phone: 718-710-9434
     birth: 12-11-1967
     address: New York City, New York
     summary: >
-        Dev ops support engineer focused on performant data and web systems. Skilled Python programmer.
-        More than 10 years of hands-on development team support..
+        Dev ops support engineer focused on performant data and web systems. Skilled bash and python programmer.
+        More than 10 years of hands-on development team support, including all infrastructure and platform testing.
 
     image: "https://link.to.image"
     website: http://www.urbanspectra.com
@@ -22,20 +22,7 @@ profile:
             username: jjdonson
             url: https://www.linkedin.com/in/jjdonson
 
-        -   provider: google+
-            username: jjdonson
-            url: https://plus.google.com/+jjdonson
-
 skills:
-    -   area: Emerging Trend Per Tier
-        skills:
-            - User Interface Development: svg
-            - Processing: go
-            - Data: ceph
-            - Network: software-defined-networking
-            - Operating Systems: ansible, CoreOS
-            - Hardware: bare-metal provisioning, clustering 
-
     -   area: Programming
         skills:
             - Python, 5+ years
@@ -59,9 +46,7 @@ skills:
 
     -   area: Languages
         skills:
-            - Polish, Mother tongue
             - English, Fluent
-            - German, Basic
 
 work:
     -   company: Thingr

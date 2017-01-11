@@ -7,8 +7,9 @@ profile:
     birth: 12-11-1967
     address: New York City, New York
     summary: >
-        Dev ops support engineer focused on performant data and web systems. Skilled bash and python programmer.
+        Dev ops support engineer focused on performant data and web systems.
         More than 10 years of hands-on development team support, including all infrastructure and platform testing.
+        Skilled bash, mariadb and python programmer.
 
     image: "https://link.to.image"
     website: http://www.urbanspectra.com
@@ -23,7 +24,7 @@ profile:
             url: https://www.linkedin.com/in/jjdonson
 
 skills:
-    -   area: Programming
+    -   area: Supported Languages
         skills:
             - Python, 5+ years
             - Bash, expert, 10+ years,
@@ -32,17 +33,15 @@ skills:
             - Ruby, 5+ years
             - Go, novice, +2 years
 
-    -   area: Technology
+    -   area: Technologies
         skills:
-            - Git, Mercurial, Bazaar
-            - PostgreSQL
-            - MySQL
-            - Cassandra
-            - ElasticSearch
-            - Redis
-            - Memcached
-            - MongoDB
-            - Docker
+            - Git, Gitlab, Github
+            - CloudForms / ManageIQ
+            - OpenShift
+            - OpenStack
+            - Docker, DockerSwarm
+            - Ceph, Redis, Memcached, MongoDB
+            - MySQL, PostgreSQL
 
     -   area: Languages
         skills:

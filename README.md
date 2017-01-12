@@ -1,29 +1,28 @@
 resume
 ======
 
-Python resume generator. From YAML to PDF and static HTML.
+Python resume generator.
+From YAML in /resumes/  ==$ make;  ==> Static Responsive HTML Plus PDF in /build/.
 
-Example Themes
---------------
-* [simple](http://resume.hanula.com/)
-* [compact](http://jmbeach.github.io/resume/)
+Installing Resume App
+---------------------
+    # 1. Ensure we have git, python and python3 installed locally.
+    $ git --version
+    $ python --version
+    $ python3 --version
 
-Installing
-----------
+    # 2. First time clone resume repo from github.
+    $ cd ~; git clone https://github.com/jjdonson/resume; cd resume; git status
 
-    git clone https://github.com/hanula/resume
-    cd resume
-    pip install -r requirements.txt
+    # 3. Install python requirements using python3.
+    $ python3 -m pip install -r requirements.txt
 
-### Requirements
+    # 4. Test sample yaml resume.
+    $ echo "RESUME ?= resumes/hanula.yaml" > config.make ; rm -rf build/*; make
 
-This script requires `Python 3` and a set of libraries with their dependencies:
-
-    PyYAML
-    Jinja2
-    Markdown
-    WeasyPrint
-    docopt
+    # 5. Copy resume sample, rename, repopulate, and create new output:
+    $ cp -p resumes/hanula.yaml resumes/${LOGIN}.yaml; edit resumes/${LOGIN}.yaml;
+    $ echo "RESUME ?= resumes/${LOGIN}.yaml" > config.make ; rm -rf build/*; make
 
 Usage
 -----

@@ -7,9 +7,9 @@ profile:
     birth: 12-11-1967
     address: New York City, New York
     summary: >
-        Dev ops support engineer focused on performant data and web systems.
+        Dev ops support engineer focused on test-driven tooling and automation to facilitate preventive problem-solving.
         More than 10 years of hands-on development team support, including all infrastructure and platform testing.
-        Skilled bash, mariadb and python programmer.
+        Skilled bash, mariadb and python programmer.  Expert with performant data and web system scaling.
 
     image: "https://link.to.image"
     website: http://www.urbanspectra.com
@@ -35,7 +35,7 @@ skills:
 
     -   area: Technologies
         skills:
-            - Git, Gitlab, Github
+            - Git, Gitlab, Github, Bitbucket
             - CloudForms / ManageIQ
             - OpenShift
             - OpenStack
@@ -43,7 +43,7 @@ skills:
             - Ceph, Redis, Memcached, MongoDB
             - MySQL, PostgreSQL
 
-    -   area: Languages
+    -   area: Languages x
         skills:
             - English, Fluent
 

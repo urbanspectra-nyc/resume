@@ -3,9 +3,8 @@ profile:
     name: Jeremy Donson
     label: Dev Ops Support Engineer
     email: jjdonson@gmail.com
+    address: UWS, New York City, New York
     phone: 718-710-9434
-    birth: 12-11-1967
-    address: New York City, New York
     summary: >
         Dev ops support engineer focused on test-driven tooling and automation to facilitate preventive problem-solving.
         More than 10 years of hands-on development team support, including all infrastructure and platform testing.
@@ -24,6 +23,12 @@ profile:
             url: https://www.linkedin.com/in/jjdonson
 
 skills:
+    -   area: Certifications Held
+        skills:
+            - MySQL Database Administrator + Developer
+            - Oracle Database Administrator + Developer
+            - RedHat Linux Systems Administrator
+
     -   area: Technologies
         skills:
             - Git, Gitlab, Github, Bitbucket
@@ -36,12 +41,13 @@ skills:
 
     -   area: Languages Supported
         skills:
+            - Bash, Expert, 10+ years
             - Python, 5+ years
-            - Bash, expert, 10+ years,
-            - C/C++, intermediate, 5+ years
-            - Python, 5+ years
-            - Ruby, 5+ years
-            - Go, novice, +2 years
+            - C/C++, Intermediate, 5+ years
+            - Ruby, Intermediate, 5+ years
+            - Java, Intermediate, 5+ years
+            - Node.js, Novice, 2+ years
+            - Go, novice, 2+ years 
 
     -   area: Diagrams
         skills:
@@ -52,6 +58,12 @@ skills:
             - Physical Network & System Schematics
             - Logical Process & Data Models
             - Physical Process & Data Diagrams
+
+    -   area: Certifications Pending
+        skills:
+            - AWS Pro Architect
+            - RedHat CloudForms + OpenStack + OpenShift
+            - CoreOS / Project Atomic
 
 work:
     -   company: Thingr
@@ -199,3 +211,4 @@ config:
     theme: simple
     github_source: https://github.com/jjdonson/resume
     pdf_file: Jeremy_Donson_Resume.pdf
+    msword_doc: Jeremy_Donson_Resume.doc

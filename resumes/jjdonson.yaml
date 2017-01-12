@@ -24,15 +24,6 @@ profile:
             url: https://www.linkedin.com/in/jjdonson
 
 skills:
-    -   area: Supported Languages
-        skills:
-            - Python, 5+ years
-            - Bash, expert, 10+ years,
-            - C/C++, intermediate, 5+ years
-            - Python, 5+ years
-            - Ruby, 5+ years
-            - Go, novice, +2 years
-
     -   area: Technologies
         skills:
             - Git, Gitlab, Github, Bitbucket
@@ -43,9 +34,24 @@ skills:
             - Ceph, Redis, Memcached, MongoDB
             - MySQL, PostgreSQL
 
-    -   area: Languages x
+    -   area: Languages Supported
         skills:
-            - English, Fluent
+            - Python, 5+ years
+            - Bash, expert, 10+ years,
+            - C/C++, intermediate, 5+ years
+            - Python, 5+ years
+            - Ruby, 5+ years
+            - Go, novice, +2 years
+
+    -   area: Diagrams
+        skills:
+            - Analytical Workflow Modeling
+            - Federated LAN/WAN Security Models & Test Matrices
+            - Digital Ecosystems & Staffing
+            - Logical Network & System Models
+            - Physical Network & System Schematics
+            - Logical Process & Data Models
+            - Physical Process & Data Diagrams
 
 work:
     -   company: Thingr
@@ -176,15 +182,15 @@ projects:
 education:
     -   location: Columbia University
         date: 2000 - 2002
-        summary: Enterprise Systems & Database Application Design & Development
+        summary: Enterprise Systems & Database Application Design & Development Program
 
 
 interests:
-    - Web scalability and performance.
-    - Dev ops.
-    - Logical data nodeling, architecture and physical storage engineering.
-    - Science
-    - Jazz
+    - Web and data systems scalability and performance.
+    - Development team onboarding, training and workflow analytics.
+    - Logical data modeling, architecture and physical storage engineering.
+    - Arts, Maths, Sciences, Education
+    - Jazz - http://google.com
     - Cooking
     - Gardening
 

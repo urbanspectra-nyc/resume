@@ -1,0 +1,97 @@
+---
+Name: Generic Workflow Diagram Legend Standards
+- WORKFLOW DIAGRAM LEGEND ELEMENTS
+	- processes: circles
+	- subprocesses: circles within circles
+	- data inputs + output: rectangles
+	- roles: tpm, uidev, admin, engineer
+- DIAGRAM LEGEND CONNECTORS
+	- data-flows-to and data-flows-from: arrows  -->  <--
+	- is-supported by: --C
+    	- (uidev --c tpm --c admin --c engineer) =>  ui--c tpm--c adm--c eng  ??
+          IS THIS SYMBOL COMMUTATIVE??
+
+    Custom Logical Workflow Diagram Legend Connectors
+    ascii triplet symbols : legend label names ?
+===============================================================
+                      <|> : is-mirror-opposite
+                      --< : one-to-many
+                      >-- : many-to-one
+                      --> : data-flows-to
+                      <-- : data-flows-from
+                      --c : is-supported-by
+                      ?-- : supports
+                      |=> : becomes
+                      <=| : requires
+---
+Name: Workflows To Diagram
+- thumboot create & enhance
+- thumboot use local-only
+- thumboot use net-enabled
+- git solo local
+- workflow legends + analytics
+- publish resume
+- broadcast web resume link
+---
+Name: Thumboot Create + Enhance
+- Sketch vlan plan for vagrant from thumboot.
+- Sketch thumboot proposed contents.
+- Gather thumboot local iso resources to url.
+- Gather thumboot tools to interconvert iso: qcow, ovf, ami, etc.
+- Test each os, install local tools, derive vms.
+- NOTE: Each vm must be deployed ready to use, except for user registration and conifgs.
+- Secure thumboot with shared admin password that will expire and shift.
+- Move thumboot iso and vm contents to https vlan service.
+- Test PXE Boot For Network Provisioning
+- Give vagrant new vlan repository, to support
+---
+Name: Thumboot Local Host Provisioning Workflows
+- Allocate Resources
+  - Local
+    - logical
+    - physical
+  - Network
+    - logical
+    - physical
+- Discover Resources
+- Device Introspection
+- Configure OS Builds & Tests From Image Streams
+- OS Build-Test-Release
+- Configure Service Builds & Tests From Image Streams
+- Service Build-Test-Release
+- Deploy Host To ??
+- Provision Host To ??
+- Support Host
+- Train Dev Leads
+- Automate Infrastructure Testing
+- Automate Dev Testing
+---
+Name: Thumboot Network Host Provisioning Workflows
+- Allocate Network Source Resources & Services = https and pxeboot.
+---
+Diagram Types:
+ - ecosystems
+ - security-first federated vlan-lan-wan models + tests
+ - environments
+ - cluster schematic
+ - system schematic
+ - component schematic
+ - networks
+ - hosts
+ - services
+ - user interface
+ - processes
+    - logical: process flow modeling + uml (objects)
+    - physical: process benchmarking
+    - physical: process type log planning
+ - data
+    - logical: entity relational diagrams
+    - logical: persistent + changing data structures
+    - physical: files + file systems
+    - physical: data storage benchmarking
+    - physical: data storage planning schematics
+ - workflow
+ - tiers
+ - lanes
+ - code pipeline = multiple interdependent test-driven workflows
+---

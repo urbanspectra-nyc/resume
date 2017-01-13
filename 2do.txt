@@ -1,0 +1,64 @@
+NEXT STEPS:
+- diff against last commit
+- stash that
+- rewind to last commit and mv /build/images/ to ??
+- msword_file link + icon retrieve
+- reapply stash
+- pdf_file link + icon
+- new resume photo
+- projectname: openResume
+---
+- clean up linkedin
+- finish msword resume
+- add msword doc link
+- broadcast, search, add meta tags to resume
+- post to job boards
+- model resume workflow
+- linkedin articles
+- cover letters
+---
+Name: Resume Tasks
+- [x] update word doc
+- [  ] services per role
+- [  ] update linkedin
+- [  ] update indeed
+- [  ] update resume photo
+- [  ] cover letter target topics
+- [  ] cover letter recruiter
+---
+- web resume from word doc??
+- jinja2 issues
+- pelican issues
+- fonts
+- images/svg
+---
+- generic workflow diagram
+  - legend!
+- specific workflow diagrams
+  - git solo local
+    - workflow bash functions
+  - uidev site builder
+    - workflow bash functions
+- articles
+- demos
+- test matrices
+---
+THUMBOOT32
+ - ubuntu32+admin login => drive
+ - centos32+admin login => drive
+ - thumboot32
+ - thumboot32 => 64bit emu?
+ - test ubuntu32 install
+ - test ubuntu32 ramdisk
+ - test ubuntu32 gitbash
+ - test ubuntu32 http,https,http2
+ - default login embedded
+ - thumboot
+---
+- taxes
+- gonofee
+- storage
+- samis
+- rm next meetings
+  - online
+  - in-person

@@ -1,0 +1,37 @@
+Name: Top-Level Entities IAAS
+- File Types
+- Character Sets & Collations
+- Operating Systems
+- Test Cases
+- Roadmaps
+- Deploy Targets
+- Provisioners
+- Diagrams
+- Workflows
+- Open Source Foundations
+- Custom Federated Security Modeling, Testing, Implementations
+- Network Services Layer Provisioning
+- Host Services Layer Provisioning
+- Storage Services Layer Provisioning
+- Cloud Services
+ - Internal Provisioning
+   - Bare Metal
+   - KVM
+   - VirtualBox
+ - External Provisioning
+---
+Name: Top-Level Entities PAAS
+- Browsers
+- Languages
+- Projects
+- Repositories => repository-index.txt
+---
+Name: Top-Level Entities SAAS
+
+---
+Name: Web Templates
+- openresume
+- sow
+- invoice
+- device
+--

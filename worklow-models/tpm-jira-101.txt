@@ -1,0 +1,77 @@
+curl:
+- jira
+- github
+- bitbucket
+- hipchat
+- travis-ci
+- gitlab
+- image-streams
+- kvm-guests-ceph-api
+
+Name: They-Host Services
+- Hipchat
+- Github.com
+- bitbucket.org
+- travis-ci
+- Jira => admin filter and export tasks to github as issues
+  - Jira Service Core Objects
+    - Teams
+    - Users
+    - Epics
+    - Projects
+    - Tasks
+---
+- service + workflow tiers
+    - technical project managers
+    - user interface developers
+    - automated testing operators
+    - app developers
+    - software architects
+    - database admins
+    - network admins
+    - systems admins
+    - hardware engineers
+---
+- lanes
+    - dev local laptops
+    - dev local vms
+    - dev servers
+    - qa servers
+    - uat server
+    - production server
+    - ci-ct servers
+    - auth servers
+    - storage servers    
+---
+Name: Task Tags
+---
+Name: Task Categories
+- saas
+  - voice-driven custom dev cli workflows
+- paas
+- iaas
+    - auth
+---
+Name: We-Host Services
+- gitorious
+- gitlab
+- kvm
+- ceph
+- https
+- vlan network services
+  - named
+  - auth
+---
+Name: UrbanSpectra Private Projects
+    - vlan-services
+    - vlan-host-provision
+    - domains
+      - sub-domains
+    - sofiasys
+    - sow-invoice
+---
+Name: UrbanSpectra Public Projects
+    - openresume
+    - demos
+    - test matrices
+---

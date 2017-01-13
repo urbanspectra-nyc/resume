@@ -1,16 +1,9 @@
 NEXT STEPS:
-- diff against last commit
-- stash that
-- rewind to last commit and mv /build/images/ to ??
-- msword_file link + icon retrieve
-- reapply stash
-- pdf_file link + icon
-- new resume photo
-- projectname: openResume
----
 - clean up linkedin
 - finish msword resume
 - add msword doc link
+- new resume photo
+- projectname: openResume
 - broadcast, search, add meta tags to resume
 - post to job boards
 - model resume workflow

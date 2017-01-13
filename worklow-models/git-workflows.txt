@@ -27,6 +27,24 @@ NAME: Git Workflow Modeling
 ---
 NAME: Git Workflow Modeling
 - gitbash remote setups
+  - onboard uidev
+  - github-bbkt-gitlab
+  - uidev-intro team invite
+  - first-null-commit repo invite
+  - first-null-commit ok
+  - send pull request to origin
+  - pull request reject
+  - pull request tests
+  - pull request accept merge to master branch
+  - travis tests
+  - travis test reporting to hipchat
+  - uidev workflows
+  - project skeletons
+  - other repos
+    - team clash stash
+    - team dev dojo
+    - resume
+    - sofiasys
 ---
 NAME: Git Workflow Modeling
 - gitbash solo remote skills

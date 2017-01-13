@@ -1,0 +1,48 @@
+NAME: Git Workflow Modeling
+- gitbash local setups
+  - facterVersion
+  - gitInstalled
+  - gitVersion
+  - gitConfigs
+---
+NAME: Git Workflow Modeling
+- gitbash solo local skills
+  - gitInit
+  - gitInitUndo
+  - gitInitSkel
+  - gitAdd
+  - gitAddUndo
+  - gitCommit
+  - gitStatus
+  - gitLog
+  - gitCommitUndo
+  - gitCommitAmend
+  - gitLog
+  - gitDiff
+  - gitRewind
+  - gitRebase
+  - gitStash
+  - gitBranch
+  - gitMerge
+---
+NAME: Git Workflow Modeling
+- gitbash remote setups
+---
+NAME: Git Workflow Modeling
+- gitbash solo remote skills
+---
+NAME: Git admin tasks...
+  - xuseradd-dev
+  - useradd-admin
+  - gitWhoami
+  - gitWhoIsRoot
+  - gitEtc
+  - gitRepos:    Check upon root login?
+      - local
+      - remote
+      - owned-public
+      - owned-private
+      - shared-public
+      - shared-private
+
+---

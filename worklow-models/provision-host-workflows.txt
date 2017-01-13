@@ -1,0 +1,20 @@
+Name: Provision Host Workflow Steps
+- Methods
+  - Manual Host Provisioning
+  - Vagrant Host Provisioning
+- Resource Allocation
+  - Logical Resources
+  - Physical Resources
+- Discovery of Resources
+- Introspection of Resources
+- Configure Build
+- Build + Test
+- Release
+- Deploy
+- Provision
+- Train
+- Support
+---
+Name: Vagrant Automated VLAN Host Provisioning
+Name: Thumboot Manual Baremetal LAN Host Provisioning
+---

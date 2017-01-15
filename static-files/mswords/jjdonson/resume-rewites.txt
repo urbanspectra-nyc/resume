@@ -1,0 +1,19 @@
+Custom Data Warehouse Architect, Developer & Administrator
+JP Morgan / Chase Manhattan Bank: 2001 – 2003 / CitiBank, Inc: 1999 – 2001
+Hired by CitiBank Marketing Division to audit massive batch processing by Acxiom, Inc.
+Developed auditing scripts to verify, track and report errors changes in batch inputs and outputs.
+This evolved quickly into an internal data hosting and reporting platform for own historical data.
+
+Tasked by CitiBank Management to migrate historical data into new in-house Custom Time Series Data Warehouse.
+This represented about ten years (2 Petabytes) of credit card demographics and financial banking data.
+
+Within about six months, the following tasks were achieved: 
+Validated all raw archived data in place during evening vendor maintenance windows. 
+Devised flexible logical models and performant physical models to support ongoing time-series analytics. 
+Set up a RedHat Linux Data Warehouse system with massively parallelized disk io, running Oracle 9i. 
+Migrated all raw historical data to dedicated local Linux / Oracle Data Warehouse system. 
+Developed PL/SQL Time-Series Warehouse REST API + Aggregation Schemes + CSV Export + Browser Tools. 
+Validated Logical and Performance Requirements to the Satisfaction of Bank Management and Vendor. 
+Automated daily data migrations, plus all daily, weekly/monthly/quarterly Data Warehouse Analytics reports. 
+Trained many developers to create consistent and performant tools to leverage historical trends. Trained IT department staff to manage data warehouse validations, loads and scripts. 
+Next I was sent to JP Morgan / Chase Manhattan Bank, another local Acxiom client, where I basically implemented the same in-house solutions listed above in their Data Processing department. These successful experiences using RedHat Linux for enterprise data process was my first step towards open source platforms and API’s. 

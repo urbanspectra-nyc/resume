@@ -1,0 +1,41 @@
+Name: Lanes
+- dev sandbox
+---
+Name: Tiers
+- software-as-a-service
+- user interface design
+- user interface development
+- processes
+- data
+- network
+- operating systems
+- hardware
+---
+web cms
+responsive
+drupal
+mysql
+mariadb
+data modeling
+Data Warehouse Architecture Social Networking
+Logical Data Modeling
+php
+PHP Frameworks Performance Testing
+Unit Testing
+User Acceptance Testing Software Project Management Technical Illustration Technical Writing
+Business Intelligence
+Data Analysis
+Technical Documentation bash
+oracle
+MySQL database design
+API
+REST SQLite 
+SQL 
+ERD 
+LAMP
+Git 
+Database Analysis MySQL PHP 
+Bash
+APIs
+Oracle Architecture Databases CMS Web Applications Web Services
+Agile Methodologies

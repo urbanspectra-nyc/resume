@@ -1,0 +1,29 @@
+# Git setup
+
+alias gitExists=git
+alias gE='gitExists'
+alias gitVersions='git --version'
+alias gV='gitVersions'
+alias gitConfigs='git config --list'
+alias gCfg='gitConfigs'
+
+# Git solo local
+
+alias gitClone='git clone'
+alias gCl='gitClone'
+alias gitInit='git init'
+alias gI='gitInit'
+alias gitAdd='git add'
+alias gA='gitAdd'
+alias gitCommit='git commit'
+alias gCom='gitCommit'
+alias gitPush='git push'
+alias gPsh='gitPush'
+alias gitStash='git stash'
+alias gSta='gitStash'
+alias gitStatus='git status'
+alias gSt='gitStatus'
+alias gitApply='git apply'
+alias gAp='gitApply'
+
+# Git solo remote

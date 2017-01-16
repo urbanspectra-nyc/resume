@@ -19,3 +19,8 @@ Name: Mustache Dependencies Per Language
   - Virtual Env Manager: 
   - Package Manager: 
   - Package Name: https://github.com/cbroglie/mustache
+- Language: bash
+  - Version: 3.2.x
+  - Virtual Env Manager:
+  - Package Manager:
+  - Package Name: mo

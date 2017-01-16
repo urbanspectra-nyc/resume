@@ -24,3 +24,8 @@ Name: Mustache Dependencies Per Language
   - Virtual Env Manager:
   - Package Manager:
   - Package Name: mo
+- Language: php
+  - Version: 5.5.x
+  - Virtual Env Manager:
+  - Package Manager: pear
+  - Package Name: https://github.com/bobthecow/mustache.php

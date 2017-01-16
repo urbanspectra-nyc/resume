@@ -1,4 +1,4 @@
-# Git setup
+# Git Setup
 
 alias gitExists=git
 alias gE='gitExists'
@@ -7,7 +7,7 @@ alias gV='gitVersions'
 alias gitConfigs='git config --list'
 alias gCfg='gitConfigs'
 
-# Git solo local
+# Git Solo Local: LEVEL 1
 
 alias gitClone='git clone'
 alias gCl='gitClone'
@@ -26,4 +26,8 @@ alias gSt='gitStatus'
 alias gitApply='git apply'
 alias gAp='gitApply'
 
-# Git solo remote
+# Git Solo Local: LEVEL 2
+
+# Git Solo Remote: LEVEL 1
+
+# Git Solo Remote: LEVEL 2

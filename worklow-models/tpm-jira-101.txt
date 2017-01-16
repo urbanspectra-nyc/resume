@@ -7,7 +7,7 @@ curl:
 - gitlab
 - image-streams
 - kvm-guests-ceph-api
-
+--
 Name: They-Host Services
 - Hipchat
 - Github.com

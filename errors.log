@@ -1,0 +1,292 @@
+/usr/bin/python3 build.py --output_dir build --format html resumes/hanula.yaml
+Done
+/usr/bin/python3 build.py --output_dir build --format pdf resumes/hanula.yaml
+Failed to load stylesheet at file://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic : URLError: <urlopen error [Errno 2] No such file or directory: '/css?family=Source+Sans+Pro:300,400,700,400italic'>
+Ignored `-ms-text-size-adjust: 100%` at 7:91, unknown property.
+Ignored `-webkit-text-size-adjust: 100%` at 7:117, unknown property.
+Ignored `-moz-box-sizing: content-box` at 7:824, unknown property.
+Ignored `-webkit-appearance: button` at 7:1173, unknown property.
+Ignored `cursor: pointer` at 7:1199, the property does not apply for the print media.
+Ignored `cursor: default` at 7:1252, the property does not apply for the print media.
+Invalid or unsupported selector 'button::-moz-focus-inner,input::-moz-focus-inner', Unknown pseudo-element: -moz-focus-inner
+Invalid or unsupported selector 'input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button', Unknown pseudo-element: -webkit-inner-spin-button
+Ignored `-webkit-appearance: textfield` at 7:1564, unknown property.
+Ignored `-moz-box-sizing: content-box` at 7:1593, unknown property.
+Ignored `-webkit-box-sizing: content-box` at 7:1621, unknown property.
+Ignored `-webkit-appearance: none` at 7:1774, unknown property.
+Ignored `box-shadow: none` at 7:2187, unknown property.
+Ignored `text-shadow: none` at 7:2214, unknown property.
+Ignored `-webkit-font-smoothing: antialiased` at 7:3511, unknown property.
+Ignored `-moz-osx-font-smoothing: grayscale` at 7:3546, unknown property.
+Ignored `-webkit-box-sizing: border-box` at 7:12280, unknown property.
+Ignored `-moz-box-sizing: border-box` at 7:12310, unknown property.
+Ignored `-webkit-box-sizing: border-box` at 7:12376, unknown property.
+Ignored `-moz-box-sizing: border-box` at 7:12406, unknown property.
+Ignored `-webkit-tap-highlight-color: rgba(0,0,0,0)` at 7:12475, unknown property.
+Ignored `outline: 5px auto -webkit-focus-ring-color` at 7:12881, invalid value.
+Ignored `outline-offset: -2px` at 7:12923, unknown property.
+Ignored `-webkit-transition: all .2s ease-in-out` at 7:13277, unknown property.
+Ignored `-o-transition: all .2s ease-in-out` at 7:13316, unknown property.
+Ignored `transition: all .2s ease-in-out` at 7:13350, unknown property.
+Ignored `cursor: help` at 7:16584, the property does not apply for the print media.
+Ignored `box-shadow: inset 0 -1px 0 rgba(0,0,0,0.25)` at 7:17984, unknown property.
+Ignored `box-shadow: none` at 7:18077, unknown property.
+Ignored `word-break: break-all` at 7:18179, unknown property.
+Ignored `overflow-y: scroll` at 7:18453, unknown property.
+Ignored `overflow-x: auto` at 7:30784, unknown property.
+Ignored `-webkit-box-sizing: border-box` at 7:32575, unknown property.
+Ignored `-moz-box-sizing: border-box` at 7:32605, unknown property.
+Ignored `margin-top: 1px \9` at 7:32712, invalid value.
+Ignored `outline: 5px auto -webkit-focus-ring-color` at 7:32969, invalid value.
+Ignored `outline-offset: -2px` at 7:33011, unknown property.
+Ignored `-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075)` at 7:33330, unknown property.
+Ignored `box-shadow: inset 0 1px 1px rgba(0,0,0,0.075)` at 7:33383, unknown property.
+Ignored `-webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s` at 7:33428, unknown property.
+Ignored `-o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s` at 7:33505, unknown property.
+Ignored `transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s` at 7:33577, unknown property.
+Ignored `-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(102,175,233,0.6)` at 7:33697, unknown property.
+Ignored `box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(102,175,233,0.6)` at 7:33780, unknown property.
+Invalid or unsupported selector '.form-control::-moz-placeholder', Unknown pseudo-element: -moz-placeholder
+Invalid or unsupported selector '.form-control:-ms-input-placeholder', The pseudo-class :-ms-input-placeholder is unknown
+Invalid or unsupported selector '.form-control::-webkit-input-placeholder', Unknown pseudo-element: -webkit-input-placeholder
+Ignored `cursor: not-allowed` at 7:34097, the property does not apply for the print media.
+Ignored `-webkit-appearance: none` at 7:34206, unknown property.
+Ignored `line-height: 1.42857143 \0` at 7:34334, invalid value.
+Ignored `line-height: 1.5 \0` at 7:34500, invalid value.
+Ignored `line-height: 1.33 \0` at 7:34659, invalid value.
+Invalid or unsupported selector '_:-ms-fullscreen,:root input[type="date"],_:-ms-fullscreen,:root input[type="time"],_:-ms-fullscreen,:root input[type="datetime-local"],_:-ms-fullscreen,:root input[type="month"]', The pseudo-class :-ms-fullscreen is unknown
+Invalid or unsupported selector '_:-ms-fullscreen.input-sm,:root input[type="date"].input-sm,_:-ms-fullscreen.input-sm,:root input[type="time"].input-sm,_:-ms-fullscreen.input-sm,:root input[type="datetime-local"].input-sm,_:-ms-fullscreen.input-sm,:root input[type="month"].input-sm', The pseudo-class :-ms-fullscreen is unknown
+Invalid or unsupported selector '_:-ms-fullscreen.input-lg,:root input[type="date"].input-lg,_:-ms-fullscreen.input-lg,:root input[type="time"].input-lg,_:-ms-fullscreen.input-lg,:root input[type="datetime-local"].input-lg,_:-ms-fullscreen.input-lg,:root input[type="month"].input-lg', The pseudo-class :-ms-fullscreen is unknown
+Ignored `cursor: pointer` at 7:35629, the property does not apply for the print media.
+Ignored `margin-top: 4px \9` at 7:35814, invalid value.
+Ignored `cursor: pointer` at 7:36009, the property does not apply for the print media.
+Ignored `cursor: not-allowed` at 7:36321, the property does not apply for the print media.
+Ignored `cursor: not-allowed` at 7:36458, the property does not apply for the print media.
+Ignored `cursor: not-allowed` at 7:36591, the property does not apply for the print media.
+Ignored `pointer-events: none` at 7:37663, unknown property.
+Ignored `-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075)` at 7:38164, unknown property.
+Ignored `box-shadow: inset 0 1px 1px rgba(0,0,0,0.075)` at 7:38217, unknown property.
+Ignored `-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 6px #fff` at 7:38316, unknown property.
+Ignored `box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 6px #fff` at 7:38382, unknown property.
+Ignored `-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075)` at 7:38917, unknown property.
+Ignored `box-shadow: inset 0 1px 1px rgba(0,0,0,0.075)` at 7:38970, unknown property.
+Ignored `-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 6px #fff` at 7:39069, unknown property.
+Ignored `box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 6px #fff` at 7:39135, unknown property.
+Ignored `-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075)` at 7:39648, unknown property.
+Ignored `box-shadow: inset 0 1px 1px rgba(0,0,0,0.075)` at 7:39701, unknown property.
+Ignored `-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 6px #fff` at 7:39798, unknown property.
+Ignored `box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 6px #fff` at 7:39864, unknown property.
+Ignored `touch-action: manipulation` at 7:41922, unknown property.
+Ignored `cursor: pointer` at 7:41948, the property does not apply for the print media.
+Ignored `-webkit-user-select: none` at 7:42106, unknown property.
+Ignored `-moz-user-select: none` at 7:42131, unknown property.
+Ignored `-ms-user-select: none` at 7:42153, unknown property.
+Ignored `user-select: none` at 7:42174, unknown property.
+Ignored `outline: 5px auto -webkit-focus-ring-color` at 7:42305, invalid value.
+Ignored `outline-offset: -2px` at 7:42347, unknown property.
+Ignored `-webkit-box-shadow: inset 0 3px 5px rgba(0,0,0,0.125)` at 7:42491, unknown property.
+Ignored `box-shadow: inset 0 3px 5px rgba(0,0,0,0.125)` at 7:42544, unknown property.
+Ignored `cursor: not-allowed` at 7:42642, the property does not apply for the print media.
+Ignored `pointer-events: none` at 7:42661, unknown property.
+Ignored `filter: alpha(opacity=65)` at 7:42694, unknown property.
+Ignored `-webkit-box-shadow: none` at 7:42719, unknown property.
+Ignored `box-shadow: none` at 7:42743, unknown property.
+Ignored `-webkit-box-shadow: none` at 7:48974, unknown property.
+Ignored `box-shadow: none` at 7:48998, unknown property.
+Ignored `-webkit-transition: opacity 0.15s linear` at 7:49828, unknown property.
+Ignored `-o-transition: opacity 0.15s linear` at 7:49868, unknown property.
+Ignored `transition: opacity 0.15s linear` at 7:49903, unknown property.
+Ignored `-webkit-transition-property: height, visibility` at 7:50171, unknown property.
+Ignored `transition-property: height, visibility` at 7:50218, unknown property.
+Ignored `-webkit-transition-duration: 0.35s` at 7:50257, unknown property.
+Ignored `transition-duration: 0.35s` at 7:50291, unknown property.
+Ignored `-webkit-transition-timing-function: ease` at 7:50317, unknown property.
+Ignored `transition-timing-function: ease` at 7:50357, unknown property.
+Ignored `-webkit-box-shadow: 0 6px 12px rgba(0,0,0,0.175)` at 7:50894, unknown property.
+Ignored `box-shadow: 0 6px 12px rgba(0,0,0,0.175)` at 7:50942, unknown property.
+Ignored `filter: progid:DXImageTransform.Microsoft.gradient(enabled=false)` at 7:51798, unknown property.
+Ignored `cursor: not-allowed` at 7:51863, the property does not apply for the print media.
+Ignored `-webkit-box-shadow: inset 0 3px 5px rgba(0,0,0,0.125)` at 7:54356, unknown property.
+Ignored `box-shadow: inset 0 3px 5px rgba(0,0,0,0.125)` at 7:54409, unknown property.
+Ignored `-webkit-box-shadow: none` at 7:54496, unknown property.
+Ignored `box-shadow: none` at 7:54520, unknown property.
+Ignored `pointer-events: none` at 7:56363, unknown property.
+Ignored `cursor: not-allowed` at 7:60281, the property does not apply for the print media.
+Ignored `cursor: default` at 7:60936, the property does not apply for the print media.
+Ignored `overflow-x: visible` at 7:63191, unknown property.
+Ignored `box-shadow: inset 0 1px 0 rgba(255,255,255,0.1)` at 7:63280, unknown property.
+Ignored `-webkit-overflow-scrolling: touch` at 7:63327, unknown property.
+Ignored `overflow-y: auto` at 7:63380, unknown property.
+Ignored `-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.1),0 1px 0 rgba(255,255,255,0.1)` at 7:66310, unknown property.
+Ignored `box-shadow: inset 0 1px 0 rgba(255,255,255,0.1),0 1px 0 rgba(255,255,255,0.1)` at 7:66395, unknown property.
+Ignored `cursor: default` at 7:74493, the property does not apply for the print media.
+Ignored `cursor: not-allowed` at 7:74745, the property does not apply for the print media.
+Ignored `cursor: not-allowed` at 7:75949, the property does not apply for the print media.
+Ignored `cursor: pointer` at 7:76216, the property does not apply for the print media.
+Ignored `cursor: pointer` at 7:77389, the property does not apply for the print media.
+Ignored `-webkit-transition: border .2s ease-in-out` at 7:78192, unknown property.
+Ignored `-o-transition: border .2s ease-in-out` at 7:78234, unknown property.
+Ignored `transition: border .2s ease-in-out` at 7:78271, unknown property.
+Ignored `-webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1)` at 7:79792, unknown property.
+Ignored `box-shadow: inset 0 1px 2px rgba(0,0,0,0.1)` at 7:79843, unknown property.
+Ignored `-webkit-box-shadow: inset 0 -1px 0 rgba(0,0,0,0.15)` at 7:80021, unknown property.
+Ignored `box-shadow: inset 0 -1px 0 rgba(0,0,0,0.15)` at 7:80072, unknown property.
+Ignored `-webkit-transition: width 0.6s ease` at 7:80115, unknown property.
+Ignored `-o-transition: width 0.6s ease` at 7:80150, unknown property.
+Ignored `transition: width 0.6s ease` at 7:80180, unknown property.
+Ignored `background-image: -webkit-linear-gradient(45deg, rgba(255,255,255,0.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0.15) 75%, transparent 75%, transparent)` at 7:80261, invalid value.
+Ignored `background-image: -o-linear-gradient(45deg, rgba(255,255,255,0.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0.15) 75%, transparent 75%, transparent)` at 7:80457, invalid value.
+Ignored `-webkit-animation: progress-bar-stripes 2s linear infinite` at 7:80914, unknown property.
+Ignored `-o-animation: progress-bar-stripes 2s linear infinite` at 7:80972, unknown property.
+Ignored `animation: progress-bar-stripes 2s linear infinite` at 7:81025, unknown property.
+Ignored `background-image: -webkit-linear-gradient(45deg, rgba(255,255,255,0.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0.15) 75%, transparent 75%, transparent)` at 7:81162, invalid value.
+Ignored `background-image: -o-linear-gradient(45deg, rgba(255,255,255,0.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0.15) 75%, transparent 75%, transparent)` at 7:81358, invalid value.
+Ignored `background-image: -webkit-linear-gradient(45deg, rgba(255,255,255,0.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0.15) 75%, transparent 75%, transparent)` at 7:81818, invalid value.
+Ignored `background-image: -o-linear-gradient(45deg, rgba(255,255,255,0.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0.15) 75%, transparent 75%, transparent)` at 7:82014, invalid value.
+Ignored `background-image: -webkit-linear-gradient(45deg, rgba(255,255,255,0.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0.15) 75%, transparent 75%, transparent)` at 7:82480, invalid value.
+Ignored `background-image: -o-linear-gradient(45deg, rgba(255,255,255,0.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0.15) 75%, transparent 75%, transparent)` at 7:82676, invalid value.
+Ignored `background-image: -webkit-linear-gradient(45deg, rgba(255,255,255,0.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0.15) 75%, transparent 75%, transparent)` at 7:83140, invalid value.
+Ignored `background-image: -o-linear-gradient(45deg, rgba(255,255,255,0.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0.15) 75%, transparent 75%, transparent)` at 7:83336, invalid value.
+Ignored `cursor: not-allowed` at 7:84886, the property does not apply for the print media.
+Ignored `-webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.05)` at 7:88038, unknown property.
+Ignored `box-shadow: 0 1px 1px rgba(0,0,0,0.05)` at 7:88084, unknown property.
+Ignored `-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.05)` at 7:99352, unknown property.
+Ignored `box-shadow: inset 0 1px 1px rgba(0,0,0,0.05)` at 7:99404, unknown property.
+Ignored `text-shadow: 0 1px 0 #ffffff` at 7:99671, unknown property.
+Ignored `filter: alpha(opacity=20)` at 7:99711, unknown property.
+Ignored `cursor: pointer` at 7:99797, the property does not apply for the print media.
+Ignored `filter: alpha(opacity=50)` at 7:99824, unknown property.
+Ignored `cursor: pointer` at 7:99872, the property does not apply for the print media.
+Ignored `-webkit-appearance: none` at 7:99919, unknown property.
+Ignored `-webkit-overflow-scrolling: touch` at 7:100065, unknown property.
+Ignored `-webkit-transform: translate(0, -25%)` at 7:100134, unknown property.
+Ignored `-ms-transform: translate(0, -25%)` at 7:100171, unknown property.
+Ignored `-o-transform: translate(0, -25%)` at 7:100204, unknown property.
+Ignored `-webkit-transition: -webkit-transform .3s ease-out` at 7:100265, unknown property.
+Ignored `-moz-transition: -moz-transform .3s ease-out` at 7:100315, unknown property.
+Ignored `-o-transition: -o-transform .3s ease-out` at 7:100359, unknown property.
+Ignored `transition: transform .3s ease-out` at 7:100399, unknown property.
+Ignored `-webkit-transform: translate(0, 0)` at 7:100457, unknown property.
+Ignored `-ms-transform: translate(0, 0)` at 7:100491, unknown property.
+Ignored `-o-transform: translate(0, 0)` at 7:100521, unknown property.
+Ignored `overflow-x: hidden` at 7:100595, unknown property.
+Ignored `overflow-y: auto` at 7:100613, unknown property.
+Ignored `-webkit-box-shadow: 0 3px 9px rgba(0,0,0,0.5)` at 7:100818, unknown property.
+Ignored `box-shadow: 0 3px 9px rgba(0,0,0,0.5)` at 7:100863, unknown property.
+Ignored `filter: alpha(opacity=0)` at 7:101055, unknown property.
+Ignored `filter: alpha(opacity=50)` at 7:101110, unknown property.
+Ignored `filter: alpha(opacity=0)` at 7:102021, unknown property.
+Ignored `filter: alpha(opacity=90)` at 7:102069, unknown property.
+Ignored `-webkit-box-shadow: 0 5px 10px rgba(0,0,0,0.2)` at 7:103665, unknown property.
+Ignored `box-shadow: 0 5px 10px rgba(0,0,0,0.2)` at 7:103711, unknown property.
+Ignored `-webkit-transition: .6s ease-in-out left` at 7:105437, unknown property.
+Ignored `-o-transition: .6s ease-in-out left` at 7:105477, unknown property.
+Ignored `transition: .6s ease-in-out left` at 7:105512, unknown property.
+Ignored `filter: alpha(opacity=50)` at 7:106586, unknown property.
+Ignored `text-shadow: 0 1px 2px rgba(0,0,0,0.6)` at 7:106658, unknown property.
+Ignored `background-image: -webkit-linear-gradient(left, rgba(0,0,0,0.5) 0, rgba(0,0,0,0.0001) 100%)` at 7:106719, invalid value.
+Ignored `background-image: -o-linear-gradient(left, rgba(0,0,0,0.5) 0, rgba(0,0,0,0.0001) 100%)` at 7:106810, invalid value.
+Ignored `filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1)` at 7:107010, unknown property.
+Ignored `background-image: -webkit-linear-gradient(left, rgba(0,0,0,0.0001) 0, rgba(0,0,0,0.5) 100%)` at 7:107170, invalid value.
+Ignored `background-image: -o-linear-gradient(left, rgba(0,0,0,0.0001) 0, rgba(0,0,0,0.5) 100%)` at 7:107261, invalid value.
+Ignored `filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1)` at 7:107461, unknown property.
+Ignored `filter: alpha(opacity=90)` at 7:107684, unknown property.
+Ignored `cursor: pointer` at 7:108617, the property does not apply for the print media.
+Ignored `background-color: #000 \9` at 7:108632, invalid value.
+Ignored `text-shadow: 0 1px 2px rgba(0,0,0,0.6)` at 7:108921, unknown property.
+Ignored `text-shadow: none` at 7:108982, unknown property.
+Ignored `text-shadow: none` at 7:110723, unknown property.
+Ignored `-webkit-box-shadow: none` at 7:114258, unknown property.
+Ignored `box-shadow: none` at 7:114282, unknown property.
+Ignored `-webkit-box-shadow: none` at 7:115255, unknown property.
+Ignored `box-shadow: none` at 7:115279, unknown property.
+Ignored `-webkit-box-shadow: inset 0 2px 0 rgba(0,0,0,0.075)` at 7:116502, unknown property.
+Ignored `box-shadow: inset 0 2px 0 rgba(0,0,0,0.075)` at 7:116553, unknown property.
+Ignored `-webkit-box-shadow: inset 0 2px 0 rgba(0,0,0,0.075)` at 7:116809, unknown property.
+Ignored `box-shadow: inset 0 2px 0 rgba(0,0,0,0.075)` at 7:116860, unknown property.
+Ignored `-webkit-box-shadow: inset 0 2px 0 rgba(0,0,0,0.075)` at 7:117138, unknown property.
+Ignored `box-shadow: inset 0 2px 0 rgba(0,0,0,0.075)` at 7:117189, unknown property.
+Ignored `-webkit-box-shadow: inset 0 2px 0 rgba(0,0,0,0.075)` at 7:117475, unknown property.
+Ignored `box-shadow: inset 0 2px 0 rgba(0,0,0,0.075)` at 7:117526, unknown property.
+Ignored `-webkit-transition: all .2s ease-in-out` at 7:117767, unknown property.
+Ignored `-o-transition: all .2s ease-in-out` at 7:117806, unknown property.
+Ignored `transition: all .2s ease-in-out` at 7:117840, unknown property.
+Ignored `-webkit-box-shadow: none` at 7:118382, unknown property.
+Ignored `box-shadow: none` at 7:118406, unknown property.
+Ignored `-webkit-box-shadow: inset 0 2px 0 rgba(0,0,0,0.1)` at 7:119802, unknown property.
+Ignored `box-shadow: inset 0 2px 0 rgba(0,0,0,0.1)` at 7:119851, unknown property.
+Ignored `-webkit-box-shadow: inset 0 -4px 0 rgba(0,0,0,0.15)` at 7:119906, unknown property.
+Ignored `box-shadow: inset 0 -4px 0 rgba(0,0,0,0.15)` at 7:119957, unknown property.
+Ignored `-webkit-box-shadow: inset 0 2px 0 rgba(0,0,0,0.05)` at 7:120031, unknown property.
+Ignored `box-shadow: inset 0 2px 0 rgba(0,0,0,0.05)` at 7:120081, unknown property.
+Ignored `-webkit-box-shadow: inset 0 2px 0 rgba(0,0,0,0.05)` at 7:120159, unknown property.
+Ignored `box-shadow: inset 0 2px 0 rgba(0,0,0,0.05)` at 7:120209, unknown property.
+Parse error at 7:2956, unknown at-rule in stylesheet context: @font-face
+Parse error at 7:14782, expected a media type, got (
+Parse error at 7:16364, expected a media type, got (
+Parse error at 7:18561, expected a media type, got (
+Parse error at 7:18610, expected a media type, got (
+Parse error at 7:18659, expected a media type, got (
+Parse error at 7:21144, expected a media type, got (
+Parse error at 7:22911, expected a media type, got (
+Parse error at 7:24678, expected a media type, got (
+Parse error at 7:30824, expected a media type, got IDENT, IDENT, (
+Parse error at 7:40250, expected a media type, got (
+Parse error at 7:41474, expected a media type, got (
+Parse error at 7:41646, expected a media type, got (
+Parse error at 7:41739, expected a media type, got (
+Parse error at 7:52468, expected a media type, got (
+Parse error at 7:61180, expected a media type, got (
+Parse error at 7:61507, expected a media type, got (
+Parse error at 7:62219, expected a media type, got (
+Parse error at 7:62548, expected a media type, got (
+Parse error at 7:63077, expected a media type, got (
+Parse error at 7:63129, expected a media type, got (
+Parse error at 7:63403, expected a media type, got (
+Parse error at 7:63904, expected a media type, got (, IDENT, (
+Parse error at 7:64212, expected a media type, got (
+Parse error at 7:64440, expected a media type, got (
+Parse error at 7:64583, expected a media type, got (
+Parse error at 7:64956, expected a media type, got (
+Parse error at 7:65443, expected a media type, got (
+Parse error at 7:65599, expected a media type, got (
+Parse error at 7:66042, expected a media type, got (
+Parse error at 7:66512, expected a media type, got (
+Parse error at 7:67442, expected a media type, got (
+Parse error at 7:67563, expected a media type, got (
+Parse error at 7:68125, expected a media type, got (
+Parse error at 7:68210, expected a media type, got (
+Parse error at 7:69609, expected a media type, got (
+Parse error at 7:71985, expected a media type, got (
+Parse error at 7:77886, expected a media type, got IDENT, IDENT, (
+Parse error at 7:79500, unknown at-rule in stylesheet context: @-webkit-keyframes
+Parse error at 7:79600, unknown at-rule in stylesheet context: @keyframes
+Parse error at 7:101676, expected a media type, got (
+Parse error at 7:101866, expected a media type, got (
+Parse error at 7:105619, expected a media type, got IDENT, IDENT, (
+Parse error at 7:109006, expected a media type, got IDENT, IDENT, (
+Parse error at 7:110861, unknown at-rule in stylesheet context: @-ms-viewport
+Parse error at 7:111245, expected a media type, got (
+Parse error at 7:111440, expected a media type, got (
+Parse error at 7:111509, expected a media type, got (
+Parse error at 7:111580, expected a media type, got (
+Parse error at 7:111663, expected a media type, got (, IDENT, (
+Parse error at 7:111880, expected a media type, got (, IDENT, (
+Parse error at 7:111971, expected a media type, got (, IDENT, (
+Parse error at 7:112064, expected a media type, got (, IDENT, (
+Parse error at 7:112169, expected a media type, got (, IDENT, (
+Parse error at 7:112387, expected a media type, got (, IDENT, (
+Parse error at 7:112479, expected a media type, got (, IDENT, (
+Parse error at 7:112573, expected a media type, got (, IDENT, (
+Parse error at 7:112679, expected a media type, got (
+Parse error at 7:112875, expected a media type, got (
+Parse error at 7:112945, expected a media type, got (
+Parse error at 7:113017, expected a media type, got (
+Parse error at 7:113101, expected a media type, got (
+Parse error at 7:113162, expected a media type, got (, IDENT, (
+Parse error at 7:113245, expected a media type, got (, IDENT, (
+Parse error at 7:113329, expected a media type, got (
+No anchor # for internal URI reference at line None
+No anchor # for internal URI reference at line None
+No anchor # for internal URI reference at line None
+No anchor # for internal URI reference at line None

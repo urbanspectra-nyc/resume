@@ -12,7 +12,7 @@ Installing Resume App
     $ python3 --version
 
     # 2. First time clone resume repo from github.
-    $ cd ~; git clone https://github.com/jjdonson/resume; cd resume; git status
+    $ cd ~; git clone https://github.com/urbanspectra-nyc/resume; cd resume; git status
 
     # 3. Install python requirements using python3.
     $ python3 -m pip install -r requirements.txt

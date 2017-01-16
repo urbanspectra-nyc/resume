@@ -1,0 +1,36 @@
+Name: Mustache Dependencies Per Language
+- Language: Python
+  - Version: 2.7.11
+  - Virtual Env Manager: virtualenvwrapper
+  - Package Manager: pip
+  - Package Name: pystache
+- Language: Ruby
+  - Version: 2.2
+  - Virtual Env Manager: rvm
+  - Package Manager: gem
+  - Package Name: mustache
+- Language: Node
+  - Version: 7.4.0
+  - Virtual Env Manager: 
+  - Package Manager: npm
+  - Package Name: mu
+- Language: go
+  - Version: 1.7.4
+  - Virtual Env Manager: 
+  - Package Manager: 
+  - Package Name: https://github.com/cbroglie/mustache
+- Language: bash
+  - Version: 3.2.x
+  - Virtual Env Manager:
+  - Package Manager:
+  - Package Name: mo
+- Language: php
+  - Version: 5.5.x
+  - Virtual Env Manager:
+  - Package Manager: pear
+  - Package Name: https://github.com/bobthecow/mustache.php
+- Language: java
+  - Version: 1.8.0_60
+  - Virtual Env Manager:
+  - Package Manager: 
+  - Package Name: https://github.com/spullara/mustache.java

@@ -6,11 +6,10 @@ profile:
     address: Lyndhurst, NJ 07071
     phone: 347-985-5954
     summary: >
-        Dev ops support engineer focused on test-driven tooling and automation to facilitate preventive problem-solving.
-        More than 10 years of hands-on development team support, including all infrastructure and platform testing.
-        Skilled bash, mariadb and python programmer.  Expert with performant data and web system scaling.
+        Linux and Unix sysadmin with 15 years experience in systems installation and management, hardware configuration and setup,
+        and OS installation and support.
 
-    image: "https://link.to.image"
+    image: "https://photos.google.com/photo/AF1QipOrZ0JBANToW4SKL3nU4ZWvE_vUW7X46qa4jEJo"
     website: http://www.urbanspectra.com
 
     networks:
@@ -25,29 +24,22 @@ profile:
 skills:
     -   area: Certifications Held
         skills:
-            - MySQL Database Administrator + Developer
-            - Oracle Database Administrator + Developer
-            - RedHat Linux Systems Administrator
+            - CompTIA Linux+ Systems Administrator
 
     -   area: Technologies
         skills:
-            - Git, Gitlab, Github, Bitbucket
-            - CloudForms / ManageIQ
-            - OpenShift
-            - OpenStack
-            - Docker, DockerSwarm
-            - Ceph, Redis, Memcached, MongoDB
-            - MySQL, PostgreSQL
+            - Git, Github, Bitbucket
+            - Vagrant
+            - Docker
+            - MongoDB
 
     -   area: Languages Supported
         skills:
             - Bash, Expert, 10+ years
-            - Python, 5+ years
-            - C/C++, Intermediate, 5+ years
+            - C, Intermediate, 7+ years
             - Ruby, Intermediate, 5+ years
-            - Java, Intermediate, 5+ years
-            - Node.js, Novice, 2+ years
-            - Go, novice, 2+ years 
+            - Python, novice, 3+ years
+            - Smalltalk, novice, 2+ years 
 
     -   area: Diagrams
         skills:
@@ -192,9 +184,9 @@ projects:
 
 
 education:
-    -   location: Columbia University
-        date: 2000 - 2002
-        summary: Enterprise Systems & Database Application Design & Development Program
+    -   location: Art Institute of Philadelphia
+        date: 1998 - 1999
+        summary: Multimedia Design
 
 
 interests:
@@ -209,6 +201,6 @@ interests:
 
 config:
     theme: simple
-    github_source: https://github.com/jjdonson/resume
+    github_source: https://github.com/urbanspectra-nyc/resume
     pdf_file: Robert_Menes_Resume.pdf
     msword_file: Robert_Menes_Resume.doc

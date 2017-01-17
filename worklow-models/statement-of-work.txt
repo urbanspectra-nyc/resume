@@ -11,3 +11,5 @@ Name: Typical Subjects Of Statement of Work (SOW)
 - Miscellaneous: Many items that are not part of the main negotiations may be listed because they are important to the project, and overlooking or forgetting them could pose problems for the project.
 
 http://www.pmicoc.org/document-repository/articles-of-interest/611-sow-writing-guide/file
+---
+Nane: Statement of Work YAML

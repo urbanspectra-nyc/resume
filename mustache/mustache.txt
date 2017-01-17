@@ -1,12 +1,9 @@
-
-
-    mustache(5)
-    Mustache Manual
-    mustache(5)
+mustache(5)    Mustache Manual	mustache(5)
 
 NAME
 
 mustache - Logic-less templates.
+
 SYNOPSIS
 
 A typical Mustache template:

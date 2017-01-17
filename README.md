@@ -1,9 +1,12 @@
 resume
 ======
 
-Python Web Resume Generator.
+Static Web Resume Generator.
 
-From YAML under /resumes/ and html in themes  ==> $ make  ==> Static Responsive HTML Plus PDF in /build/.
+FROM   /resumes/[resume-name].yaml
+AND   /themes/simple/index.jinja2
+======> $ make
+======> Static Responsive HTML Plus PDF in /build/.
 
 Installing Resume App
 ---------------------

@@ -1,13 +1,17 @@
-# Git Setup
+# OSS FOUNDATIONS: Git Setups
 
-alias gitExists=git
+# listInstalledBinaries
+# listSupportedVersionsRange
+# listRecommendedVersion
+
+alias gitExists='which git'
 alias gE='gitExists'
-alias gitVersions='git --version'
-alias gV='gitVersions'
+alias gitVersion='git --version'
+alias gV='gitVersion'
 alias gitConfigs='git config --list'
 alias gCfg='gitConfigs'
 
-# Git Solo Local: LEVEL 1
+# OSS FOUNDATIONS: Git Solo Local: LEVEL 1
 
 alias gitClone='git clone'
 alias gCl='gitClone'
@@ -26,8 +30,13 @@ alias gSt='gitStatus'
 alias gitApply='git apply'
 alias gAp='gitApply'
 
-# Git Solo Local: LEVEL 2
+# OSS FOUNDATIONS: Git Solo Local: LEVEL 2
 
-# Git Solo Remote: LEVEL 1
+# OSS FOUNDATIONS: Git Solo Remote: LEVEL 1
 
-# Git Solo Remote: LEVEL 2
+# OSS FOUNDATIONS: Git Solo Remote: LEVEL 2
+
+# OSS FOUNDATIONS: Team Dev Using Git + Github.com: LEVEL 1
+
+# OSS FOUNDATIONS: Team Dev Using Git + Github.com: LEVEL 2
+

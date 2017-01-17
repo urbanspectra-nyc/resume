@@ -1,8 +1,9 @@
 resume
 ======
 
-Python resume generator.
-From YAML in /resumes/  ==$ make;  ==> Static Responsive HTML Plus PDF in /build/.
+Python Web Resume Generator.
+
+From YAML under /resumes/ and html in themes  ==> $ make  ==> Static Responsive HTML Plus PDF in /build/.
 
 Installing Resume App
 ---------------------

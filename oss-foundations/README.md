@@ -99,6 +99,7 @@ Name: bash-internals
 - other shells
 - $ man test
 - $ man eval
+- $ man expr
 - bash builtins
 - $ man sysctl
 - $ man shutil

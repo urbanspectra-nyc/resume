@@ -1,0 +1,1490 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" class=" js flexbox flexboxlegacy datauri">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title> bash functions: implode() </title>
+<pre>
+# Define bash custom function to create delimited string from array.
+$ implode() { local IFS="$1"; shift; echo "$*"; }
+
+ # Use that function to view terminal output:
+ $ arr=(1 2 3 4 5)
+ $ implode , ${arr[@]}
+ 1,2,3,4,5
+
+ # Pass output to variable in memory:
+ result=$(implode , ${arr[@]})
+ echo $result
+
+ # Define bash custom function to create array from delimited string.
+ $ explode() { local IFS="$1"; read -a $2 <<< "${3} }
+
+ $ FQDNS="ns1.cyberciti.biz ns2.cyberciti.biz ns3.cyberciti.biz"
+ $ explode ' ' $FQDNS FQDN_ARRAY
+ $ first=${dnsservers[1]}
+jjdonson-air:~ Mac$ echo $first
+
+# Use that function:
+# STRING=1,2,3,4,5
+
+
+</pre>
+ <link rel="shortcut icon" href="http://us3.php.net/favicon.ico">
+ <link rel="search" type="application/opensearchdescription+xml" href="http://php.net/phpnetimprovedsearch.src" title="Add PHP.net search">
+ <link rel="alternate" type="application/atom+xml" href="http://us3.php.net/releases/feed.php" title="PHP Release feed">
+ <link rel="alternate" type="application/atom+xml" href="http://us3.php.net/feed.atom" title="PHP: Hypertext Preprocessor">
+
+ <link rel="canonical" href="http://php.net/manual/en/function.explode.php">
+ <link rel="shorturl" href="http://php.net/explode">
+ <link rel="alternate" href="http://php.net/explode" hreflang="x-default">
+
+ <link rel="contents" href="http://us3.php.net/manual/en/index.php">
+ <link rel="index" href="http://us3.php.net/manual/en/ref.strings.php">
+ <link rel="prev" href="http://us3.php.net/manual/en/function.echo.php">
+ <link rel="next" href="http://us3.php.net/manual/en/function.fprintf.php">
+ <link rel="alternate" href="http://us3.php.net/manual/en/function.explode.php" hreflang="en">
+ <link rel="alternate" href="http://us3.php.net/manual/pt_BR/function.explode.php" hreflang="pt_BR">
+ <link rel="alternate" href="http://us3.php.net/manual/zh/function.explode.php" hreflang="zh">
+ <link rel="alternate" href="http://us3.php.net/manual/fr/function.explode.php" hreflang="fr">
+ <link rel="alternate" href="http://us3.php.net/manual/de/function.explode.php" hreflang="de">
+ <link rel="alternate" href="http://us3.php.net/manual/ja/function.explode.php" hreflang="ja">
+ <link rel="alternate" href="http://us3.php.net/manual/kr/function.explode.php" hreflang="kr">
+ <link rel="alternate" href="http://us3.php.net/manual/ro/function.explode.php" hreflang="ro">
+ <link rel="alternate" href="http://us3.php.net/manual/ru/function.explode.php" hreflang="ru">
+ <link rel="alternate" href="http://us3.php.net/manual/es/function.explode.php" hreflang="es">
+ <link rel="alternate" href="http://us3.php.net/manual/tr/function.explode.php" hreflang="tr">
+
+<link rel="stylesheet" type="text/css" href="./PHP_ explode - Manual_files/cached.php" media="screen">
+<link rel="stylesheet" type="text/css" href="./PHP_ explode - Manual_files/cached(1).php" media="screen">
+<link rel="stylesheet" type="text/css" href="./PHP_ explode - Manual_files/cached(2).php" media="screen">
+<link rel="stylesheet" type="text/css" href="./PHP_ explode - Manual_files/cached(3).php" media="screen">
+
+ <!--[if lte IE 7]>
+ <link rel="stylesheet" type="text/css" href="http://us3.php.net/styles/workarounds.ie7.css" media="screen">
+ <![endif]-->
+
+ <!--[if lte IE 8]>
+ <script type="text/javascript">
+  window.brokenIE = true;
+ </script>
+ <![endif]-->
+
+ <!--[if lte IE 9]>
+ <link rel="stylesheet" type="text/css" href="http://us3.php.net/styles/workarounds.ie9.css" media="screen">
+ <![endif]-->
+
+ <!--[if IE]>
+ <script type="text/javascript" src="http://us3.php.net/js/ext/html5.js"></script>
+ <![endif]-->
+
+ <!--<base href="http://us3.php.net/manual/en/function.explode.php">--><base href=".">
+
+<script type="text/javascript" src="./PHP_ explode - Manual_files/63_4852e.js"></script><script type="text/javascript" src="./PHP_ explode - Manual_files/cstf.js"></script><script type="text/javascript" src="./PHP_ explode - Manual_files/tsr.js"></script><style type="text/css">.dgaijakslja_type_def{display: table !important;text-align:center !important;margin: 0 auto;}.dgaijakslja_type_def .dgaijakslja_row{display:table-row !important}.dgaijakslja_type_def .dgaijakslja_col{display:table-cell !important;padding:5px !important}.dgaijakslja_type_def .dgaijakslja_row .dgaijakslja_col img{}.dgaijakslja_type_def .dgaijakslja_row .dgaijakslja_col div.dgaijakslja_title{font-size:13px}.dgaijakslja_type_def .dgaijakslja_row .dgaijakslja_col div.dgaijakslja_desc{}.dgaijakslja_type_xxx{display: table !important;text-align:center !important;margin: 0 auto;}.dgaijakslja_type_xxx .dgaijakslja_row{display:table-row !important}.dgaijakslja_type_xxx .dgaijakslja_col{display:table-cell !important;padding:5px !important}.dgaijakslja_type_xxx .dgaijakslja_row .dgaijakslja_col img{}.dgaijakslja_type_xxx .dgaijakslja_row .dgaijakslja_col div.dgaijakslja_title{font-size:13px}.dgaijakslja_type_xxx .dgaijakslja_row .dgaijakslja_col div.dgaijakslja_desc{}</style><script type="text/javascript" src="./PHP_ explode - Manual_files/adv_out.js"></script><script type="text/javascript" src="./PHP_ explode - Manual_files/adv_out(1).js"></script><script>var tvt = tvt || {}; tvt.captureVariables = function (a){for(var b=new Date,c={},d=Object.keys(a||{}),e=0,f;f=d[e];e++)if(a.hasOwnProperty(f)&&
+"undefined"!=typeof a[f])try{var g=[];c[f]=JSON.stringify(a[f],function(a,b){try{if("function"!==typeof b){if("object"===typeof b&&null!==b){if(b instanceof HTMLElement||b instanceof Node||-1!=g.indexOf(b))return;g.push(b)}return b}}catch(c){}})}catch(l){}a=document.createEvent("CustomEvent");a.initCustomEvent("TvtRetrievedVariablesEvent",!0,!0,{variables:c,date:b});window.dispatchEvent(a)};window.setTimeout(function() {tvt.captureVariables({'dataLayer': window['dataLayer']})}, 2000);</script></head>
+<body class="docs ">
+
+<nav id="head-nav" class="navbar navbar-fixed-top">
+  <div class="navbar-inner clearfix">
+    <a href="http://us3.php.net/" class="brand"><img src="./PHP_ explode - Manual_files/php-logo.svg" width="48" height="24" alt="php"></a>
+    <div id="mainmenu-toggle-overlay"></div>
+    <input type="checkbox" id="mainmenu-toggle">
+    <ul class="nav">
+      <li class=""><a href="http://us3.php.net/downloads">Downloads</a></li>
+      <li class="active"><a href="http://us3.php.net/docs.php">Documentation</a></li>
+      <li class=""><a href="http://us3.php.net/get-involved">Get Involved</a></li>
+      <li class=""><a href="http://us3.php.net/support">Help</a></li>
+    </ul>
+    <form class="navbar-search" id="topsearch" action="http://us3.php.net/search.php">
+      <input type="hidden" name="show" value="quickref">
+      <span class="twitter-typeahead" style="position: relative; display: inline-block;"><input class="tt-hint search-query" type="text" autocomplete="off" spellcheck="off" disabled="" style="position: absolute; top: 0px; left: 0px; border-color: transparent; box-shadow: none; background: none 0% 0% / auto repeat scroll padding-box border-box rgb(255, 255, 255);"><input type="search" name="pattern" class="search-query tt-query" placeholder="Search" accesskey="s" autocomplete="off" spellcheck="false" dir="auto" style="position: relative; vertical-align: top; background-color: transparent;"><input type="submit" style="visibility: hidden; position: fixed"><span style="position: absolute; left: -9999px; visibility: hidden; white-space: nowrap; font-family: &quot;Fira Sans&quot;, &quot;Source Sans Pro&quot;, Helvetica, Arial, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: auto; text-transform: none;"></span><span class="tt-dropdown-menu" style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none;"></span></span>
+    </form>
+  </div>
+  <div id="flash-message"></div>
+</nav>
+<div class="headsup"><a href="http://us3.php.net/conferences/index.php#id2017-12-27-1">PHPKonf: Istanbul PHP Conference 2017</a></div>
+<nav id="trick"><div><dl>
+<dt><a href="http://us3.php.net/manual/en/getting-started.php">Getting Started</a></dt>
+	<dd><a href="http://us3.php.net/manual/en/introduction.php">Introduction</a></dd>
+	<dd><a href="http://us3.php.net/manual/en/tutorial.php">A simple tutorial</a></dd>
+<dt><a href="http://us3.php.net/manual/en/langref.php">Language Reference</a></dt>
+	<dd><a href="http://us3.php.net/manual/en/language.basic-syntax.php">Basic syntax</a></dd>
+	<dd><a href="http://us3.php.net/manual/en/language.types.php">Types</a></dd>
+	<dd><a href="http://us3.php.net/manual/en/language.variables.php">Variables</a></dd>
+	<dd><a href="http://us3.php.net/manual/en/language.constants.php">Constants</a></dd>
+	<dd><a href="http://us3.php.net/manual/en/language.expressions.php">Expressions</a></dd>
+	<dd><a href="http://us3.php.net/manual/en/language.operators.php">Operators</a></dd>
+	<dd><a href="http://us3.php.net/manual/en/language.control-structures.php">Control Structures</a></dd>
+	<dd><a href="http://us3.php.net/manual/en/language.functions.php">Functions</a></dd>
+	<dd><a href="http://us3.php.net/manual/en/language.oop5.php">Classes and Objects</a></dd>
+	<dd><a href="http://us3.php.net/manual/en/language.namespaces.php">Namespaces</a></dd>
+	<dd><a href="http://us3.php.net/manual/en/language.errors.php">Errors</a></dd>
+	<dd><a href="http://us3.php.net/manual/en/language.exceptions.php">Exceptions</a></dd>
+	<dd><a href="http://us3.php.net/manual/en/language.generators.php">Generators</a></dd>
+	<dd><a href="http://us3.php.net/manual/en/language.references.php">References Explained</a></dd>
+	<dd><a href="http://us3.php.net/manual/en/reserved.variables.php">Predefined Variables</a></dd>
+	<dd><a href="http://us3.php.net/manual/en/reserved.exceptions.php">Predefined Exceptions</a></dd>
+	<dd><a href="http://us3.php.net/manual/en/reserved.interfaces.php">Predefined Interfaces and Classes</a></dd>
+	<dd><a href="http://us3.php.net/manual/en/context.php">Context options and parameters</a></dd>
+	<dd><a href="http://us3.php.net/manual/en/wrappers.php">Supported Protocols and Wrappers</a></dd>
+</dl>
+<dl>
+<dt><a href="http://us3.php.net/manual/en/security.php">Security</a></dt>
+	<dd><a href="http://us3.php.net/manual/en/security.intro.php">Introduction</a></dd>
+	<dd><a href="http://us3.php.net/manual/en/security.general.php">General considerations</a></dd>
+	<dd><a href="http://us3.php.net/manual/en/security.cgi-bin.php">Installed as CGI binary</a></dd>
+	<dd><a href="http://us3.php.net/manual/en/security.apache.php">Installed as an Apache module</a></dd>
+	<dd><a href="http://us3.php.net/manual/en/security.sessions.php">Session Security</a></dd>
+	<dd><a href="http://us3.php.net/manual/en/security.filesystem.php">Filesystem Security</a></dd>
+	<dd><a href="http://us3.php.net/manual/en/security.database.php">Database Security</a></dd>
+	<dd><a href="http://us3.php.net/manual/en/security.errors.php">Error Reporting</a></dd>
+	<dd><a href="http://us3.php.net/manual/en/security.globals.php">Using Register Globals</a></dd>
+	<dd><a href="http://us3.php.net/manual/en/security.variables.php">User Submitted Data</a></dd>
+	<dd><a href="http://us3.php.net/manual/en/security.magicquotes.php">Magic Quotes</a></dd>
+	<dd><a href="http://us3.php.net/manual/en/security.hiding.php">Hiding PHP</a></dd>
+	<dd><a href="http://us3.php.net/manual/en/security.current.php">Keeping Current</a></dd>
+<dt><a href="http://us3.php.net/manual/en/features.php">Features</a></dt>
+	<dd><a href="http://us3.php.net/manual/en/features.http-auth.php">HTTP authentication with PHP</a></dd>
+	<dd><a href="http://us3.php.net/manual/en/features.cookies.php">Cookies</a></dd>
+	<dd><a href="http://us3.php.net/manual/en/features.sessions.php">Sessions</a></dd>
+	<dd><a href="http://us3.php.net/manual/en/features.xforms.php">Dealing with XForms</a></dd>
+	<dd><a href="http://us3.php.net/manual/en/features.file-upload.php">Handling file uploads</a></dd>
+	<dd><a href="http://us3.php.net/manual/en/features.remote-files.php">Using remote files</a></dd>
+	<dd><a href="http://us3.php.net/manual/en/features.connection-handling.php">Connection handling</a></dd>
+	<dd><a href="http://us3.php.net/manual/en/features.persistent-connections.php">Persistent Database Connections</a></dd>
+	<dd><a href="http://us3.php.net/manual/en/features.safe-mode.php">Safe Mode</a></dd>
+	<dd><a href="http://us3.php.net/manual/en/features.commandline.php">Command line usage</a></dd>
+	<dd><a href="http://us3.php.net/manual/en/features.gc.php">Garbage Collection</a></dd>
+	<dd><a href="http://us3.php.net/manual/en/features.dtrace.php">DTrace Dynamic Tracing</a></dd>
+</dl>
+<dl>
+<dt><a href="http://us3.php.net/manual/en/funcref.php">Function Reference</a></dt>
+	<dd><a href="http://us3.php.net/manual/en/refs.basic.php.php">Affecting PHP's Behaviour</a></dd>
+	<dd><a href="http://us3.php.net/manual/en/refs.utilspec.audio.php">Audio Formats Manipulation</a></dd>
+	<dd><a href="http://us3.php.net/manual/en/refs.remote.auth.php">Authentication Services</a></dd>
+	<dd><a href="http://us3.php.net/manual/en/refs.utilspec.cmdline.php">Command Line Specific Extensions</a></dd>
+	<dd><a href="http://us3.php.net/manual/en/refs.compression.php">Compression and Archive Extensions</a></dd>
+	<dd><a href="http://us3.php.net/manual/en/refs.creditcard.php">Credit Card Processing</a></dd>
+	<dd><a href="http://us3.php.net/manual/en/refs.crypto.php">Cryptography Extensions</a></dd>
+	<dd><a href="http://us3.php.net/manual/en/refs.database.php">Database Extensions</a></dd>
+	<dd><a href="http://us3.php.net/manual/en/refs.calendar.php">Date and Time Related Extensions</a></dd>
+	<dd><a href="http://us3.php.net/manual/en/refs.fileprocess.file.php">File System Related Extensions</a></dd>
+	<dd><a href="http://us3.php.net/manual/en/refs.international.php">Human Language and Character Encoding Support</a></dd>
+	<dd><a href="http://us3.php.net/manual/en/refs.utilspec.image.php">Image Processing and Generation</a></dd>
+	<dd><a href="http://us3.php.net/manual/en/refs.remote.mail.php">Mail Related Extensions</a></dd>
+	<dd><a href="http://us3.php.net/manual/en/refs.math.php">Mathematical Extensions</a></dd>
+	<dd><a href="http://us3.php.net/manual/en/refs.utilspec.nontext.php">Non-Text MIME Output</a></dd>
+	<dd><a href="http://us3.php.net/manual/en/refs.fileprocess.process.php">Process Control Extensions</a></dd>
+	<dd><a href="http://us3.php.net/manual/en/refs.basic.other.php">Other Basic Extensions</a></dd>
+	<dd><a href="http://us3.php.net/manual/en/refs.remote.other.php">Other Services</a></dd>
+	<dd><a href="http://us3.php.net/manual/en/refs.search.php">Search Engine Extensions</a></dd>
+	<dd><a href="http://us3.php.net/manual/en/refs.utilspec.server.php">Server Specific Extensions</a></dd>
+	<dd><a href="http://us3.php.net/manual/en/refs.basic.session.php">Session Extensions</a></dd>
+	<dd><a href="http://us3.php.net/manual/en/refs.basic.text.php">Text Processing</a></dd>
+	<dd><a href="http://us3.php.net/manual/en/refs.basic.vartype.php">Variable and Type Related Extensions</a></dd>
+	<dd><a href="http://us3.php.net/manual/en/refs.webservice.php">Web Services</a></dd>
+	<dd><a href="http://us3.php.net/manual/en/refs.utilspec.windows.php">Windows Only Extensions</a></dd>
+	<dd><a href="http://us3.php.net/manual/en/refs.xml.php">XML Manipulation</a></dd>
+	<dd><a href="http://us3.php.net/manual/en/refs.ui.php">GUI Extensions</a></dd>
+</dl>
+<dl>
+<dt>Keyboard Shortcuts</dt><dt>?</dt>
+<dd>This help</dd>
+<dt>j</dt>
+<dd>Next menu item</dd>
+<dt>k</dt>
+<dd>Previous menu item</dd>
+<dt>g p</dt>
+<dd>Previous man page</dd>
+<dt>g n</dt>
+<dd>Next man page</dd>
+<dt>G</dt>
+<dd>Scroll to bottom</dd>
+<dt>g g</dt>
+<dd>Scroll to top</dd>
+<dt>g h</dt>
+<dd>Goto homepage</dd>
+<dt>g s</dt>
+<dd>Goto search<br>(current page)</dd>
+<dt>/</dt>
+<dd>Focus search box</dd>
+</dl></div></nav>
+<div id="goto">
+    <div class="search">
+         <div class="text"></div>
+         <div class="results"><ul></ul></div>
+   </div>
+</div>
+
+  <div id="breadcrumbs" class="clearfix">
+    <div id="breadcrumbs-inner">
+          <div class="next">
+        <a href="http://us3.php.net/manual/en/function.fprintf.php">
+          fprintf »
+        </a>
+      </div>
+              <div class="prev">
+        <a href="http://us3.php.net/manual/en/function.echo.php">
+          « echo        </a>
+      </div>
+          <ul>
+            <li><a href="http://us3.php.net/manual/en/index.php">PHP Manual</a></li>      <li><a href="http://us3.php.net/manual/en/funcref.php">Function Reference</a></li>      <li><a href="http://us3.php.net/manual/en/refs.basic.text.php">Text Processing</a></li>      <li><a href="http://us3.php.net/manual/en/book.strings.php">Strings</a></li>      <li><a href="http://us3.php.net/manual/en/ref.strings.php">String Functions</a></li>      </ul>
+    </div>
+  </div>
+
+
+
+
+<div id="layout" class="clearfix">
+  <section id="layout-content">
+  <div class="page-tools">
+    <div class="change-language">
+      <form action="http://us3.php.net/manual/change.php" method="get" id="changelang" name="changelang">
+        <fieldset>
+          <label for="changelang-langs">Change language:</label>
+          <select onchange="document.changelang.submit()" name="page" id="changelang-langs">
+            <option value="en/function.explode.php" selected="selected">English</option>
+            <option value="pt_BR/function.explode.php">Brazilian Portuguese</option>
+            <option value="zh/function.explode.php">Chinese (Simplified)</option>
+            <option value="fr/function.explode.php">French</option>
+            <option value="de/function.explode.php">German</option>
+            <option value="ja/function.explode.php">Japanese</option>
+            <option value="kr/function.explode.php">Korean</option>
+            <option value="ro/function.explode.php">Romanian</option>
+            <option value="ru/function.explode.php">Russian</option>
+            <option value="es/function.explode.php">Spanish</option>
+            <option value="tr/function.explode.php">Turkish</option>
+            <option value="help-translate.php">Other</option>
+          </select>
+        </fieldset>
+      </form>
+    </div>
+    <div class="edit-bug">
+      <a href="https://edit.php.net/?project=PHP&amp;perm=en/function.explode.php">Edit</a>
+      <a href="https://bugs.php.net/report.php?bug_type=Documentation+problem&amp;manpage=function.explode">Report a Bug</a>
+    </div>
+  </div><div id="function.explode" class="refentry">
+ <div class="refnamediv">
+  <h1 class="refname">explode</h1>
+  <p class="verinfo">(PHP 4, PHP 5, PHP 7)</p><p class="refpurpose"><span class="refname">explode</span> — <span class="dc-title">Split a string by string</span></p>
+
+ </div>
+ 
+ <div class="refsect1 description" id="refsect1-function.explode-description">
+  <h3 class="title">Description<a class="genanchor" href="http://us3.php.net/manual/en/function.explode.php#refsect1-function.explode-description"> ¶</a></h3>
+  <div class="methodsynopsis dc-description">
+   <span class="type">array</span> <span class="methodname"><strong>explode</strong></span>
+    ( <span class="methodparam"><span class="type">string</span> <code class="parameter">$delimiter</code></span>
+   , <span class="methodparam"><span class="type">string</span> <code class="parameter">$string</code></span>
+   [, <span class="methodparam"><span class="type">int</span> <code class="parameter">$limit</code><span class="initializer"> = PHP_INT_MAX</span></span>
+  ] )</div>
+
+  <p class="para rdfs-comment">
+   Returns an array of strings, each of which is a substring of
+   <code class="parameter">string</code> formed by splitting it on
+   boundaries formed by the string <code class="parameter">delimiter</code>.
+  </p>
+ </div>
+
+
+ <div class="refsect1 parameters" id="refsect1-function.explode-parameters">
+  <h3 class="title">Parameters<a class="genanchor" href="http://us3.php.net/manual/en/function.explode.php#refsect1-function.explode-parameters"> ¶</a></h3>
+  <dl>
+
+    
+     <dt>
+<code class="parameter">delimiter</code></dt>
+
+     <dd>
+
+      <p class="para">
+       The boundary string.
+      </p>
+     </dd>
+
+    
+    
+     <dt>
+<code class="parameter">string</code></dt>
+
+     <dd>
+
+      <p class="para">
+       The input string.
+      </p>
+     </dd>
+
+    
+    
+     <dt>
+<code class="parameter">limit</code></dt>
+
+     <dd>
+
+      <p class="para">
+       If <code class="parameter">limit</code> is set and positive, the returned array will contain
+       a maximum of <code class="parameter">limit</code> elements with the last
+       element containing the rest of <code class="parameter">string</code>.
+      </p>
+      <p class="para">
+       If the <code class="parameter">limit</code> parameter is negative, all components
+       except the last -<code class="parameter">limit</code> are returned.
+      </p>
+      <p class="para">
+       If the <code class="parameter">limit</code> parameter is zero, then this is treated as 1.
+      </p>
+     </dd>
+
+    
+   </dl>
+
+  
+  <blockquote class="note"><p><strong class="note">Note</strong>: 
+   </p><p class="para">
+    Although <span class="function"><a href="http://us3.php.net/manual/en/function.implode.php" class="function">implode()</a></span> can, for historical reasons,
+    accept its parameters in either order,
+    <span class="function"><strong>explode()</strong></span> cannot. You must ensure that the
+    <code class="parameter">delimiter</code> argument comes before the
+    <code class="parameter">string</code> argument.
+   </p>
+  </blockquote>
+ </div>
+
+
+ <div class="refsect1 returnvalues" id="refsect1-function.explode-returnvalues">
+  <h3 class="title">Return Values<a class="genanchor" href="http://us3.php.net/manual/en/function.explode.php#refsect1-function.explode-returnvalues"> ¶</a></h3>
+  <p class="para">
+   Returns an <span class="type"><a href="http://us3.php.net/manual/en/language.types.array.php" class="type array">array</a></span> of <span class="type"><a href="http://us3.php.net/manual/en/language.types.string.php" class="type string">string</a></span>s
+   created by splitting the <code class="parameter">string</code> parameter on
+   boundaries formed by the <code class="parameter">delimiter</code>.
+  </p>
+  <p class="para">
+   If <code class="parameter">delimiter</code> is an empty <span class="type"><a href="http://us3.php.net/manual/en/language.types.string.php" class="type string">string</a></span> (""),
+   <span class="function"><strong>explode()</strong></span> will return <strong><code>FALSE</code></strong>.
+   If <code class="parameter">delimiter</code> contains a value that is not
+   contained in <code class="parameter">string</code> and a negative
+   <code class="parameter">limit</code> is used, then an empty <span class="type"><a href="http://us3.php.net/manual/en/language.types.array.php" class="type array">array</a></span> will be
+   returned, otherwise an <span class="type"><a href="http://us3.php.net/manual/en/language.types.array.php" class="type array">array</a></span> containing
+   <code class="parameter">string</code> will be returned.
+  </p>
+ </div>
+
+
+ <div class="refsect1 changelog" id="refsect1-function.explode-changelog">
+  <h3 class="title">Changelog<a class="genanchor" href="http://us3.php.net/manual/en/function.explode.php#refsect1-function.explode-changelog"> ¶</a></h3>
+  <table class="doctable informaltable">
+    
+     <thead>
+      <tr>
+       <th>Version</th>
+       <th>Description</th>
+      </tr>
+
+     </thead>
+
+     <tbody class="tbody">
+      <tr>
+       <td>5.1.0</td>
+       <td>
+        Support for negative <code class="parameter">limit</code>s was added
+       </td>
+      </tr>
+
+     </tbody>
+    
+   </table>
+
+  
+ </div>
+
+
+ <div class="refsect1 examples" id="refsect1-function.explode-examples">
+  <h3 class="title">Examples<a class="genanchor" href="http://us3.php.net/manual/en/function.explode.php#refsect1-function.explode-examples"> ¶</a></h3>
+  <div class="example" id="example-5425">
+    <p><strong>Example #1 <span class="function"><strong>explode()</strong></span> examples</strong></p>
+    <div class="example-contents">
+<div class="phpcode"><code><span style="color: #000000">
+<span style="color: #0000BB">&lt;?php<br></span><span style="color: #FF8000">//&nbsp;Example&nbsp;1<br></span><span style="color: #0000BB">$pizza&nbsp;&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">"piece1&nbsp;piece2&nbsp;piece3&nbsp;piece4&nbsp;piece5&nbsp;piece6"</span><span style="color: #007700">;<br></span><span style="color: #0000BB">$pieces&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">explode</span><span style="color: #007700">(</span><span style="color: #DD0000">"&nbsp;"</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$pizza</span><span style="color: #007700">);<br>echo&nbsp;</span><span style="color: #0000BB">$pieces</span><span style="color: #007700">[</span><span style="color: #0000BB">0</span><span style="color: #007700">];&nbsp;</span><span style="color: #FF8000">//&nbsp;piece1<br></span><span style="color: #007700">echo&nbsp;</span><span style="color: #0000BB">$pieces</span><span style="color: #007700">[</span><span style="color: #0000BB">1</span><span style="color: #007700">];&nbsp;</span><span style="color: #FF8000">//&nbsp;piece2<br><br>//&nbsp;Example&nbsp;2<br></span><span style="color: #0000BB">$data&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">"foo:*:1023:1000::/home/foo:/bin/sh"</span><span style="color: #007700">;<br>list(</span><span style="color: #0000BB">$user</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$pass</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$uid</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$gid</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$gecos</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$home</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$shell</span><span style="color: #007700">)&nbsp;=&nbsp;</span><span style="color: #0000BB">explode</span><span style="color: #007700">(</span><span style="color: #DD0000">":"</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$data</span><span style="color: #007700">);<br>echo&nbsp;</span><span style="color: #0000BB">$user</span><span style="color: #007700">;&nbsp;</span><span style="color: #FF8000">//&nbsp;foo<br></span><span style="color: #007700">echo&nbsp;</span><span style="color: #0000BB">$pass</span><span style="color: #007700">;&nbsp;</span><span style="color: #FF8000">//&nbsp;*<br><br></span><span style="color: #0000BB">?&gt;</span>
+</span>
+</code></div>
+    </div>
+
+   </div>
+  
+  <div class="example" id="example-5426">
+    <p><strong>Example #2 <span class="function"><strong>explode()</strong></span> return examples</strong></p>
+    <div class="example-contents">
+<div class="phpcode"><code><span style="color: #000000">
+<span style="color: #0000BB">&lt;?php<br></span><span style="color: #FF8000">/*&nbsp;<br>&nbsp;&nbsp;&nbsp;A&nbsp;string&nbsp;that&nbsp;doesn't&nbsp;contain&nbsp;the&nbsp;delimiter&nbsp;will&nbsp;simply<br>&nbsp;&nbsp;&nbsp;return&nbsp;a&nbsp;one-length&nbsp;array&nbsp;of&nbsp;the&nbsp;original&nbsp;string.<br>*/<br></span><span style="color: #0000BB">$input1&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">"hello"</span><span style="color: #007700">;<br></span><span style="color: #0000BB">$input2&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">"hello,there"</span><span style="color: #007700">;<br></span><span style="color: #0000BB">$input3&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">','</span><span style="color: #007700">;<br></span><span style="color: #0000BB">var_dump</span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">explode</span><span style="color: #007700">(&nbsp;</span><span style="color: #DD0000">','</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$input1&nbsp;</span><span style="color: #007700">)&nbsp;);<br></span><span style="color: #0000BB">var_dump</span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">explode</span><span style="color: #007700">(&nbsp;</span><span style="color: #DD0000">','</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$input2&nbsp;</span><span style="color: #007700">)&nbsp;);<br></span><span style="color: #0000BB">var_dump</span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">explode</span><span style="color: #007700">(&nbsp;</span><span style="color: #DD0000">','</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$input3&nbsp;</span><span style="color: #007700">)&nbsp;);<br><br></span><span style="color: #0000BB">?&gt;</span>
+</span>
+</code></div>
+    </div>
+
+    <div class="example-contents"><p>The above example will output:</p></div>
+    <div class="example-contents screen">
+<div class="cdata"><pre>array(1)
+(
+    [0] =&gt; string(5) "hello"
+)
+array(2)
+(
+    [0] =&gt; string(5) "hello"
+    [1] =&gt; string(5) "there"
+)
+array(2)
+(
+    [0] =&gt; string(0) ""
+    [1] =&gt; string(0) ""
+)
+</pre></div>
+    </div>
+   </div>
+  
+  <div class="example" id="example-5427">
+    <p><strong>Example #3 <code class="parameter">limit</code> parameter examples</strong></p>
+    <div class="example-contents">
+<div class="phpcode"><code><span style="color: #000000">
+<span style="color: #0000BB">&lt;?php<br>$str&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'one|two|three|four'</span><span style="color: #007700">;<br><br></span><span style="color: #FF8000">//&nbsp;positive&nbsp;limit<br></span><span style="color: #0000BB">print_r</span><span style="color: #007700">(</span><span style="color: #0000BB">explode</span><span style="color: #007700">(</span><span style="color: #DD0000">'|'</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$str</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">2</span><span style="color: #007700">));<br><br></span><span style="color: #FF8000">//&nbsp;negative&nbsp;limit&nbsp;(since&nbsp;PHP&nbsp;5.1)<br></span><span style="color: #0000BB">print_r</span><span style="color: #007700">(</span><span style="color: #0000BB">explode</span><span style="color: #007700">(</span><span style="color: #DD0000">'|'</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$str</span><span style="color: #007700">,&nbsp;-</span><span style="color: #0000BB">1</span><span style="color: #007700">));<br></span><span style="color: #0000BB">?&gt;</span>
+</span>
+</code></div>
+    </div>
+
+    <div class="example-contents"><p>The above example will output:</p></div>
+    <div class="example-contents screen">
+<div class="cdata"><pre>Array
+(
+    [0] =&gt; one
+    [1] =&gt; two|three|four
+)
+Array
+(
+    [0] =&gt; one
+    [1] =&gt; two
+    [2] =&gt; three
+)
+</pre></div>
+    </div>
+   </div>
+  
+ </div>
+
+
+ <div class="refsect1 notes" id="refsect1-function.explode-notes">
+  <h3 class="title">Notes<a class="genanchor" href="http://us3.php.net/manual/en/function.explode.php#refsect1-function.explode-notes"> ¶</a></h3>
+  <blockquote class="note"><p><strong class="note">Note</strong>: <span class="simpara">This function is
+binary-safe.</span></p></blockquote>
+ </div>
+
+
+ <div class="refsect1 seealso" id="refsect1-function.explode-seealso">
+  <h3 class="title">See Also<a class="genanchor" href="http://us3.php.net/manual/en/function.explode.php#refsect1-function.explode-seealso"> ¶</a></h3>
+  <ul class="simplelist">
+    <li class="member"><span class="function"><a href="http://us3.php.net/manual/en/function.preg-split.php" class="function" rel="rdfs-seeAlso">preg_split()</a> - Split string by a regular expression</span></li>
+    <li class="member"><span class="function"><a href="http://us3.php.net/manual/en/function.str-split.php" class="function" rel="rdfs-seeAlso">str_split()</a> - Convert a string to an array</span></li>
+    <li class="member"><span class="function"><a href="http://us3.php.net/manual/en/function.mb-split.php" class="function" rel="rdfs-seeAlso">mb_split()</a> - Split multibyte string using regular expression</span></li>
+    <li class="member"><span class="function"><a href="http://us3.php.net/manual/en/function.str-word-count.php" class="function" rel="rdfs-seeAlso">str_word_count()</a> - Return information about words used in a string</span></li>
+    <li class="member"><span class="function"><a href="http://us3.php.net/manual/en/function.strtok.php" class="function" rel="rdfs-seeAlso">strtok()</a> - Tokenize string</span></li>
+    <li class="member"><span class="function"><a href="http://us3.php.net/manual/en/function.implode.php" class="function" rel="rdfs-seeAlso">implode()</a> - Join array elements with a string</span></li>
+   </ul>
+  
+ </div>
+
+
+</div>
+<section id="usernotes">
+ <div class="head">
+  <span class="action"><a href="http://us3.php.net/manual/add-note.php?sect=function.explode&amp;redirect=http://us3.php.net/manual/en/function.explode.php"><img src="./PHP_ explode - Manual_files/notes-add@2x.png" alt="add a note" width="12" height="12"> <small>add a note</small></a></span>
+  <h3 class="title">User Contributed Notes <span class="count">23 notes</span></h3>
+ </div><div id="allnotes">
+  <div class="note" id="111307">  <div class="votes">
+    <div id="Vu111307">
+    <a href="http://us3.php.net/manual/vote-note.php?id=111307&amp;page=function.explode&amp;vote=up" title="Vote up!" class="usernotes-voteu">up</a>
+    </div>
+    <div id="Vd111307">
+    <a href="http://us3.php.net/manual/vote-note.php?id=111307&amp;page=function.explode&amp;vote=down" title="Vote down!" class="usernotes-voted">down</a>
+    </div>
+    <div class="tally" id="V111307" title="78% like this...">
+    219
+    </div>
+  </div>
+  <a href="http://us3.php.net/manual/en/function.explode.php#111307" class="name">
+  <strong class="user"><em>php at metehanarslan dot com</em></strong></a><a class="genanchor" href="http://us3.php.net/manual/en/function.explode.php#111307"> ¶</a><div class="date" title="2013-02-04 03:43"><strong>3 years ago</strong></div>
+  <div class="text" id="Hcom111307" style="opacity: 1;">
+<div class="phpcode"><code><span class="html">
+Here is my approach to have exploded output with multiple delimiter. <br><br><span class="default">&lt;?php<br><br></span><span class="comment">//$delimiters has to be array<br>//$string has to be array<br><br></span><span class="keyword">function </span><span class="default">multiexplode </span><span class="keyword">(</span><span class="default">$delimiters</span><span class="keyword">,</span><span class="default">$string</span><span class="keyword">) {<br>&nbsp; &nbsp; <br>&nbsp; &nbsp; </span><span class="default">$ready </span><span class="keyword">= </span><span class="default">str_replace</span><span class="keyword">(</span><span class="default">$delimiters</span><span class="keyword">, </span><span class="default">$delimiters</span><span class="keyword">[</span><span class="default">0</span><span class="keyword">], </span><span class="default">$string</span><span class="keyword">);<br>&nbsp; &nbsp; </span><span class="default">$launch </span><span class="keyword">= </span><span class="default">explode</span><span class="keyword">(</span><span class="default">$delimiters</span><span class="keyword">[</span><span class="default">0</span><span class="keyword">], </span><span class="default">$ready</span><span class="keyword">);<br>&nbsp; &nbsp; return&nbsp; </span><span class="default">$launch</span><span class="keyword">;<br>}<br><br></span><span class="default">$text </span><span class="keyword">= </span><span class="string">"here is a sample: this text, and this will be exploded. this also | this one too :)"</span><span class="keyword">;<br></span><span class="default">$exploded </span><span class="keyword">= </span><span class="default">multiexplode</span><span class="keyword">(array(</span><span class="string">","</span><span class="keyword">,</span><span class="string">"."</span><span class="keyword">,</span><span class="string">"|"</span><span class="keyword">,</span><span class="string">":"</span><span class="keyword">),</span><span class="default">$text</span><span class="keyword">);<br><br></span><span class="default">print_r</span><span class="keyword">(</span><span class="default">$exploded</span><span class="keyword">);<br><br></span><span class="comment">//And output will be like this:<br>// Array<br>// (<br>//&nbsp; &nbsp; [0] =&gt; here is a sample<br>//&nbsp; &nbsp; [1] =&gt;&nbsp; this text<br>//&nbsp; &nbsp; [2] =&gt;&nbsp; and this will be exploded<br>//&nbsp; &nbsp; [3] =&gt;&nbsp; this also <br>//&nbsp; &nbsp; [4] =&gt;&nbsp; this one too <br>//&nbsp; &nbsp; [5] =&gt; )<br>// )<br><br></span><span class="default">?&gt;</span>
+</span>
+</code></div>
+  </div>
+ </div>
+  <div class="note" id="99830">  <div class="votes">
+    <div id="Vu99830">
+    <a href="http://us3.php.net/manual/vote-note.php?id=99830&amp;page=function.explode&amp;vote=up" title="Vote up!" class="usernotes-voteu">up</a>
+    </div>
+    <div id="Vd99830">
+    <a href="http://us3.php.net/manual/vote-note.php?id=99830&amp;page=function.explode&amp;vote=down" title="Vote down!" class="usernotes-voted">down</a>
+    </div>
+    <div class="tally" id="V99830" title="70% like this...">
+    71
+    </div>
+  </div>
+  <a href="http://us3.php.net/manual/en/function.explode.php#99830" class="name">
+  <strong class="user"><em>tiago dot dias at flow-me dot com</em></strong></a><a class="genanchor" href="http://us3.php.net/manual/en/function.explode.php#99830"> ¶</a><div class="date" title="2010-09-08 09:40"><strong>6 years ago</strong></div>
+  <div class="text" id="Hcom99830" style="opacity: 1;">
+<div class="phpcode"><code><span class="html">
+Beaware splitting empty strings.<br><br><span class="default">&lt;?php<br>$str </span><span class="keyword">= </span><span class="string">""</span><span class="keyword">;<br></span><span class="default">$res </span><span class="keyword">= </span><span class="default">explode</span><span class="keyword">(</span><span class="string">","</span><span class="keyword">, </span><span class="default">$str</span><span class="keyword">);<br></span><span class="default">print_r</span><span class="keyword">(</span><span class="default">$res</span><span class="keyword">);<br></span><span class="default">?&gt;<br></span><br>If you split an empty string, you get back a one-element array with 0 as the key and an empty string for the value.<br><br>Array<br>(<br>&nbsp; &nbsp; [0] =&gt; <br>)<br><br>To solve this, just use array_filter() without callback. Quoting manual page "If the callback function is not supplied, array_filter() will remove all the entries of input that are equal to FALSE.".<br><br><span class="default">&lt;?php<br>$str </span><span class="keyword">= </span><span class="string">""</span><span class="keyword">;<br></span><span class="default">$res </span><span class="keyword">= </span><span class="default">array_filter</span><span class="keyword">(</span><span class="default">explode</span><span class="keyword">(</span><span class="string">","</span><span class="keyword">, </span><span class="default">$str</span><span class="keyword">));<br></span><span class="default">print_r</span><span class="keyword">(</span><span class="default">$res</span><span class="keyword">);<br></span><span class="default">?&gt;<br></span><br>Array<br>(<br>)</span>
+</code></div>
+  </div>
+ </div>
+  <div class="note" id="111650">  <div class="votes">
+    <div id="Vu111650">
+    <a href="http://us3.php.net/manual/vote-note.php?id=111650&amp;page=function.explode&amp;vote=up" title="Vote up!" class="usernotes-voteu">up</a>
+    </div>
+    <div id="Vd111650">
+    <a href="http://us3.php.net/manual/vote-note.php?id=111650&amp;page=function.explode&amp;vote=down" title="Vote down!" class="usernotes-voted">down</a>
+    </div>
+    <div class="tally" id="V111650" title="71% like this...">
+    47
+    </div>
+  </div>
+  <a href="http://us3.php.net/manual/en/function.explode.php#111650" class="name">
+  <strong class="user"><em>Hayley Watson</em></strong></a><a class="genanchor" href="http://us3.php.net/manual/en/function.explode.php#111650"> ¶</a><div class="date" title="2013-03-12 03:13"><strong>3 years ago</strong></div>
+  <div class="text" id="Hcom111650">
+<div class="phpcode"><code><span class="html">
+The comments to use array_filter() without a callback to remove empty strings from explode's results miss the fact that array_filter will remove all elements that, to quote the manual,&nbsp; "are equal to FALSE".<br><br>This includes, in particular, the string "0", which is NOT an empty string.<br><br>If you really want to filter out empty strings, use the defining feature of the empty string that it is the only string that has a length of 0. So:<br><span class="default">&lt;?php<br>array_filter</span><span class="keyword">(</span><span class="default">explode</span><span class="keyword">(</span><span class="string">':'</span><span class="keyword">, </span><span class="string">"1:2::3:0:4"</span><span class="keyword">), </span><span class="string">'strlen'</span><span class="keyword">);<br></span><span class="default">?&gt;</span>
+</span>
+</code></div>
+  </div>
+ </div>
+  <div class="note" id="104176">  <div class="votes">
+    <div id="Vu104176">
+    <a href="http://us3.php.net/manual/vote-note.php?id=104176&amp;page=function.explode&amp;vote=up" title="Vote up!" class="usernotes-voteu">up</a>
+    </div>
+    <div id="Vd104176">
+    <a href="http://us3.php.net/manual/vote-note.php?id=104176&amp;page=function.explode&amp;vote=down" title="Vote down!" class="usernotes-voted">down</a>
+    </div>
+    <div class="tally" id="V104176" title="65% like this...">
+    31
+    </div>
+  </div>
+  <a href="http://us3.php.net/manual/en/function.explode.php#104176" class="name">
+  <strong class="user"><em>eye_syah88 at yahoo dot com</em></strong></a><a class="genanchor" href="http://us3.php.net/manual/en/function.explode.php#104176"> ¶</a><div class="date" title="2011-05-29 06:32"><strong>5 years ago</strong></div>
+  <div class="text" id="Hcom104176">
+<div class="phpcode"><code><span class="html">
+a simple one line method to explode &amp; trim whitespaces from the exploded elements<br><br>array_map('trim',explode(",",$str));<br><br>example:<br><br>$str="one&nbsp; ,two&nbsp; ,&nbsp; &nbsp; &nbsp;&nbsp; three&nbsp; ,&nbsp; four&nbsp; &nbsp; "; <br>print_r(array_map('trim',explode(",",$str)));<br><br>Output:<br><br>Array ( [0] =&gt; one [1] =&gt; two [2] =&gt; three [3] =&gt; four )</span>
+</code></div>
+  </div>
+ </div>
+  <div class="note" id="109403">  <div class="votes">
+    <div id="Vu109403">
+    <a href="http://us3.php.net/manual/vote-note.php?id=109403&amp;page=function.explode&amp;vote=up" title="Vote up!" class="usernotes-voteu">up</a>
+    </div>
+    <div id="Vd109403">
+    <a href="http://us3.php.net/manual/vote-note.php?id=109403&amp;page=function.explode&amp;vote=down" title="Vote down!" class="usernotes-voted">down</a>
+    </div>
+    <div class="tally" id="V109403" title="64% like this...">
+    17
+    </div>
+  </div>
+  <a href="http://us3.php.net/manual/en/function.explode.php#109403" class="name">
+  <strong class="user"><em>kkobashi at kobashicomputing dot com</em></strong></a><a class="genanchor" href="http://us3.php.net/manual/en/function.explode.php#109403"> ¶</a><div class="date" title="2012-07-13 09:36"><strong>4 years ago</strong></div>
+  <div class="text" id="Hcom109403">
+<div class="phpcode"><code><span class="html">
+Explode does not parse a string by delimiters, in the sense that we expect to find tokens between a starting and ending delimiter, but instead splits a string into parts by using a string as the boundary of each part. Once that boundary is discovered the string is split. Whether or not that boundary is proceeded or superseded by any data is irrelevant since the parts are determined at the point a boundary is discovered. 
+<br>
+<br>For example: 
+<br>
+<br><span class="default">&lt;?php 
+<br>
+<br>var_dump</span><span class="keyword">(</span><span class="default">explode</span><span class="keyword">(</span><span class="string">"/"</span><span class="keyword">,</span><span class="string">"/"</span><span class="keyword">)); 
+<br>
+<br></span><span class="comment">/* 
+<br>&nbsp;&nbsp; Outputs 
+<br>
+<br>&nbsp;&nbsp; array(2) { 
+<br>&nbsp; &nbsp;&nbsp; [0]=&gt; 
+<br>&nbsp; &nbsp;&nbsp; string(0) "" 
+<br>&nbsp; &nbsp;&nbsp; [1]=&gt; 
+<br>&nbsp; &nbsp;&nbsp; string(0) "" 
+<br>&nbsp;&nbsp; } 
+<br>*/ 
+<br>
+<br></span><span class="default">?&gt;</span> 
+<br>
+<br>The reason we have two empty strings here is that a boundary is discovered before any data has been collected from the string. The boundary splits the string into two parts even though those parts are empty. 
+<br>
+<br>One way to avoid getting back empty parts (if you don't care for those empty parts) is to use array_filter on the result. 
+<br>
+<br><span class="default">&lt;?php 
+<br>
+<br>var_dump</span><span class="keyword">(</span><span class="default">array_filter</span><span class="keyword">(</span><span class="default">explode</span><span class="keyword">(</span><span class="string">"/"</span><span class="keyword">,</span><span class="string">"/"</span><span class="keyword">))); 
+<br>
+<br></span><span class="comment">/* 
+<br>&nbsp;&nbsp; Outputs 
+<br>
+<br>&nbsp;&nbsp; array(0) { 
+<br>&nbsp;&nbsp; } 
+<br>*/ 
+<br></span><span class="default">?&gt;</span> 
+<br>
+<br>*[This note was edited by googleguy at php dot net for clarity]*</span>
+</code></div>
+  </div>
+ </div>
+  <div class="note" id="93324">  <div class="votes">
+    <div id="Vu93324">
+    <a href="http://us3.php.net/manual/vote-note.php?id=93324&amp;page=function.explode&amp;vote=up" title="Vote up!" class="usernotes-voteu">up</a>
+    </div>
+    <div id="Vd93324">
+    <a href="http://us3.php.net/manual/vote-note.php?id=93324&amp;page=function.explode&amp;vote=down" title="Vote down!" class="usernotes-voted">down</a>
+    </div>
+    <div class="tally" id="V93324" title="63% like this...">
+    9
+    </div>
+  </div>
+  <a href="http://us3.php.net/manual/en/function.explode.php#93324" class="name">
+  <strong class="user"><em>Anonymous</em></strong></a><a class="genanchor" href="http://us3.php.net/manual/en/function.explode.php#93324"> ¶</a><div class="date" title="2009-09-02 01:18"><strong>7 years ago</strong></div>
+  <div class="text" id="Hcom93324">
+<div class="phpcode"><code><span class="html">
+<span class="default">&lt;?php<br></span><span class="comment">// converts pure string into a trimmed keyed array<br></span><span class="keyword">function </span><span class="default">string2KeyedArray</span><span class="keyword">(</span><span class="default">$string</span><span class="keyword">, </span><span class="default">$delimiter </span><span class="keyword">= </span><span class="string">','</span><span class="keyword">, </span><span class="default">$kv </span><span class="keyword">= </span><span class="string">'=&gt;'</span><span class="keyword">) {<br>&nbsp; if (</span><span class="default">$a </span><span class="keyword">= </span><span class="default">explode</span><span class="keyword">(</span><span class="default">$delimiter</span><span class="keyword">, </span><span class="default">$string</span><span class="keyword">)) { </span><span class="comment">// create parts<br>&nbsp; &nbsp; </span><span class="keyword">foreach (</span><span class="default">$a </span><span class="keyword">as </span><span class="default">$s</span><span class="keyword">) { </span><span class="comment">// each part<br>&nbsp; &nbsp; &nbsp; </span><span class="keyword">if (</span><span class="default">$s</span><span class="keyword">) {<br>&nbsp; &nbsp; &nbsp; &nbsp; if (</span><span class="default">$pos </span><span class="keyword">= </span><span class="default">strpos</span><span class="keyword">(</span><span class="default">$s</span><span class="keyword">, </span><span class="default">$kv</span><span class="keyword">)) { </span><span class="comment">// key/value delimiter<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="default">$ka</span><span class="keyword">[</span><span class="default">trim</span><span class="keyword">(</span><span class="default">substr</span><span class="keyword">(</span><span class="default">$s</span><span class="keyword">, </span><span class="default">0</span><span class="keyword">, </span><span class="default">$pos</span><span class="keyword">))] = </span><span class="default">trim</span><span class="keyword">(</span><span class="default">substr</span><span class="keyword">(</span><span class="default">$s</span><span class="keyword">, </span><span class="default">$pos </span><span class="keyword">+ </span><span class="default">strlen</span><span class="keyword">(</span><span class="default">$kv</span><span class="keyword">)));<br>&nbsp; &nbsp; &nbsp; &nbsp; } else { </span><span class="comment">// key delimiter not found<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="default">$ka</span><span class="keyword">[] = </span><span class="default">trim</span><span class="keyword">(</span><span class="default">$s</span><span class="keyword">);<br>&nbsp; &nbsp; &nbsp; &nbsp; }<br>&nbsp; &nbsp; &nbsp; }<br>&nbsp; &nbsp; }<br>&nbsp; &nbsp; return </span><span class="default">$ka</span><span class="keyword">;<br>&nbsp; }<br>} </span><span class="comment">// string2KeyedArray<br><br></span><span class="default">$string </span><span class="keyword">= </span><span class="string">'a=&gt;1, b=&gt;23&nbsp;&nbsp; , $a, c=&gt; 45% , true,d =&gt; ab c '</span><span class="keyword">;<br></span><span class="default">print_r</span><span class="keyword">(</span><span class="default">string2KeyedArray</span><span class="keyword">(</span><span class="default">$string</span><span class="keyword">));<br></span><span class="default">?&gt;<br></span><br>Array<br>(<br>&nbsp; [a] =&gt; 1<br>&nbsp; [b] =&gt; 23<br>&nbsp; [0] =&gt; $a<br>&nbsp; [c] =&gt; 45%<br>&nbsp; [1] =&gt; true<br>&nbsp; [d] =&gt; ab c<br>)</span>
+</code></div>
+  </div>
+ </div>
+  <div class="note" id="99167">  <div class="votes">
+    <div id="Vu99167">
+    <a href="http://us3.php.net/manual/vote-note.php?id=99167&amp;page=function.explode&amp;vote=up" title="Vote up!" class="usernotes-voteu">up</a>
+    </div>
+    <div id="Vd99167">
+    <a href="http://us3.php.net/manual/vote-note.php?id=99167&amp;page=function.explode&amp;vote=down" title="Vote down!" class="usernotes-voted">down</a>
+    </div>
+    <div class="tally" id="V99167" title="60% like this...">
+    20
+    </div>
+  </div>
+  <a href="http://us3.php.net/manual/en/function.explode.php#99167" class="name">
+  <strong class="user"><em>m0gr14 at gmail dot com</em></strong></a><a class="genanchor" href="http://us3.php.net/manual/en/function.explode.php#99167"> ¶</a><div class="date" title="2010-07-31 01:02"><strong>6 years ago</strong></div>
+  <div class="text" id="Hcom99167">
+<div class="phpcode"><code><span class="html">
+Here's a function for "multi" exploding a string.<br><br><span class="default">&lt;?php<br></span><span class="comment">//the function<br>//Param 1 has to be an Array<br>//Param 2 has to be a String<br></span><span class="keyword">function </span><span class="default">multiexplode </span><span class="keyword">(</span><span class="default">$delimiters</span><span class="keyword">,</span><span class="default">$string</span><span class="keyword">) {<br>&nbsp; &nbsp; </span><span class="default">$ary </span><span class="keyword">= </span><span class="default">explode</span><span class="keyword">(</span><span class="default">$delimiters</span><span class="keyword">[</span><span class="default">0</span><span class="keyword">],</span><span class="default">$string</span><span class="keyword">);<br>&nbsp; &nbsp; </span><span class="default">array_shift</span><span class="keyword">(</span><span class="default">$delimiters</span><span class="keyword">);<br>&nbsp; &nbsp; if(</span><span class="default">$delimiters </span><span class="keyword">!= </span><span class="default">NULL</span><span class="keyword">) {<br>&nbsp; &nbsp; &nbsp; &nbsp; foreach(</span><span class="default">$ary </span><span class="keyword">as </span><span class="default">$key </span><span class="keyword">=&gt; </span><span class="default">$val</span><span class="keyword">) {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="default">$ary</span><span class="keyword">[</span><span class="default">$key</span><span class="keyword">] = </span><span class="default">multiexplode</span><span class="keyword">(</span><span class="default">$delimiters</span><span class="keyword">, </span><span class="default">$val</span><span class="keyword">);<br>&nbsp; &nbsp; &nbsp; &nbsp; }<br>&nbsp; &nbsp; }<br>&nbsp; &nbsp; return&nbsp; </span><span class="default">$ary</span><span class="keyword">;<br>}<br><br></span><span class="comment">// Example of use<br></span><span class="default">$string </span><span class="keyword">= </span><span class="string">"1-2-3|4-5|6:7-8-9-0|1,2:3-4|5"</span><span class="keyword">;<br></span><span class="default">$delimiters </span><span class="keyword">= Array(</span><span class="string">","</span><span class="keyword">,</span><span class="string">":"</span><span class="keyword">,</span><span class="string">"|"</span><span class="keyword">,</span><span class="string">"-"</span><span class="keyword">);<br><br></span><span class="default">$res </span><span class="keyword">= </span><span class="default">multiexplode</span><span class="keyword">(</span><span class="default">$delimiters</span><span class="keyword">,</span><span class="default">$string</span><span class="keyword">);<br>echo </span><span class="string">'&lt;pre&gt;'</span><span class="keyword">;<br></span><span class="default">print_r</span><span class="keyword">(</span><span class="default">$res</span><span class="keyword">);<br>echo </span><span class="string">'&lt;/pre&gt;'</span><span class="keyword">;<br><br></span><span class="comment">//returns<br>/*<br>Array<br>(<br>&nbsp; &nbsp; [0] =&gt; Array<br>&nbsp; &nbsp; &nbsp; &nbsp; (<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [0] =&gt; Array<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [0] =&gt; Array<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [0] =&gt; 1<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [1] =&gt; 2<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [2] =&gt; 3<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; )<br><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [1] =&gt; Array<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [0] =&gt; 4<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [1] =&gt; 5<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; )<br><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [2] =&gt; Array<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [0] =&gt; 6<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; )<br><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; )<br><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [1] =&gt; Array<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [0] =&gt; Array<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [0] =&gt; 7<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [1] =&gt; 8<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [2] =&gt; 9<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [3] =&gt; 0<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; )<br><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [1] =&gt; Array<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [0] =&gt; 1<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; )<br><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; )<br><br>&nbsp; &nbsp; &nbsp; &nbsp; )<br><br>&nbsp; &nbsp; [1] =&gt; Array<br>&nbsp; &nbsp; &nbsp; &nbsp; (<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [0] =&gt; Array<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [0] =&gt; Array<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [0] =&gt; 2<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; )<br><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; )<br><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [1] =&gt; Array<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [0] =&gt; Array<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [0] =&gt; 3<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [1] =&gt; 4<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; )<br><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [1] =&gt; Array<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [0] =&gt; 5<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; )<br><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; )<br><br>&nbsp; &nbsp; &nbsp; &nbsp; )<br><br>)<br>*/<br></span><span class="default">?&gt;</span>
+</span>
+</code></div>
+  </div>
+ </div>
+  <div class="note" id="94068">  <div class="votes">
+    <div id="Vu94068">
+    <a href="http://us3.php.net/manual/vote-note.php?id=94068&amp;page=function.explode&amp;vote=up" title="Vote up!" class="usernotes-voteu">up</a>
+    </div>
+    <div id="Vd94068">
+    <a href="http://us3.php.net/manual/vote-note.php?id=94068&amp;page=function.explode&amp;vote=down" title="Vote down!" class="usernotes-voted">down</a>
+    </div>
+    <div class="tally" id="V94068" title="61% like this...">
+    9
+    </div>
+  </div>
+  <a href="http://us3.php.net/manual/en/function.explode.php#94068" class="name">
+  <strong class="user"><em>nick dot brown at free dot fr</em></strong></a><a class="genanchor" href="http://us3.php.net/manual/en/function.explode.php#94068"> ¶</a><div class="date" title="2009-10-14 09:47"><strong>7 years ago</strong></div>
+  <div class="text" id="Hcom94068">
+<div class="phpcode"><code><span class="html">
+My application was running out of memory (my hosting company limits PHP to 32MB).&nbsp; I have a string containing between 100 and 20000 triplets, separated by a space, with each triplet consisting of three double-precision numbers, separated by commas.&nbsp; Total size of the biggest string, with 20000 triplets, is about 1MB.<br><br>The application needs to split the string into triplets, then split the triplet into numbers.&nbsp; In C, this would take up about 480K (20000 times 3 x 8 bytes) for the final array.&nbsp; The intermediate array of strings shouldn't be much bigger than the long string itself (1MB).&nbsp; And I expect some overhead from PHP, say 300% to allow for indexes etc.<br><br>Well, PHP5 manages to run out of memory *at the first stage* (exploding the string on the space character).&nbsp; I'm expecting to get an array of 20000 strings, but it needs more than 32MB to store it.&nbsp; Amazing.<br><br>The workaround was easy and had the bonus of producing faster code (I compared it on a 10000 triplet string).&nbsp; Since in any case I had to split up the numeric triplets afterwards, I decided to use preg_match_all() on the original string.&nbsp; Despite the fact that the resulting "matches" array contains more data per element than the result of explode() - because it stores the matched triplet, plus its component numbers - it takes up far less memory.<br><br>Moral: be careful when using explode() on big strings, as it can also explode your memory usage.</span>
+</code></div>
+  </div>
+ </div>
+  <div class="note" id="101624">  <div class="votes">
+    <div id="Vu101624">
+    <a href="http://us3.php.net/manual/vote-note.php?id=101624&amp;page=function.explode&amp;vote=up" title="Vote up!" class="usernotes-voteu">up</a>
+    </div>
+    <div id="Vd101624">
+    <a href="http://us3.php.net/manual/vote-note.php?id=101624&amp;page=function.explode&amp;vote=down" title="Vote down!" class="usernotes-voted">down</a>
+    </div>
+    <div class="tally" id="V101624" title="60% like this...">
+    5
+    </div>
+  </div>
+  <a href="http://us3.php.net/manual/en/function.explode.php#101624" class="name">
+  <strong class="user"><em>dhz</em></strong></a><a class="genanchor" href="http://us3.php.net/manual/en/function.explode.php#101624"> ¶</a><div class="date" title="2010-12-30 02:21"><strong>6 years ago</strong></div>
+  <div class="text" id="Hcom101624">
+<div class="phpcode"><code><span class="html">
+A one-liner to extract a portion of a string, starting from the END of the string....<br><span class="default">&lt;?php<br>$extracted_string </span><span class="keyword">= </span><span class="default">implode</span><span class="keyword">(</span><span class="string">'.'</span><span class="keyword">, </span><span class="default">array_slice</span><span class="keyword">(</span><span class="default">explode</span><span class="keyword">(</span><span class="string">'.'</span><span class="keyword">, </span><span class="default">$original_string</span><span class="keyword">), -</span><span class="default">2</span><span class="keyword">));<br></span><span class="default">?&gt;</span>
+</span>
+</code></div>
+  </div>
+ </div>
+  <div class="note" id="111419">  <div class="votes">
+    <div id="Vu111419">
+    <a href="http://us3.php.net/manual/vote-note.php?id=111419&amp;page=function.explode&amp;vote=up" title="Vote up!" class="usernotes-voteu">up</a>
+    </div>
+    <div id="Vd111419">
+    <a href="http://us3.php.net/manual/vote-note.php?id=111419&amp;page=function.explode&amp;vote=down" title="Vote down!" class="usernotes-voted">down</a>
+    </div>
+    <div class="tally" id="V111419" title="59% like this...">
+    5
+    </div>
+  </div>
+  <a href="http://us3.php.net/manual/en/function.explode.php#111419" class="name">
+  <strong class="user"><em>m.reesinck</em></strong></a><a class="genanchor" href="http://us3.php.net/manual/en/function.explode.php#111419"> ¶</a><div class="date" title="2013-02-18 05:59"><strong>3 years ago</strong></div>
+  <div class="text" id="Hcom111419">
+<div class="phpcode"><code><span class="html">
+I needed a multiexplode which didn't replace my delimiters for 1 other delimiter. Because I couldn't find one in the examples I made one.
+<br>
+<br>delimiter array:
+<br>array('/RTRN/','/BUSP/','/BENM/','/ORDP/','/CSID/', '/MARF/','/EREF/', '/PREF/','/REMI/','/ID/','/PURP/', '/ULTB/','/ULTD/');
+<br>
+<br>input string: /RTRN/MS03//BENM/NL50INGB00012345/BUSP/Europese Incasso/eenmalig/67/INGBNL2A/ING Bank N.V. inzake WeB///CSID/NL32ZZZ999999991234//MARF/EV45451//EREF/EV45451 REP170112T1106//REMI///EV45451REP170112T1106/
+<br>
+<br>output:
+<br>array(
+<br>[/RTRN/] =&gt; MS03/
+<br>[/BENM/] =&gt; NL50INGB00012345
+<br>[/BUSP/] =&gt; Europese Incasso/eenmalig/67/INGBNL2A/ING Bank N.V. inzake WeB//
+<br>[/CSID/] =&gt; NL32ZZZ999999991234/
+<br>[/MARF/] =&gt; EV45451/
+<br>[/EREF/] =&gt; EV45451REP170112T1106/
+<br>[/REMI/] =&gt; //EV45451REP170112T1106/
+<br>[/ORDP/] =&gt; 
+<br>[/PREF/] =&gt; 
+<br>[/ID/] =&gt; 
+<br>[/PURP/] =&gt; 
+<br>[/ULTB/] =&gt; 
+<br>[/ULTD/] =&gt;
+<br>)
+<br>
+<br><span class="default">&lt;?php
+<br></span><span class="keyword">function </span><span class="default">multiexplode</span><span class="keyword">(</span><span class="default">$delimiters</span><span class="keyword">,</span><span class="default">$string</span><span class="keyword">) {
+<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+<br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="default">$arrOccurence </span><span class="keyword">= array();
+<br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="default">$arrEnd </span><span class="keyword">= array();
+<br>&nbsp; &nbsp; &nbsp; &nbsp; foreach(</span><span class="default">$delimiters </span><span class="keyword">as </span><span class="default">$key </span><span class="keyword">=&gt; </span><span class="default">$value</span><span class="keyword">){
+<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="default">$position </span><span class="keyword">= </span><span class="default">strpos</span><span class="keyword">(</span><span class="default">$string</span><span class="keyword">, </span><span class="default">$value</span><span class="keyword">);
+<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if(</span><span class="default">$position </span><span class="keyword">&gt; -</span><span class="default">1</span><span class="keyword">){
+<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="default">$arrOccurence</span><span class="keyword">[</span><span class="default">$value</span><span class="keyword">] = </span><span class="default">$position</span><span class="keyword">;
+<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }
+<br>&nbsp; &nbsp; &nbsp; &nbsp; }
+<br>&nbsp; &nbsp; &nbsp; &nbsp; 
+<br>&nbsp; &nbsp; &nbsp; &nbsp; if(</span><span class="default">count</span><span class="keyword">(</span><span class="default">$arrOccurence</span><span class="keyword">) &gt; </span><span class="default">0</span><span class="keyword">){
+<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="default">asort</span><span class="keyword">(</span><span class="default">$arrOccurence</span><span class="keyword">);
+<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="default">$arrEnd </span><span class="keyword">= </span><span class="default">array_values</span><span class="keyword">(</span><span class="default">$arrOccurence</span><span class="keyword">);
+<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="default">array_shift</span><span class="keyword">(</span><span class="default">$arrEnd</span><span class="keyword">);
+<br>&nbsp; &nbsp; 
+<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="default">$i </span><span class="keyword">= </span><span class="default">0</span><span class="keyword">;
+<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; foreach(</span><span class="default">$arrOccurence </span><span class="keyword">as </span><span class="default">$key </span><span class="keyword">=&gt; </span><span class="default">$start</span><span class="keyword">){
+<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="default">$pointer </span><span class="keyword">= </span><span class="default">$start</span><span class="keyword">+</span><span class="default">strlen</span><span class="keyword">(</span><span class="default">$key</span><span class="keyword">);
+<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if(</span><span class="default">$i </span><span class="keyword">== </span><span class="default">count</span><span class="keyword">(</span><span class="default">$arrEnd</span><span class="keyword">)){
+<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="default">$arrOccurence</span><span class="keyword">[</span><span class="default">$key</span><span class="keyword">] = </span><span class="default">substr</span><span class="keyword">(</span><span class="default">$string</span><span class="keyword">, </span><span class="default">$pointer</span><span class="keyword">);
+<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; } else {
+<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="default">$arrOccurence</span><span class="keyword">[</span><span class="default">$key</span><span class="keyword">] = </span><span class="default">substr</span><span class="keyword">(</span><span class="default">$string</span><span class="keyword">, </span><span class="default">$pointer</span><span class="keyword">, </span><span class="default">$arrEnd</span><span class="keyword">[</span><span class="default">$i</span><span class="keyword">]-</span><span class="default">$pointer</span><span class="keyword">);
+<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; } 
+<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="default">$i</span><span class="keyword">++;
+<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }
+<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+<br>&nbsp; &nbsp; &nbsp; &nbsp; }
+<br>
+<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="comment">//next part can be left apart if not necessary. In that case key that don't appear in the inputstringwill not be returned
+<br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="keyword">foreach(</span><span class="default">$delimiters </span><span class="keyword">as </span><span class="default">$key </span><span class="keyword">=&gt; </span><span class="default">$value</span><span class="keyword">){
+<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if(!isset(</span><span class="default">$arrOccurence</span><span class="keyword">[</span><span class="default">$value</span><span class="keyword">])){
+<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="default">$arrOccurence</span><span class="keyword">[</span><span class="default">$value</span><span class="keyword">] = </span><span class="string">''</span><span class="keyword">;
+<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }
+<br>&nbsp; &nbsp; &nbsp; &nbsp; }
+<br>
+<br>&nbsp; &nbsp; &nbsp; &nbsp; return </span><span class="default">$arrOccurence</span><span class="keyword">;
+<br>}
+<br></span><span class="default">?&gt;</span>
+</span>
+</code></div>
+  </div>
+ </div>
+  <div class="note" id="116213">  <div class="votes">
+    <div id="Vu116213">
+    <a href="http://us3.php.net/manual/vote-note.php?id=116213&amp;page=function.explode&amp;vote=up" title="Vote up!" class="usernotes-voteu">up</a>
+    </div>
+    <div id="Vd116213">
+    <a href="http://us3.php.net/manual/vote-note.php?id=116213&amp;page=function.explode&amp;vote=down" title="Vote down!" class="usernotes-voted">down</a>
+    </div>
+    <div class="tally" id="V116213" title="58% like this...">
+    5
+    </div>
+  </div>
+  <a href="http://us3.php.net/manual/en/function.explode.php#116213" class="name">
+  <strong class="user"><em>wado</em></strong></a><a class="genanchor" href="http://us3.php.net/manual/en/function.explode.php#116213"> ¶</a><div class="date" title="2014-11-22 07:17"><strong>2 years ago</strong></div>
+  <div class="text" id="Hcom116213">
+<div class="phpcode"><code><span class="html">
+It should be said that when an empty delimiter is passed to explode, the function not only will return false but will also emit a warning.<br><br><span class="default">&lt;?php<br>var_dump</span><span class="keyword">( </span><span class="default">explode</span><span class="keyword">(</span><span class="string">''</span><span class="keyword">,</span><span class="string">'asdasd'</span><span class="keyword">) );<br><br></span><span class="comment">/**<br>&nbsp; * Output:<br>&nbsp; * Warning: explode(): Empty delimiter in ...<br>&nbsp; * bool(false)<br>&nbsp; */<br></span><span class="default">?&gt;</span>
+</span>
+</code></div>
+  </div>
+ </div>
+  <div class="note" id="99281">  <div class="votes">
+    <div id="Vu99281">
+    <a href="http://us3.php.net/manual/vote-note.php?id=99281&amp;page=function.explode&amp;vote=up" title="Vote up!" class="usernotes-voteu">up</a>
+    </div>
+    <div id="Vd99281">
+    <a href="http://us3.php.net/manual/vote-note.php?id=99281&amp;page=function.explode&amp;vote=down" title="Vote down!" class="usernotes-voted">down</a>
+    </div>
+    <div class="tally" id="V99281" title="59% like this...">
+    6
+    </div>
+  </div>
+  <a href="http://us3.php.net/manual/en/function.explode.php#99281" class="name">
+  <strong class="user"><em>Cody G.</em></strong></a><a class="genanchor" href="http://us3.php.net/manual/en/function.explode.php#99281"> ¶</a><div class="date" title="2010-08-08 12:41"><strong>6 years ago</strong></div>
+  <div class="text" id="Hcom99281">
+<div class="phpcode"><code><span class="html">
+I'm sure you guys get just a bit frustrated at times when you need a fraction of a very simple string and you use "explode()", but then you have to define a whole extra variable. (That is because you need to store a function-returned array in a variable before you can extract a value).<br><br>If you're extracting the last half, or third, of a string, there's an easy inline workaround. Check this:<br><br><span class="default">&lt;?php<br> $mystr </span><span class="keyword">= </span><span class="string">"separated-text"</span><span class="keyword">;<br> print(</span><span class="default">str_replace</span><span class="keyword">(</span><span class="string">"-"</span><span class="keyword">,</span><span class="string">""</span><span class="keyword">,</span><span class="default">strstr</span><span class="keyword">(</span><span class="string">"-"</span><span class="keyword">,</span><span class="default">$mystr</span><span class="keyword">)));<br> </span><span class="comment">//Returns "text"<br></span><span class="default">?&gt;<br></span><br>If the separator (dash) can be left in, you don't even need the "str_replace()" function.<br><br>Lets try this with 3 fractions:<br><br><span class="default">&lt;?php<br> $mystr </span><span class="keyword">= </span><span class="string">"separated-text-again"</span><span class="keyword">;<br> </span><span class="comment">//Comment submission wouldn't let me<br> // combine this into one statement.<br> // That's okay, it's more readable.<br> </span><span class="default">$split1 </span><span class="keyword">= </span><span class="default">str_replace</span><span class="keyword">(</span><span class="string">"-"</span><span class="keyword">,</span><span class="string">""</span><span class="keyword">,</span><span class="default">strstr</span><span class="keyword">(</span><span class="string">"-"</span><span class="keyword">,</span><span class="default">$mystr</span><span class="keyword">));<br> print(</span><span class="default">str_replace</span><span class="keyword">(</span><span class="string">"-"</span><span class="keyword">,</span><span class="string">""</span><span class="keyword">,</span><span class="default">strstr</span><span class="keyword">(</span><span class="string">"-"</span><span class="keyword">,</span><span class="default">$split1</span><span class="keyword">)));<br> </span><span class="comment">//Returns "again"<br></span><span class="default">?&gt;<br></span><br>Anything more than 3 fractions gets really confusing, in that case you should use "explode()".<br><br>Hope this helps!<br>~Cody G.</span>
+</code></div>
+  </div>
+ </div>
+  <div class="note" id="114273">  <div class="votes">
+    <div id="Vu114273">
+    <a href="http://us3.php.net/manual/vote-note.php?id=114273&amp;page=function.explode&amp;vote=up" title="Vote up!" class="usernotes-voteu">up</a>
+    </div>
+    <div id="Vd114273">
+    <a href="http://us3.php.net/manual/vote-note.php?id=114273&amp;page=function.explode&amp;vote=down" title="Vote down!" class="usernotes-voted">down</a>
+    </div>
+    <div class="tally" id="V114273" title="58% like this...">
+    3
+    </div>
+  </div>
+  <a href="http://us3.php.net/manual/en/function.explode.php#114273" class="name">
+  <strong class="user"><em>artaxerxes2 at iname dot com</em></strong></a><a class="genanchor" href="http://us3.php.net/manual/en/function.explode.php#114273"> ¶</a><div class="date" title="2014-01-31 09:29"><strong>2 years ago</strong></div>
+  <div class="text" id="Hcom114273">
+<div class="phpcode"><code><span class="html">
+Note that using explode() on an empty string returns a non-empty array.<br><br>So the code:<br><span class="default">&lt;?php<br>&nbsp; print_r</span><span class="keyword">(</span><span class="default">explode</span><span class="keyword">(</span><span class="string">"|"</span><span class="keyword">,</span><span class="string">""</span><span class="keyword">);<br></span><span class="default">?&gt;<br></span>returns:<br>Array<br>(<br>&nbsp; &nbsp; [0] =&gt; <br>)<br><br>If you need to return an empty array in the case of an empty string, you must call array_diff() after the explode:<br><span class="default">&lt;?php<br>&nbsp; print_r</span><span class="keyword">(</span><span class="default">array_diff</span><span class="keyword">(</span><span class="default">explode</span><span class="keyword">(</span><span class="string">"|"</span><span class="keyword">,</span><span class="string">""</span><span class="keyword">),array(</span><span class="string">""</span><span class="keyword">)));<br></span><span class="default">?&gt;<br></span>returns:<br>Array<br>(<br>)<br><br>This is useful in case your use of MySQL's group_concat() returns an empty string for just some records but you want to convert them all to arrays that actually reflect what group_concat() gave you</span>
+</code></div>
+  </div>
+ </div>
+  <div class="note" id="90415">  <div class="votes">
+    <div id="Vu90415">
+    <a href="http://us3.php.net/manual/vote-note.php?id=90415&amp;page=function.explode&amp;vote=up" title="Vote up!" class="usernotes-voteu">up</a>
+    </div>
+    <div id="Vd90415">
+    <a href="http://us3.php.net/manual/vote-note.php?id=90415&amp;page=function.explode&amp;vote=down" title="Vote down!" class="usernotes-voted">down</a>
+    </div>
+    <div class="tally" id="V90415" title="57% like this...">
+    5
+    </div>
+  </div>
+  <a href="http://us3.php.net/manual/en/function.explode.php#90415" class="name">
+  <strong class="user"><em>SR</em></strong></a><a class="genanchor" href="http://us3.php.net/manual/en/function.explode.php#90415"> ¶</a><div class="date" title="2009-04-21 01:50"><strong>7 years ago</strong></div>
+  <div class="text" id="Hcom90415">
+<div class="phpcode"><code><span class="html">
+Keep in mind that explode() can return empty elements if the delimiter is immediately repeated twice (or more), as shown by the following example:<br><br><span class="default">&lt;?php<br>$foo </span><span class="keyword">= </span><span class="string">'uno dos&nbsp; tres'</span><span class="keyword">; </span><span class="comment">// two spaces between "dos" and "tres"<br></span><span class="default">print_r</span><span class="keyword">(</span><span class="default">explode</span><span class="keyword">(</span><span class="string">' '</span><span class="keyword">, </span><span class="default">$foo</span><span class="keyword">));<br></span><span class="default">?&gt;<br></span><br>Array<br>(<br>&nbsp; &nbsp; [0] =&gt; uno<br>&nbsp; &nbsp; [1] =&gt; dos<br>&nbsp; &nbsp; [2] =&gt; <br>&nbsp; &nbsp; [3] =&gt; tres<br>)<br><br>Needless to say this is definitely not intuitive and must be handled carefully.</span>
+</code></div>
+  </div>
+ </div>
+  <div class="note" id="37467">  <div class="votes">
+    <div id="Vu37467">
+    <a href="http://us3.php.net/manual/vote-note.php?id=37467&amp;page=function.explode&amp;vote=up" title="Vote up!" class="usernotes-voteu">up</a>
+    </div>
+    <div id="Vd37467">
+    <a href="http://us3.php.net/manual/vote-note.php?id=37467&amp;page=function.explode&amp;vote=down" title="Vote down!" class="usernotes-voted">down</a>
+    </div>
+    <div class="tally" id="V37467" title="58% like this...">
+    6
+    </div>
+  </div>
+  <a href="http://us3.php.net/manual/en/function.explode.php#37467" class="name">
+  <strong class="user"><em>coroa at cosmo-genics dot com</em></strong></a><a class="genanchor" href="http://us3.php.net/manual/en/function.explode.php#37467"> ¶</a><div class="date" title="2003-11-16 01:01"><strong>13 years ago</strong></div>
+  <div class="text" id="Hcom37467">
+<div class="phpcode"><code><span class="html">
+To split a string containing multiple seperators between elements rather use preg_split than explode:<br><br>preg_split ("/\s+/", "Here&nbsp; are&nbsp; &nbsp; to&nbsp; &nbsp; many&nbsp; spaces in&nbsp;&nbsp; between");<br><br>which gives you<br>array ("Here", "are", "to", "many", "spaces", "in", "between");</span>
+</code></div>
+  </div>
+ </div>
+  <div class="note" id="71648">  <div class="votes">
+    <div id="Vu71648">
+    <a href="http://us3.php.net/manual/vote-note.php?id=71648&amp;page=function.explode&amp;vote=up" title="Vote up!" class="usernotes-voteu">up</a>
+    </div>
+    <div id="Vd71648">
+    <a href="http://us3.php.net/manual/vote-note.php?id=71648&amp;page=function.explode&amp;vote=down" title="Vote down!" class="usernotes-voted">down</a>
+    </div>
+    <div class="tally" id="V71648" title="55% like this...">
+    3
+    </div>
+  </div>
+  <a href="http://us3.php.net/manual/en/function.explode.php#71648" class="name">
+  <strong class="user"><em>seventoes at gmail dot com</em></strong></a><a class="genanchor" href="http://us3.php.net/manual/en/function.explode.php#71648"> ¶</a><div class="date" title="2006-12-09 12:49"><strong>10 years ago</strong></div>
+  <div class="text" id="Hcom71648">
+<div class="phpcode"><code><span class="html">
+Note that explode, split, and functions like it, can accept more than a single character for the delimiter.<br><br><span class="default">&lt;?php<br>$string </span><span class="keyword">= </span><span class="string">"Something--next--something else--next--one more"</span><span class="keyword">;<br><br></span><span class="default">print_r</span><span class="keyword">(</span><span class="default">explode</span><span class="keyword">(</span><span class="string">'--next--'</span><span class="keyword">,</span><span class="default">$string</span><span class="keyword">));<br></span><span class="default">?&gt;</span>
+</span>
+</code></div>
+  </div>
+ </div>
+  <div class="note" id="93778">  <div class="votes">
+    <div id="Vu93778">
+    <a href="http://us3.php.net/manual/vote-note.php?id=93778&amp;page=function.explode&amp;vote=up" title="Vote up!" class="usernotes-voteu">up</a>
+    </div>
+    <div id="Vd93778">
+    <a href="http://us3.php.net/manual/vote-note.php?id=93778&amp;page=function.explode&amp;vote=down" title="Vote down!" class="usernotes-voted">down</a>
+    </div>
+    <div class="tally" id="V93778" title="53% like this...">
+    2
+    </div>
+  </div>
+  <a href="http://us3.php.net/manual/en/function.explode.php#93778" class="name">
+  <strong class="user"><em>Anonymous</em></strong></a><a class="genanchor" href="http://us3.php.net/manual/en/function.explode.php#93778"> ¶</a><div class="date" title="2009-09-28 09:20"><strong>7 years ago</strong></div>
+  <div class="text" id="Hcom93778">
+<div class="phpcode"><code><span class="html">
+Note to the previous example: we can do the whole string-&gt;array conversion using explode() exclusively. <br><br><span class="default">&lt;?php<br>&nbsp; &nbsp; </span><span class="comment">// converts pure string into a trimmed keyed array<br>&nbsp; &nbsp; </span><span class="keyword">function </span><span class="default">string_2_array</span><span class="keyword">( </span><span class="default">$string</span><span class="keyword">, </span><span class="default">$delimiter </span><span class="keyword">= </span><span class="string">','</span><span class="keyword">, </span><span class="default">$kv </span><span class="keyword">= </span><span class="string">'=&gt;'</span><span class="keyword">)<br>&nbsp; &nbsp; {<br>&nbsp; &nbsp; &nbsp; &nbsp; if (</span><span class="default">$element </span><span class="keyword">= </span><span class="default">explode</span><span class="keyword">( </span><span class="default">$delimiter</span><span class="keyword">, </span><span class="default">$string </span><span class="keyword">))<br>&nbsp; &nbsp; &nbsp; &nbsp; {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="comment">// create parts<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="keyword">foreach ( </span><span class="default">$element </span><span class="keyword">as </span><span class="default">$key_value </span><span class="keyword">)<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="comment">// key -&gt; value pair or single value<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="default">$atom </span><span class="keyword">= </span><span class="default">explode</span><span class="keyword">( </span><span class="default">$kv</span><span class="keyword">, </span><span class="default">$key_value </span><span class="keyword">);<br><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if( </span><span class="default">trim</span><span class="keyword">(</span><span class="default">$atom</span><span class="keyword">[</span><span class="default">1</span><span class="keyword">]) )<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="default">$key_arr</span><span class="keyword">[</span><span class="default">trim</span><span class="keyword">(</span><span class="default">$atom</span><span class="keyword">[</span><span class="default">0</span><span class="keyword">])] = </span><span class="default">trim</span><span class="keyword">(</span><span class="default">$atom</span><span class="keyword">[</span><span class="default">1</span><span class="keyword">]);<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; else<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="default">$key_arr</span><span class="keyword">[] = </span><span class="default">trim</span><span class="keyword">(</span><span class="default">$atom</span><span class="keyword">[</span><span class="default">0</span><span class="keyword">]);<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br>&nbsp; &nbsp; &nbsp; &nbsp; }<br>&nbsp; &nbsp; &nbsp; &nbsp; else<br>&nbsp; &nbsp; &nbsp; &nbsp; {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="default">$key_arr </span><span class="keyword">= </span><span class="default">false</span><span class="keyword">;<br>&nbsp; &nbsp; &nbsp; &nbsp; }<br><br>&nbsp; &nbsp; &nbsp; &nbsp; return </span><span class="default">$key_arr</span><span class="keyword">;<br>&nbsp; &nbsp; }<br></span><span class="default">?&gt;</span>
+</span>
+</code></div>
+  </div>
+ </div>
+  <div class="note" id="114481">  <div class="votes">
+    <div id="Vu114481">
+    <a href="http://us3.php.net/manual/vote-note.php?id=114481&amp;page=function.explode&amp;vote=up" title="Vote up!" class="usernotes-voteu">up</a>
+    </div>
+    <div id="Vd114481">
+    <a href="http://us3.php.net/manual/vote-note.php?id=114481&amp;page=function.explode&amp;vote=down" title="Vote down!" class="usernotes-voted">down</a>
+    </div>
+    <div class="tally" id="V114481" title="52% like this...">
+    1
+    </div>
+  </div>
+  <a href="http://us3.php.net/manual/en/function.explode.php#114481" class="name">
+  <strong class="user"><em>david dot drakulovski at gmail dot com</em></strong></a><a class="genanchor" href="http://us3.php.net/manual/en/function.explode.php#114481"> ¶</a><div class="date" title="2014-02-25 03:58"><strong>2 years ago</strong></div>
+  <div class="text" id="Hcom114481">
+<div class="phpcode"><code><span class="html">
+I made this code for some useful filtering texts with lot of gibberish. Example provided:<br><br><span class="default">&lt;?php<br>$text </span><span class="keyword">= </span><span class="string">"There are;many|variations of:passages of Lorem Ipsum available,but the/majority have\"suffered|alteration in some form,by injected humour,or randomised words which don't look even.slightly:believable./"</span><span class="keyword">;<br><br></span><span class="default">$delimiter </span><span class="keyword">= array(</span><span class="string">" "</span><span class="keyword">,</span><span class="string">","</span><span class="keyword">,</span><span class="string">"."</span><span class="keyword">,</span><span class="string">"'"</span><span class="keyword">,</span><span class="string">"\""</span><span class="keyword">,</span><span class="string">"|"</span><span class="keyword">,</span><span class="string">"\\"</span><span class="keyword">,</span><span class="string">"/"</span><span class="keyword">,</span><span class="string">";"</span><span class="keyword">,</span><span class="string">":"</span><span class="keyword">);<br></span><span class="default">$replace </span><span class="keyword">= </span><span class="default">str_replace</span><span class="keyword">(</span><span class="default">$delimiter</span><span class="keyword">, </span><span class="default">$delimiter</span><span class="keyword">[</span><span class="default">0</span><span class="keyword">], </span><span class="default">$text</span><span class="keyword">);<br></span><span class="default">$explode </span><span class="keyword">= </span><span class="default">explode</span><span class="keyword">(</span><span class="default">$delimiter</span><span class="keyword">[</span><span class="default">0</span><span class="keyword">], </span><span class="default">$replace</span><span class="keyword">);<br><br>echo </span><span class="string">'&lt;pre&gt;'</span><span class="keyword">;<br></span><span class="default">print_r</span><span class="keyword">(</span><span class="default">$explode</span><span class="keyword">);<br>echo </span><span class="string">'&lt;/pre&gt;'</span><span class="keyword">;<br></span><span class="comment">// replaces many symbols in text, then explodes it<br></span><span class="default">?&gt;<br></span><br>This will output the following:<br>Array<br>(<br>&nbsp; &nbsp; [0] =&gt; There<br>&nbsp; &nbsp; [1] =&gt; are<br>&nbsp; &nbsp; [2] =&gt; many<br>&nbsp; &nbsp; [3] =&gt; variations<br>&nbsp; &nbsp; [4] =&gt; of<br>&nbsp; &nbsp; [5] =&gt; passages<br>&nbsp; &nbsp; [6] =&gt; of<br>&nbsp; &nbsp; [7] =&gt; Lorem<br>&nbsp; &nbsp; [8] =&gt; Ipsum<br>&nbsp; &nbsp; [9] =&gt; available<br>&nbsp; &nbsp; [10] =&gt; but<br>&nbsp; &nbsp; [11] =&gt; the<br>&nbsp; &nbsp; [12] =&gt; majority<br>&nbsp; &nbsp; [13] =&gt; have<br>&nbsp; &nbsp; [14] =&gt; suffered<br>&nbsp; &nbsp; [15] =&gt; alteration<br>&nbsp; &nbsp; [16] =&gt; in<br>&nbsp; &nbsp; [17] =&gt; some<br>&nbsp; &nbsp; [18] =&gt; form<br>&nbsp; &nbsp; [19] =&gt; by<br>&nbsp; &nbsp; [20] =&gt; injected<br>&nbsp; &nbsp; [21] =&gt; humour<br>&nbsp; &nbsp; [22] =&gt; or<br>&nbsp; &nbsp; [23] =&gt; randomised<br>&nbsp; &nbsp; [24] =&gt; words<br>&nbsp; &nbsp; [25] =&gt; which<br>&nbsp; &nbsp; [26] =&gt; don<br>&nbsp; &nbsp; [27] =&gt; t<br>&nbsp; &nbsp; [28] =&gt; look<br>&nbsp; &nbsp; [29] =&gt; even<br>&nbsp; &nbsp; [30] =&gt; slightly<br>&nbsp; &nbsp; [31] =&gt; believable<br>&nbsp; &nbsp; [32] =&gt; <br>&nbsp; &nbsp; [33] =&gt; <br>)</span>
+</code></div>
+  </div>
+ </div>
+  <div class="note" id="119212">  <div class="votes">
+    <div id="Vu119212">
+    <a href="http://us3.php.net/manual/vote-note.php?id=119212&amp;page=function.explode&amp;vote=up" title="Vote up!" class="usernotes-voteu">up</a>
+    </div>
+    <div id="Vd119212">
+    <a href="http://us3.php.net/manual/vote-note.php?id=119212&amp;page=function.explode&amp;vote=down" title="Vote down!" class="usernotes-voted">down</a>
+    </div>
+    <div class="tally" id="V119212" title="100% like this...">
+    2
+    </div>
+  </div>
+  <a href="http://us3.php.net/manual/en/function.explode.php#119212" class="name">
+  <strong class="user"><em>dark dot side01 at yahoo dot com</em></strong></a><a class="genanchor" href="http://us3.php.net/manual/en/function.explode.php#119212"> ¶</a><div class="date" title="2016-04-19 01:44"><strong>8 months ago</strong></div>
+  <div class="text" id="Hcom119212">
+<div class="phpcode"><code><span class="html">
+(excuse my english)<br>When I try to use explode to know if a string contains many words, I noticed this :<br><br><span class="default">&lt;?php<br>&nbsp; &nbsp; &nbsp; $sentence</span><span class="keyword">= </span><span class="string">"&nbsp; word "</span><span class="keyword">;<br>&nbsp; &nbsp; &nbsp; </span><span class="default">$array </span><span class="keyword">= </span><span class="default">explode</span><span class="keyword">(</span><span class="default">$sentence</span><span class="keyword">); <br>&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="default">var_dump</span><span class="keyword">(</span><span class="default">$array</span><span class="keyword">);<br></span><span class="default">?&gt;<br></span>return this :<br><br>array(4) {<br>&nbsp; [0]=&gt;&nbsp; string(0) ""<br>&nbsp; [1]=&gt;&nbsp; string(0) ""<br>&nbsp; [2]=&gt;&nbsp; string(4) "word"<br>&nbsp; [3]=&gt;&nbsp; string(0) ""<br>}<br><br>So, "explode" didn't keep the delimiter but counts it. You have to use trim($sentence) to count words in a sentence.&nbsp; ^v^</span>
+</code></div>
+  </div>
+ </div>
+  <div class="note" id="120391">  <div class="votes">
+    <div id="Vu120391">
+    <a href="http://us3.php.net/manual/vote-note.php?id=120391&amp;page=function.explode&amp;vote=up" title="Vote up!" class="usernotes-voteu">up</a>
+    </div>
+    <div id="Vd120391">
+    <a href="http://us3.php.net/manual/vote-note.php?id=120391&amp;page=function.explode&amp;vote=down" title="Vote down!" class="usernotes-voted">down</a>
+    </div>
+    <div class="tally" id="V120391" title="no votes...">
+    0
+    </div>
+  </div>
+  <a href="http://us3.php.net/manual/en/function.explode.php#120391" class="name">
+  <strong class="user"><em>Manngo</em></strong></a><a class="genanchor" href="http://us3.php.net/manual/en/function.explode.php#120391"> ¶</a><div class="date" title="2016-12-30 12:25"><strong>18 days ago</strong></div>
+  <div class="text" id="Hcom120391">
+<div class="phpcode"><code><span class="html">
+Sometimes I want to create a MINIMUM length array. For example, if the delimiter is not present at all, you might still want an empty additional item.<br><br>This can be done by adding the delimiter to the string as follows:<br><br><span class="default">&lt;?php<br>&nbsp; &nbsp; $data</span><span class="keyword">=</span><span class="string">'a'</span><span class="keyword">;<br>&nbsp; &nbsp; </span><span class="default">$array</span><span class="keyword">=</span><span class="default">explode</span><span class="keyword">(</span><span class="string">':'</span><span class="keyword">,</span><span class="string">"</span><span class="default">$data</span><span class="string">:"</span><span class="keyword">);<br>&nbsp; &nbsp; </span><span class="default">print_r</span><span class="keyword">(</span><span class="default">$array</span><span class="keyword">);<br></span><span class="default">?&gt;<br></span><br>If you want an EXACT number of elements, you can combine this with array_slice:<br><br><span class="default">&lt;?php<br>&nbsp; &nbsp; $data</span><span class="keyword">=</span><span class="string">'a:::'</span><span class="keyword">;<br>&nbsp; &nbsp; </span><span class="default">$array</span><span class="keyword">=</span><span class="default">explode</span><span class="keyword">(</span><span class="string">':'</span><span class="keyword">,</span><span class="string">"</span><span class="default">$data</span><span class="string">:"</span><span class="keyword">);<br>&nbsp; &nbsp; </span><span class="default">$array</span><span class="keyword">=</span><span class="default">array_slice</span><span class="keyword">(</span><span class="default">$array</span><span class="keyword">,</span><span class="default">0</span><span class="keyword">,</span><span class="default">2</span><span class="keyword">);&nbsp; &nbsp; </span><span class="comment">//&nbsp; &nbsp; exactly 2 elements<br>&nbsp; &nbsp; </span><span class="default">print_r</span><span class="keyword">(</span><span class="default">$array</span><span class="keyword">);<br></span><span class="default">?&gt;</span>
+</span>
+</code></div>
+  </div>
+ </div>
+  <div class="note" id="118175">  <div class="votes">
+    <div id="Vu118175">
+    <a href="http://us3.php.net/manual/vote-note.php?id=118175&amp;page=function.explode&amp;vote=up" title="Vote up!" class="usernotes-voteu">up</a>
+    </div>
+    <div id="Vd118175">
+    <a href="http://us3.php.net/manual/vote-note.php?id=118175&amp;page=function.explode&amp;vote=down" title="Vote down!" class="usernotes-voted">down</a>
+    </div>
+    <div class="tally" id="V118175" title="100% like this...">
+    1
+    </div>
+  </div>
+  <a href="http://us3.php.net/manual/en/function.explode.php#118175" class="name">
+  <strong class="user"><em>kenorb at niepodam dot pl</em></strong></a><a class="genanchor" href="http://us3.php.net/manual/en/function.explode.php#118175"> ¶</a><div class="date" title="2015-10-20 03:48"><strong>1 year ago</strong></div>
+  <div class="text" id="Hcom118175">
+<div class="phpcode"><code><span class="html">
+If you need to split by multiple characters, use preg_split() instead:<br><br>&nbsp; &nbsp; $new_string = preg_split("/[&amp;=:]/", $string);</span>
+</code></div>
+  </div>
+ </div>
+  <div class="note" id="112885">  <div class="votes">
+    <div id="Vu112885">
+    <a href="http://us3.php.net/manual/vote-note.php?id=112885&amp;page=function.explode&amp;vote=up" title="Vote up!" class="usernotes-voteu">up</a>
+    </div>
+    <div id="Vd112885">
+    <a href="http://us3.php.net/manual/vote-note.php?id=112885&amp;page=function.explode&amp;vote=down" title="Vote down!" class="usernotes-voted">down</a>
+    </div>
+    <div class="tally" id="V112885" title="50% like this...">
+    0
+    </div>
+  </div>
+  <a href="http://us3.php.net/manual/en/function.explode.php#112885" class="name">
+  <strong class="user"><em>crog at gustavus dot edu</em></strong></a><a class="genanchor" href="http://us3.php.net/manual/en/function.explode.php#112885"> ¶</a><div class="date" title="2013-08-01 01:52"><strong>3 years ago</strong></div>
+  <div class="text" id="Hcom112885">
+<div class="phpcode"><code><span class="html">
+Note that while the documentation states the "If limit is set and positive," passing a null-value will still result in triggering the "limit is zero" case (as of PHP 5.4.17).<br><br>When passing through values (such as using explode to implement an interface method), you'll need to explicitly check that the limit has been set:<br><br><span class="default">&lt;?php<br>&nbsp; </span><span class="keyword">public function </span><span class="default">split</span><span class="keyword">(</span><span class="default">$string</span><span class="keyword">, </span><span class="default">$delimiter</span><span class="keyword">, </span><span class="default">$limit </span><span class="keyword">= </span><span class="default">null</span><span class="keyword">)<br>&nbsp; {<br>&nbsp; &nbsp; return isset(</span><span class="default">$limit</span><span class="keyword">) ? </span><span class="default">explode</span><span class="keyword">(</span><span class="default">$delimiter</span><span class="keyword">, </span><span class="default">$string</span><span class="keyword">, </span><span class="default">$limit</span><span class="keyword">) : </span><span class="default">explode</span><span class="keyword">(</span><span class="default">$delimiter</span><span class="keyword">, </span><span class="default">$string</span><span class="keyword">);<br>&nbsp; }<br></span><span class="default">?&gt;<br></span><br>Failing to check $limit and simply passing through a null-value will return the same value as if $limit were 0 or 1. To clarify, all of the following will return the same value:<br><br><span class="default">&lt;?php<br>explode</span><span class="keyword">(</span><span class="default">$string</span><span class="keyword">, </span><span class="default">$delimiter</span><span class="keyword">, </span><span class="default">null</span><span class="keyword">);<br></span><span class="default">explode</span><span class="keyword">(</span><span class="default">$string</span><span class="keyword">, </span><span class="default">$delimiter</span><span class="keyword">, </span><span class="default">0</span><span class="keyword">);<br></span><span class="default">explode</span><span class="keyword">(</span><span class="default">$string</span><span class="keyword">, </span><span class="default">$delimiter</span><span class="keyword">, </span><span class="default">1</span><span class="keyword">);<br></span><span class="default">?&gt;</span>
+</span>
+</code></div>
+  </div>
+ </div>
+  <div class="note" id="97216">  <div class="votes">
+    <div id="Vu97216">
+    <a href="http://us3.php.net/manual/vote-note.php?id=97216&amp;page=function.explode&amp;vote=up" title="Vote up!" class="usernotes-voteu">up</a>
+    </div>
+    <div id="Vd97216">
+    <a href="http://us3.php.net/manual/vote-note.php?id=97216&amp;page=function.explode&amp;vote=down" title="Vote down!" class="usernotes-voted">down</a>
+    </div>
+    <div class="tally" id="V97216" title="50% like this...">
+    0
+    </div>
+  </div>
+  <a href="http://us3.php.net/manual/en/function.explode.php#97216" class="name">
+  <strong class="user"><em>locoluis at gmail dot com</em></strong></a><a class="genanchor" href="http://us3.php.net/manual/en/function.explode.php#97216"> ¶</a><div class="date" title="2010-04-08 03:02"><strong>6 years ago</strong></div>
+  <div class="text" id="Hcom97216">
+<div class="phpcode"><code><span class="html">
+That with all stateful encodings that use bytes between 0x00 and 0x7f for something other than, say, encoding ASCII characters. Including GBK, BIG5, Shift-JIS etc.<br><br>explode and other such PHP functions work on bytes, not characters.<br><br>What you do is to convert the string to UTF-8 using iconv(), then explode, then go back to GBK.</span>
+</code></div>
+  </div>
+ </div></div>
+
+ <div class="foot"><a href="http://us3.php.net/manual/add-note.php?sect=function.explode&amp;redirect=http://us3.php.net/manual/en/function.explode.php"><img src="./PHP_ explode - Manual_files/notes-add@2x.png" alt="add a note" width="12" height="12"> <small>add a note</small></a></div>
+</section>    </section><!-- layout-content -->
+        <aside class="layout-menu">
+    
+        <ul class="parent-menu-list">
+                                    <li>
+                <a href="http://us3.php.net/manual/en/ref.strings.php">String Functions</a>
+    
+                                    <ul class="child-menu-list">
+    
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.addcslashes.php" title="addcslashes">addcslashes</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.addslashes.php" title="addslashes">addslashes</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.bin2hex.php" title="bin2hex">bin2hex</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.chop.php" title="chop">chop</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.chr.php" title="chr">chr</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.chunk-split.php" title="chunk_​split">chunk_​split</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.convert-cyr-string.php" title="convert_​cyr_​string">convert_​cyr_​string</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.convert-uudecode.php" title="convert_​uudecode">convert_​uudecode</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.convert-uuencode.php" title="convert_​uuencode">convert_​uuencode</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.count-chars.php" title="count_​chars">count_​chars</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.crc32.php" title="crc32">crc32</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.crypt.php" title="crypt">crypt</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.echo.php" title="echo">echo</a>
+                        </li>
+                          
+                        <li class="current">
+                            <a href="http://us3.php.net/manual/en/function.explode.php" title="explode">explode</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.fprintf.php" title="fprintf">fprintf</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.get-html-translation-table.php" title="get_​html_​translation_​table">get_​html_​translation_​table</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.hebrev.php" title="hebrev">hebrev</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.hebrevc.php" title="hebrevc">hebrevc</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.hex2bin.php" title="hex2bin">hex2bin</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.html-entity-decode.php" title="html_​entity_​decode">html_​entity_​decode</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.htmlentities.php" title="htmlentities">htmlentities</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.htmlspecialchars-decode.php" title="htmlspecialchars_​decode">htmlspecialchars_​decode</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.htmlspecialchars.php" title="htmlspecialchars">htmlspecialchars</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.implode.php" title="implode">implode</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.join.php" title="join">join</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.lcfirst.php" title="lcfirst">lcfirst</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.levenshtein.php" title="levenshtein">levenshtein</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.localeconv.php" title="localeconv">localeconv</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.ltrim.php" title="ltrim">ltrim</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.md5-file.php" title="md5_​file">md5_​file</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.md5.php" title="md5">md5</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.metaphone.php" title="metaphone">metaphone</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.money-format.php" title="money_​format">money_​format</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.nl-langinfo.php" title="nl_​langinfo">nl_​langinfo</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.nl2br.php" title="nl2br">nl2br</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.number-format.php" title="number_​format">number_​format</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.ord.php" title="ord">ord</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.parse-str.php" title="parse_​str">parse_​str</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.print.php" title="print">print</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.printf.php" title="printf">printf</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.quoted-printable-decode.php" title="quoted_​printable_​decode">quoted_​printable_​decode</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.quoted-printable-encode.php" title="quoted_​printable_​encode">quoted_​printable_​encode</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.quotemeta.php" title="quotemeta">quotemeta</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.rtrim.php" title="rtrim">rtrim</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.setlocale.php" title="setlocale">setlocale</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.sha1-file.php" title="sha1_​file">sha1_​file</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.sha1.php" title="sha1">sha1</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.similar-text.php" title="similar_​text">similar_​text</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.soundex.php" title="soundex">soundex</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.sprintf.php" title="sprintf">sprintf</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.sscanf.php" title="sscanf">sscanf</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.str-getcsv.php" title="str_​getcsv">str_​getcsv</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.str-ireplace.php" title="str_​ireplace">str_​ireplace</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.str-pad.php" title="str_​pad">str_​pad</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.str-repeat.php" title="str_​repeat">str_​repeat</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.str-replace.php" title="str_​replace">str_​replace</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.str-rot13.php" title="str_​rot13">str_​rot13</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.str-shuffle.php" title="str_​shuffle">str_​shuffle</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.str-split.php" title="str_​split">str_​split</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.str-word-count.php" title="str_​word_​count">str_​word_​count</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.strcasecmp.php" title="strcasecmp">strcasecmp</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.strchr.php" title="strchr">strchr</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.strcmp.php" title="strcmp">strcmp</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.strcoll.php" title="strcoll">strcoll</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.strcspn.php" title="strcspn">strcspn</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.strip-tags.php" title="strip_​tags">strip_​tags</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.stripcslashes.php" title="stripcslashes">stripcslashes</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.stripos.php" title="stripos">stripos</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.stripslashes.php" title="stripslashes">stripslashes</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.stristr.php" title="stristr">stristr</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.strlen.php" title="strlen">strlen</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.strnatcasecmp.php" title="strnatcasecmp">strnatcasecmp</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.strnatcmp.php" title="strnatcmp">strnatcmp</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.strncasecmp.php" title="strncasecmp">strncasecmp</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.strncmp.php" title="strncmp">strncmp</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.strpbrk.php" title="strpbrk">strpbrk</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.strpos.php" title="strpos">strpos</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.strrchr.php" title="strrchr">strrchr</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.strrev.php" title="strrev">strrev</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.strripos.php" title="strripos">strripos</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.strrpos.php" title="strrpos">strrpos</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.strspn.php" title="strspn">strspn</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.strstr.php" title="strstr">strstr</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.strtok.php" title="strtok">strtok</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.strtolower.php" title="strtolower">strtolower</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.strtoupper.php" title="strtoupper">strtoupper</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.strtr.php" title="strtr">strtr</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.substr-compare.php" title="substr_​compare">substr_​compare</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.substr-count.php" title="substr_​count">substr_​count</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.substr-replace.php" title="substr_​replace">substr_​replace</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.substr.php" title="substr">substr</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.trim.php" title="trim">trim</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.ucfirst.php" title="ucfirst">ucfirst</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.ucwords.php" title="ucwords">ucwords</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.vfprintf.php" title="vfprintf">vfprintf</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.vprintf.php" title="vprintf">vprintf</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.vsprintf.php" title="vsprintf">vsprintf</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://us3.php.net/manual/en/function.wordwrap.php" title="wordwrap">wordwrap</a>
+                        </li>
+                            
+                    </ul>
+                    
+            </li>
+                        
+                    </ul>
+    </aside>
+
+
+  </div><!-- layout -->
+         
+  <footer>
+    <div class="container footer-content">
+      <div class="row-fluid">
+      <ul class="footmenu">
+        <li><a href="http://us3.php.net/copyright.php">Copyright © 2001-2017 The PHP Group</a></li>
+        <li><a href="http://us3.php.net/my.php">My PHP.net</a></li>
+        <li><a href="http://us3.php.net/contact.php">Contact</a></li>
+        <li><a href="http://us3.php.net/sites.php">Other PHP.net sites</a></li>
+        <li><a href="http://us3.php.net/mirrors.php">Mirror sites</a></li>
+        <li><a href="http://us3.php.net/privacy.php">Privacy policy</a></li>
+      </ul>
+      </div>
+    </div>
+  </footer>
+
+    
+ <!-- External and third party libraries. -->
+ <script type="text/javascript" src="./PHP_ explode - Manual_files/jquery.min.js"></script>
+<script type="text/javascript" src="./PHP_ explode - Manual_files/cached(4).php"></script>
+<script type="text/javascript" src="./PHP_ explode - Manual_files/cached(5).php"></script>
+<script type="text/javascript" src="./PHP_ explode - Manual_files/cached(6).php"></script>
+<script type="text/javascript" src="./PHP_ explode - Manual_files/cached(7).php"></script>
+<script type="text/javascript" src="./PHP_ explode - Manual_files/cached(8).php"></script>
+<script type="text/javascript" src="./PHP_ explode - Manual_files/cached(9).php"></script>
+
+<a id="toTop" href="javascript:;" style="display: inline;"><span id="toTopHover"></span><img width="40" height="40" alt="To Top" src="./PHP_ explode - Manual_files/to-top@2x.png"></a>
+
+
+
+
+<script src="./PHP_ explode - Manual_files/live_http_headers.js"></script></body></html>

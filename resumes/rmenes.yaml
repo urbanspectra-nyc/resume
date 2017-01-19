@@ -1,5 +1,6 @@
 ---
 profile:
+    header: New York City roles ONLY.
     name: Robert Menes
     label: Dev Ops Support Engineer
     email: viewtiful.icchan@gmail.com
@@ -40,16 +41,6 @@ skills:
             - Ruby, Intermediate, 5+ years
             - Python, novice, 3+ years
             - Smalltalk, novice, 2+ years 
-
-    -   area: Diagrams
-        skills:
-            - Analytical Workflow Modeling
-            - Federated LAN/WAN Security Models & Test Matrices
-            - Digital Ecosystems & Staffing
-            - Logical Network & System Models
-            - Physical Network & System Schematics
-            - Logical Process & Data Models
-            - Physical Process & Data Diagrams
 
     -   area: Certifications Pending
         skills:
@@ -151,36 +142,15 @@ work:
 
 projects:
 
-    -   name: BetaFrontpage
-        role: Frontend and backend developer
-        website: http://www.betafrontpage.com
-        date: 08.2014
-        summary: BetaFrontpage lists startups frontpages. Full screenshots for
-            inspiration and product discovery.
+    -   name: Rockbox
+        role: Developer and Document Writer
+        website: http://www.rockbox.org
+        date: 07-2007 - 10-2011
+        summary: Rockbox is a firmware replacement for various MP3 players.
         highlights:
-            - "[Pyramid web framework](http://www.pylonsproject.org/)."
-            - "[Docker](https://docker.com/) for screenshot grabbing service."
-
-    -   name: Wwwino.pl
-        role: Developed web spider and search engine. Frontend and backend developement.
-
-        website: http://wwwino.pl
-        date: 2014 - Present
-        summary: Wine search engine and price comparator for Polish wine consumers.
-        highlights:
-            - "[Pyramid web framework](http://www.pylonsproject.org/)."
-            - ElasticSearch.
-            - Web scrapping.
-
-    -   name: Piwwwo.pl
-        role: Frontend and backend developer
-        website: http://piwwwo.pl
-        date: 08-2014
-        summary: Piwwwo.pl is a beer journal and brewery database.
-        highlights:
-            - "[Pyramid web framework](http://www.pylonsproject.org/)."
-            - SQLAlchemy ORM framework.
-            - PostgreSQL database.
+            - Co-developed three platform ports.
+            - Wrote documentation on usage and support.
+            - Provided support on mailing lists and forums.
 
 
 education:

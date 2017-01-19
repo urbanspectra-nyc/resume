@@ -1,5 +1,10 @@
-Name: Lanes
-- dev sandbox
+KEYWORDS: CANDIDATE SKILLS- jhINDUSTRY KEYWORDS- jhTITLE KEYWORDS + TOOLS- Web & Data Systems Architect & Engineer: selenium, - Software Architect:  - Technical Project Manager:  Jira, Github, Hipchat, Travis, BitBucket.- Dev Team Platform AutName: Emerging Trends Per Stack Tier - Web User Interface Layer:  Responsive web apps, svg images, selenium, github. - Process Layer:  Languages, services, containers, testing, deploying, kubernetes, travis. - Data Services Layer: Modeling, testing, scaling of both block (cinder) and object (ceph) storage. - Network Services Layer:  Software-Defined Networking, Public & Private Cloud Hosting. - Operating Systems: Federated Security Solutions, Bare-Metal and KVM Hybrid Clustering, coreOS. - Hardware: Advanced clustered network data center scaling.---Name: Lanes
+- devsandbox
+- devlocal
+- devcollab
+- devqa
+- uat
+- production
 ---
 Name: Tiers
 - software-as-a-service

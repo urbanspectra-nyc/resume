@@ -30,8 +30,9 @@ profile:
 skills:
     -   area: Certifications Held
         skills:
-            - MySQL Database Administrator + Developer
-            - Oracle Database Administrator + Developer
+            - mariaDB Database Administrator
+            - MySQL Database Administrator
+            - Oracle Database Administrator
             - RedHat Linux Systems Administrator
 
     -   area: Technologies
@@ -73,25 +74,45 @@ skills:
             - CoreOS / Project Atomic
 
 work:
-    -   company: Bank of America
-        role: 
-        website: https://thingr.com
-        date: 2014 - Present
-        summary: Knowledge management, discovery and collaboration service. Startup project.
+    -   company: Bank of America, NYC
+        role: Development Team Support, Testing & Platform Automation Engineer
+        website: https://bankofamerica.com
+        date: March, 2016 - Present
+        summary: Dev and admin team onboarding, training, testing, debugging, project management.
         highlights:
-            - Frontend and backend development.
+            - SAAS
             - >
-                [SOA](https://en.wikipedia.org/wiki/Service-oriented_architecture)
-                architecture. [Dockerized](https://docker.com/) containers.
-            - REST API server, distributed task queueing, web content extraction and analysis.
-            - >
-                Python's [Pyramid web framework](http://www.pylonsproject.org/)
-                and  SQLAlchemy ORM framework.
+                [SAAS](https://en.wikipedia.org/wiki/SAAS)
+                [Diagramming]()
+                [Training]()
+                [Technical Project Management]()
+                [User Interface Web Dev]()
+                [Workflow Analysis]()
+                [Definition of Requirements]()
+                [Statements of Work]()
+                [Invoices]()
 
-    -   company: Simbin AB
-        role: Senior Python Backend Programmer
-        date: 2012 - 2014
-        website: http://game.raceroom.com/
+            - PAAS
+            - >
+                [PAAS](https://en.wikipedia.org/wiki/PAAS)                
+                Supported Langs: go, python, node, ruby, C, java, lua, php, perl, etc
+                [OpenShift]() Development Team Container Hosting Platform Engineering
+                [Dockerized](https://docker.com/) containers.
+
+            - IAAS
+            - >
+                [IAAS](https://en.wikipedia.org/wiki/IAAS)
+                Automated Network & Host Provisioning Via RedHat's [Ansible]()
+                [OpenStack]() Private Cloud Platform Engineering
+                [CloudForms]() Orchestration of Linux + Windows Server
+                Private + Public Cloud: kvm, BareMetal, heroku, aws, gcloud, cf
+                Software-Defined Networking: Nuage
+                Container Service Hosting: OpenShift on Kubernetes
+
+    -   company: Credit Suisse, NYC
+        role: Data Center Migration Project Manager + Dev Ops Engineer
+        date: 2015, May - 2016, Feb
+        website: http://www.creditsuisse.com
         highlights:
             - >
                 Developed Cassandra-based systems: generic content metadata,
@@ -109,9 +130,9 @@ work:
                 development focus.
             - Major role in design process of game features and services.
 
-    -   company: Gemilo OY
-        role: Python Web Developer
-        date: 2008 - 2012
+    -   company: AdPrime Media, NYC
+        role: Dev Ops Engineer, DBA & Software Architect
+        date: 2014, Dec - 2015 March
         website: http://www.gemilo.com
         summary: >
             Front and back-end developement of large,
@@ -127,59 +148,69 @@ work:
             - Pylons web framework / PostgreSQL / Javascript.
             - Strong TDD approach.
 
-    -   company: Youplanet
-        role: Javascript frontend developer
-        summary: Contracting job to help build a traveling site.
-        date: 2008
+    -   company: The Economist Group, NYC
+        role: Open Source Dev Ops Engineer
+        summary: AWS, Drupal and Github Migrations 
+        date: 2014, July - 2014, Nov
         highlights:
             - Javascript tools and components.
             - Google maps integration.
             - Usability advisor.
 
-    -   company: i123.pl
-        role: Founder, Python Developer
-        website: http://i123.pl
-        date: 2006 - 2009
+    -   company: GooglePlay, NYC
+        role: Database Architect, Engineer & Developer
+        website: http://youtube.com
+        date: 2014, March - June 2014
         summary: >
             Multiple service-oriented tools and a community portal.
             (video bookmarking, rss reader, TODO app, meta search engine).
+
+    -   company: MANY
+        role: Data & Web Systems Engineering Consultant
+        date: 2012, Jan - 2014, Feb
+        summary: ??
         highlights:
-            - First big python project.
-            - www.i123.pl - Meta search engine, aggregating and prioritizing
-                polish content from Google, Yahoo, MSN Search and polish search engines.
-            - rss.i123.pl - Personalized RSS feed reader.
-            - video.i123.pl - Personalized video aggregator. Users could upload
-                own videos or use services like Youtube, Google Video, Vimeo,
-                Metacafe (and others) to keep and share their videos.
-            - tudu.i123.pl - Javascript TODO app.
+            - Plan, design and develop PHP software.
+            - Web security consulting.
 
-
-    -   company: Stbit
-        role: Founder, Python/PHP developer
-        date: 2004 - 2006
+    -   company: Barnes & Noble, NYC
+        role: Database Systems Engineer & Data Warehouse Architect
+        date: 2011, Jan - 2011, Oct
         summary: Consulting and web development agency.
         highlights:
             - Plan, design and develop PHP software.
             - Web security consulting.
 
+    -   company: MANY
+        role: Data & Web Systems Engineering Consultant
+        date: 2008, Sept - 2010, Dec
+        summary: Consulting and web development agency.
+        highlights:
+            - Plan, design and develop PHP software.
+            - Web security consulting.
+
+    -   company: Hearst Digital Media
+        role: Senoir Database Administrator & PHP Developer
+        date: 2008, Feb - 2008, Sept
+        summary: Consulting and web development agency.
+        highlights:
+            - Plan, design and develop PHP software.
+            - Web security consulting.
+
+    -   company: Rodale Publishing
+        role: Drupal Architect, DBA, LAMP Engineer
+        date: 2007, April - 2008, Jan
+        summary: provided complete migration support from legacy proprietary CMS to LAMP stack
+        highlights:
+            - Plan, design and develop PHP software.
+            - Web security consulting.
 
 
 projects:
 
-    -   name: BetaFrontpage
-        role: Frontend and backend developer
-        website: http://www.betafrontpage.com
-        date: 08.2014
-        summary: BetaFrontpage lists startups frontpages. Full screenshots for
-            inspiration and product discovery.
-        highlights:
-            - "[Pyramid web framework](http://www.pylonsproject.org/)."
-            - "[Docker](https://docker.com/) for screenshot grabbing service."
-
-    -   name: Wwwino.pl
-        role: Developed web spider and search engine. Frontend and backend developement.
-
-        website: http://wwwino.pl
+    -   name: openresume
+        role: founder
+        website: http://
         date: 2014 - Present
         summary: Wine search engine and price comparator for Polish wine consumers.
         highlights:

@@ -1,0 +1,221 @@
+---
+profile:
+    name: Jeremy Donson
+    label: Dev Ops Support Engineer
+    email: jjdonson@gmail.com
+    address: New York City, NY 10027
+    phone: 718-710-9434
+    summary: >
+        Dev ops support engineer focused on test-driven tooling and automation to facilitate preventive problem-solving.
+        More than 10 years of hands-on development team support, including all infrastructure and platform testing.
+        Skilled bash, mariadb and python programmer.  Expert with performant data and web systems scaling.
+
+    image: images/headshot-cropped.jpg
+
+    website: http://www.urbanspectra.com
+
+    networks:
+        -   provider: github
+            username: jjdonson
+            url: https://github.com/jjdonson
+
+        -   provider: linkedin
+            username: jjdonson
+            url: https://www.linkedin.com/in/jjdonson
+
+        -   provider: meetup
+            username: jjdonson
+            url: https-urls??
+
+skills:
+    -   area: Certifications Held
+        skills:
+            - MySQL Database Administrator + Developer
+            - Oracle Database Administrator + Developer
+            - RedHat Linux Systems Administrator
+
+    -   area: Technologies
+        skills:
+            - Git, Gitlab, Github, Bitbucket
+            - CloudForms / ManageIQ
+            - OpenShift
+            - OpenStack
+            - Docker, DockerSwarm
+            - Ceph, Redis, Memcached, MongoDB
+            - MySQL, PostgreSQL
+
+    -   area: Languages Supported
+        skills:
+            - Bash, Expert, 10+ years
+            - Python, 5+ years
+            - C/C++, Intermediate, 5+ years
+            - Ruby, Intermediate, 5+ years
+            - Java, Intermediate, 5+ years
+            - Node.js, Novice, 2+ years
+            - Go, novice, 2+ years 
+
+    -   area: Diagrams
+        skills:
+            - Analytical Workflow Modeling
+            - Divisions of Technical Roles and Concerns
+            - Federated LAN/WAN Security Models & Test Matrices
+            - Digital Ecosystems & Staffing
+            - Logical Network & System Models
+            - Physical Network & System Schematics
+            - Logical Process & Data Models
+            - Physical Process & Data Diagrams
+
+    -   area: Certifications Pending
+        skills:
+            - AWS Pro Architect
+            - Google Cloud + Kubernetes
+            - RedHat CloudForms + OpenStack + OpenShift
+            - CoreOS / Project Atomic
+
+work:
+    -   company: Bank of America
+        role: 
+        website: https://thingr.com
+        date: 2014 - Present
+        summary: Knowledge management, discovery and collaboration service. Startup project.
+        highlights:
+            - Frontend and backend development.
+            - >
+                [SOA](https://en.wikipedia.org/wiki/Service-oriented_architecture)
+                architecture. [Dockerized](https://docker.com/) containers.
+            - REST API server, distributed task queueing, web content extraction and analysis.
+            - >
+                Python's [Pyramid web framework](http://www.pylonsproject.org/)
+                and  SQLAlchemy ORM framework.
+
+    -   company: Simbin AB
+        role: Senior Python Backend Programmer
+        date: 2012 - 2014
+        website: http://game.raceroom.com/
+        highlights:
+            - >
+                Developed Cassandra-based systems: generic content metadata,
+                user activity feeds,
+            - ElasticSearch-based content search.
+            - >
+                Designed and developed game content permission system for users
+                to buy, lend, and try content from the store. Dynamic permissions
+                based on time, availability nad user properties like location,
+                owned content and role groups.
+            - >
+                Custom Go-based statistics server which aggregates context based
+                game activities and achivements.
+            - Introduced better quality with strong TDD, continous integration and
+                development focus.
+            - Major role in design process of game features and services.
+
+    -   company: Gemilo OY
+        role: Python Web Developer
+        date: 2008 - 2012
+        website: http://www.gemilo.com
+        summary: >
+            Front and back-end developement of large,
+            multipurpose collaboration SaaS platform.
+        highlights:
+            - >
+                Design and development on major system components:
+                permission system, caching framework, comments and blogging systems.
+            - >
+                Development of in-house tools for Scrum management, server monitoring,
+                Database migrations and more.
+
+            - Pylons web framework / PostgreSQL / Javascript.
+            - Strong TDD approach.
+
+    -   company: Youplanet
+        role: Javascript frontend developer
+        summary: Contracting job to help build a traveling site.
+        date: 2008
+        highlights:
+            - Javascript tools and components.
+            - Google maps integration.
+            - Usability advisor.
+
+    -   company: i123.pl
+        role: Founder, Python Developer
+        website: http://i123.pl
+        date: 2006 - 2009
+        summary: >
+            Multiple service-oriented tools and a community portal.
+            (video bookmarking, rss reader, TODO app, meta search engine).
+        highlights:
+            - First big python project.
+            - www.i123.pl - Meta search engine, aggregating and prioritizing
+                polish content from Google, Yahoo, MSN Search and polish search engines.
+            - rss.i123.pl - Personalized RSS feed reader.
+            - video.i123.pl - Personalized video aggregator. Users could upload
+                own videos or use services like Youtube, Google Video, Vimeo,
+                Metacafe (and others) to keep and share their videos.
+            - tudu.i123.pl - Javascript TODO app.
+
+
+    -   company: Stbit
+        role: Founder, Python/PHP developer
+        date: 2004 - 2006
+        summary: Consulting and web development agency.
+        highlights:
+            - Plan, design and develop PHP software.
+            - Web security consulting.
+
+
+
+projects:
+
+    -   name: BetaFrontpage
+        role: Frontend and backend developer
+        website: http://www.betafrontpage.com
+        date: 08.2014
+        summary: BetaFrontpage lists startups frontpages. Full screenshots for
+            inspiration and product discovery.
+        highlights:
+            - "[Pyramid web framework](http://www.pylonsproject.org/)."
+            - "[Docker](https://docker.com/) for screenshot grabbing service."
+
+    -   name: Wwwino.pl
+        role: Developed web spider and search engine. Frontend and backend developement.
+
+        website: http://wwwino.pl
+        date: 2014 - Present
+        summary: Wine search engine and price comparator for Polish wine consumers.
+        highlights:
+            - "[Pyramid web framework](http://www.pylonsproject.org/)."
+            - ElasticSearch.
+            - Web scrapping.
+
+    -   name: Piwwwo.pl
+        role: Frontend and backend developer
+        website: http://piwwwo.pl
+        date: 08-2014
+        summary: Piwwwo.pl is a beer journal and brewery database.
+        highlights:
+            - "[Pyramid web framework](http://www.pylonsproject.org/)."
+            - SQLAlchemy ORM framework.
+            - PostgreSQL database.
+
+
+education:
+    -   location: Columbia University
+        date: 2000 - 2002
+        summary: Enterprise Systems & Database Application Design & Development Program
+
+
+interests:
+    - Web and data systems scalability and performance.
+    - Development team onboarding, training and workflow analytics.
+    - Logical data modeling, architecture and physical storage engineering.
+    - Arts, Maths, Sciences, Education
+    - Jazz - http://google.com
+    - Cooking
+    - Gardening
+
+
+config:
+    theme: simple
+    github_source: https://github.com/jjdonson/resume
+    pdf_file: Jeremy_Donson_Resume.pdf
+    msword_file: Jeremy_Donson_Resume.doc

@@ -1,4 +1,45 @@
 NEXT STEPS:
+- code pipeline:
+  - Setups
+    - 1 [ ] - 
+  - Tests
+    - 1 [ ] - Set up two mini-sprints in Jira.
+    - 2 [ ] - Sync sprint issues to ghub.
+    - 3 [ ] - Sync sprint issues to bbkt.
+    - 4 [ ] - Smart commits from ghub to Jira.
+    - 5 [ ] - Smart commits from bbkt to Jira.
+    - 6 [ ] - Smart commits and other notifications to hipChat project chatroom. 
+    - 7 [ ] - Automated travis testing on push.
+    - 8 [ ] - Automated travis testing results => Notifications to hipChat project chatroom
+  - Details
+  - Diagrams
+  - Demos
+
+- high-level (low-detail) service diagrams:
+  - httpd
+  - httpsd
+  - http2d
+  - grub
+  - pxeboot
+  - ntpd
+  - ptpd
+  - mysqld
+  - cloudforms
+  - keystone
+
+  - mariadb
+  - mongodb
+  - redis
+  - ceph
+  - kvm
+  - beowulf
+ 
+ 
+- projectname: openResume: https://help.github.com/articles/renaming-a-repository/
+- subprojects get their own repos
+- repo-index gathers facts
+- api-registry gathers facts
+
 - clean up linkedin
 - finish msword resume
 - add msword doc link

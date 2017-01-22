@@ -1,6 +1,7 @@
 #/bin/bash
 
 # For most effective learning context, review high-level team dev workflow diagrams:
+
 # - Code Generation + Testing
 # - Code Pipeline Paving
 # - Code Pipeline Sprint Training

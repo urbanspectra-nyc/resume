@@ -1,0 +1,95 @@
+
+   WEBTHUMB(8) Linux System Manager's Manual WEBTHUMB(8)
+
+   NAME
+
+   webthumb -- web page snapshot-taker for Linux
+
+   SYNOPSIS
+
+   webthumb URL
+
+   PRACTICAL EXAMPLE
+
+   Take a snapshot of our home page and reduce it to a thumbnail no
+   larger than 100x100, preserving the original aspect ratio (enter this
+   command as one line, of course):
+
+   webthumb http://www.boutell.com/ | pnmscale -xysize 100 100 |
+   pnmtojpeg > thumb.jpg
+
+   VERSION
+
+   Version 1.01, 12/31/2003. Version 1.01 adds a simple locking mechanism
+   that forces webthumb jobs to run in sequence so that each job receives
+   the correct screenshot.
+
+   REQUIREMENTS
+
+   You must have the following tools, which are often already installed
+   and/or available as packages for your Linux distribution:
+     * The Xvfb virtual framebuffer X server. Sometimes not installed by
+       default, but easily available as a package for Red Hat, Debian, et
+       cetera.
+     * The [1]Mozilla web browser.
+     * The [2]netpbm image manipulation utilities. Almost always
+       installed; it's easy to build them yourself or install them as a
+       package.
+     * The Linux operating system. webthumb uses the /proc file system to
+       determine whether processes are still running properly.
+
+   WHERE TO GET
+
+   [3]Download from our web server.
+
+   DESCRIPTION
+
+   Creates a PPM-format image of the first screenful of a web page and
+   writes this image to standard output. This is done using the Xvfb
+   virtual framebuffer X server, which provides an environment for the
+   mozilla web browser. To minimize CPU impact, the Xvfb and mozilla
+   processes are kept resident in memory and reused by future invocations
+   of webthumb. See the top of the Perl source for useful settings.
+
+   BUGS
+
+   The "chrome" of the browser is displayed. This could be fixed with a
+   set of custom XUL files and the -chrome command line option. If you
+   have run Mozilla or Netscape 4 interactively as the current Unix user
+   before, Mozilla may display dialog boxes telling you about profile
+   upgrades and so forth, which prevent the display of the desired page.
+   This can be addressed by deleting the .mozilla and .netscape folders
+   from the home directory of the current Unix user, if they do not
+   contain files that are important to you. It would be nice if webthumb
+   could set up your Mozilla preferences at first use in an appropriate
+   way.
+
+   In an ideal world, mozilla would have a command line option like this:
+
+   mozilla -htmltops URL (THIS DOESN'T REALLY EXIST)
+
+   In order to produce a high-quality postscript version of a web page
+   without the need for any X server at all, and this could then be piped
+   through ghostscript to produce all manner of great things. But there
+   is no such feature, so webthumb is a handy workaround.
+
+   LICENSE
+
+   Copyright (c) 2003, [4]Thomas Boutell and [5]Boutell.Com, Inc. This
+   software is released for free use under the terms of the GNU General
+   Public License, version 2 or higher.
+
+   CONTACT INFORMATION
+
+   See [6]the webthumb web page for the latest release. Feel free to
+   [7]contact us.
+
+References
+
+   1. http://www.mozilla.org/
+   2. http://netpbm.sourceforge.net/
+   3. http://www.boutell.com/webthumb/webthumb.tar.gz
+   4. http://www.boutell.com/boutell
+   5. http://www.boutell.com/
+   6. http://www.boutell.com/webthumb
+   7. http://www.boutell.com/contact

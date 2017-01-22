@@ -1,0 +1,109 @@
+<html>
+<head>
+
+<title>WEBTHUMB(8)</title>
+
+</head>
+<body bgcolor="#FFFFFF">
+<!--
+ Copyright (c) 2003, Thomas Boutell and Boutell.Com, Inc.
+ This software is released for free use under the terms of
+ the GNU General Public License, version 2 or higher.
+-->
+<table>
+<tr>
+<th width=33% align=left>WEBTHUMB(8)
+<th width=33% align=right>Linux System Manager's Manual
+<th width=33% align=right>WEBTHUMB(8)
+</tr>
+</table>
+<p>
+<font color="#FF8888" size="4">NAME</font>
+<p>
+webthumb -- web page snapshot-taker for Linux
+<p>
+<font color="#FF8888" size="4">SYNOPSIS</font>
+<p>
+<code>webthumb URL</code>
+<p>
+<font color="#FF8888" size="4">PRACTICAL EXAMPLE</font>
+<p>
+Take a snapshot of our home page and reduce it to a thumbnail no larger
+than 100x100, preserving the original aspect ratio (enter this
+command as one line, of course):
+<p>
+<code>webthumb http://www.boutell.com/ | pnmscale -xysize 100 100 | pnmtojpeg > thumb.jpg</code>
+<p>
+<font color="#FF8888" size="4">VERSION</font>
+<p>
+Version 1.01, 12/31/2003. Version 1.01 adds a simple locking mechanism 
+that forces webthumb jobs to run in sequence so that each job receives 
+the correct screenshot.
+<p>
+<font color="#FF8888" size="4">REQUIREMENTS</font>
+<p>
+You must have the following tools, which are often already
+installed and/or available as packages for your Linux distribution: 
+<ul>
+<li>The <b>Xvfb</b> virtual framebuffer X server. Sometimes not installed
+by default, but easily available as a package for Red Hat, Debian, et cetera.
+<li>The <a href="http://www.mozilla.org/">Mozilla</a> web browser. 
+<li>The <a href="http://netpbm.sourceforge.net/">netpbm</a> image
+manipulation utilities. Almost always installed; it's easy to build them
+yourself or install them as a package.  
+<li>The <b>Linux</b> operating system. webthumb uses the /proc file system
+to determine whether processes are still running properly.
+</ul>
+<p>
+<font color="#FF8888" size="4">WHERE TO GET</font>
+<p>
+<a href="http://www.boutell.com/webthumb/webthumb.tar.gz">Download from our web server.</a>
+<p>
+<font color="#FF8888" size="4">DESCRIPTION</font>
+<p>
+Creates a PPM-format image of the first screenful of a web page and
+writes this image to standard output. This is done using the Xvfb
+virtual framebuffer X server, which provides an environment for the
+mozilla web browser. To minimize CPU impact, the Xvfb and mozilla
+processes are kept resident in memory and reused by future
+invocations of <code>webthumb</code>. See the top of the Perl
+source for useful settings.
+<p>
+<font color="#FF8888" size="4">BUGS</font>
+<p>
+The "chrome" of the browser is displayed. This could be fixed with a
+set of custom XUL files and the -chrome command line option. If you have
+run Mozilla or Netscape 4 interactively as the current Unix user before,
+Mozilla may display dialog boxes telling you about profile upgrades and
+so forth, which prevent the display of the desired page. This can be
+addressed by deleting the .mozilla and .netscape folders from the
+home directory of the current Unix user, <b>if they do not contain
+files that are important to you.</b> It would be nice if webthumb
+could set up your Mozilla preferences at first use in an appropriate way.
+<p>
+In an ideal world, mozilla would have a command line option like this:
+<p>
+<code>mozilla -htmltops URL (THIS DOESN'T REALLY EXIST)</code>
+<p>
+In order to produce a high-quality postscript version of a web page
+without the need for any X server at all, and this could then be
+piped through ghostscript to produce all manner of great things. But
+there is no such feature, so webthumb is a handy workaround.
+<p>
+<font color="#FF8888" size="4">LICENSE</font>
+<p>
+Copyright (c) 2003,
+<a href="http://www.boutell.com/boutell">Thomas Boutell</a> and 
+<a href="http://www.boutell.com/">Boutell.Com, Inc.</a>
+This software is released for free use under the terms of
+the GNU General Public License, version 2 or higher.
+<p>
+<font color="#FF8888" size="4">CONTACT INFORMATION</font>
+<p>
+See <a href="http://www.boutell.com/webthumb">the webthumb web page</a> 
+for the latest release.
+Feel free to <a href="http://www.boutell.com/contact">contact us</a>.
+
+</body>
+</html>
+

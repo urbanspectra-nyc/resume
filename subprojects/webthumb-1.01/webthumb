@@ -1,0 +1,180 @@
+#!/usr/bin/perl
+
+#Copyright 2003, Boutell.Com, Inc. Released under the terms of the
+#GNU General Public License, version 2 or later.
+#
+#Usage: webthumb URL 
+#
+#Outputs a ppm image of the web page in question, as displayed
+#by the mozilla browser (the first screen only), to standard output.
+#
+#EXAMPLE: to produce a thumbnail screenshot of a web page, 
+#no larger than 100x100 pixels, preserving the original aspect ratio:
+#
+#webthumb http://www.example.com/ | pnmscale -xysize 100 100 | cjpeg > thumb.jpg
+#
+#NOTE: runs an Xvfb process and a mozilla process in the background; 
+#after the first run they stay resident and are reused. This saves some
+#time and saves a LOT of CPU. If you wish to halt them, just kill the
+#process whose PID is found in the text file ~/.webthumb/Xvfb. 
+
+#SETTINGS YOU MAY NEED OR WISH TO CHANGE
+#Use X display number 2, a 1024x768 resolution, and 24-bit truecolor.
+#THIS IS NOT THE PLACE TO SET THE SIZE OF THE THUMBNAIL IMAGE YOU REALLY
+#WANT. Use a command line like the example above to get a gorgeous 
+#thumbnail with resampled pixels. mozilla will not run usefully at very 
+#small sizes, and even if it did, it wouldn't be attractive.
+
+my $xvfbCommand =  "Xvfb :2 -screen 0 1024x768x24";
+my $mozillaCommand = "mozilla";
+my $mozillaWidth = "1024";
+my $mozillaHeight = "768";
+my $background = "black";
+#Since mozilla remote control is asynchronous, we must sleep a fixed
+#number of seconds after instructing mozilla to load a page before
+#taking the snapshot. I don't recommend setting this any lower or you'll
+#have trouble capturing even a fast-loading page.
+my $loadTime = 5;
+#LEAVE THIS TURNED ON, unless you are NOT allowing web users to
+#enter URLs of their own to be captured via this script. Letting
+#people capture your files with file: URLs is a BAD idea.
+my $httpOnly = 1;
+#For temporary files -- tiny little things, this is usually a good place
+my $files = $ENV{'HOME'} . "/.webthumb";
+
+#NO CHANGES USUALLY REQUIRED BELOW HERE
+
+use POSIX;
+
+if (int(@ARGV) != 1) {
+	die "Usage: webthumb URL\n" .
+		"Produces a ppm file on standard output, suitable for piping\n" .
+		"to pnmscale, cjpeg, and so on.\n";
+}
+	
+if (!(-e $files)) {
+	if (!mkdir($files)) {
+		die "Can't create $files to hold temporary files, home directory must be writable.\n";
+	}
+}
+
+&lock;
+
+&restartIfNeeded("Xvfb", $xvfbCommand);
+$ENV{'DISPLAY'} = ":2.0";
+system("xsetroot -solid $background");
+&restartIfNeeded("mozilla", "$mozillaCommand -width $mozillaWidth " .
+	"-height $mozillaHeight");
+
+#Use a list rather than a single quoted string to avoid the shell
+#and make passing the URL reasonably safe
+
+my $url = $ARGV[0];
+if ($httpOnly) {
+	if ($url !~ /^http\:/) {
+		die "Only HTTP URLs are allowed";
+	}
+}
+
+#Be patient and retry this a few times. -remote is picky and the exact
+#time required for mozilla to start up is not deterministic.
+
+my $good = 0;
+for ($tries = 0; ($tries < 10); $tries++) {
+	my $result = system($mozillaCommand, '-remote', "openURL($url)");
+	if ($result == 0) {
+		$good = 1;
+		last;
+	}
+	sleep(1);
+}
+
+if (!$good) {
+	die "$mozillaCommand -remote didn't work after 10 tries.";
+}
+
+#Unfortunately, mozilla -remote is not synchronous: it does not wait
+#until the page has been successfully loaded. We take a reasonable stab
+#at this by allowing 5 seconds for page rendering. If the site being
+#loaded is slow, this might show some missing images, etc.
+sleep($loadTime);
+
+#Capture the contents of the virtual frame buffer, then write them to
+#standard output in ppm format. Done!
+system("xwd -root -silent | xwdtopnm"); 
+
+&unlock;
+
+sub restartIfNeeded
+{
+	# The parent process stores the pid of the child
+	# in a temporary file. The child process removes the
+	# temporary file just before exiting. As a sanity check,
+	# the parent process also checks (above) whether the
+	# pid contained in the file still exists and that its
+	# command line looks relevant via the procfs.
+	my ($name, $command) = @_;
+	my $xpid;
+	if (open(IN, "$files/$name")) {
+		$xpid = <IN>;
+		close(IN);
+		if (!(-e "/proc/$xpid")) {
+			$xpid = undef;
+		} else {
+			open(IN, "/proc/$xpid/cmdline");
+			my $cmdline;
+			read(IN, $cmdline, 1024);	
+			close(IN);
+			if ($cmdline !~ /webthumb/) {
+				$xpid = undef;	
+				unlink("$files/$name");
+			}
+		}
+	}
+	if (!defined($xpid)) {
+		my $pid = fork;
+		if ($pid == 0) {
+			POSIX::setsid() || die "Can't disassociate $name process";
+			system($command);
+			# Give the parent a chance to create the tempfile
+			# in the event of an immediate failure of $command
+			sleep(1);
+			# Remove the tempfile, process no longer exists
+			unlink("$files/$name");
+			exit 0;
+		} else {
+			$xpid = $pid;
+			open(OUT, ">$files/$name");
+			print OUT $xpid;
+			close(OUT);
+			# This is a bit of a hack, but the fact is that
+			# Xvfb and mozilla both require a little bit of
+			# initialization time before they can be expected
+			# to do useful work. This delay is only necessary
+			# on the first use of the script, since after that
+			# the processes are already resident.
+			sleep(2);
+			# Now check whether the child has already exited
+			# and fail if it has -- this is supposed to be a
+			# resident process.
+			if (!(-e "$files/$name")) {
+				die "Unable to start $command";
+			}	
+		}
+	}
+}
+
+use Fcntl ':flock';
+	
+sub lock
+{
+	open(LOCK, ">>$files/lock") || die "Can't create $files/lock";
+	flock(LOCK, LOCK_EX); 
+}
+
+sub unlock
+{
+	flock(LOCK, LOCK_UN);
+	close(LOCK);
+}
+

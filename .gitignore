@@ -5,3 +5,4 @@ env/
 *.sublime-workspace
 bower_components/
 config.make
+.DS_Store

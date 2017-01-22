@@ -96,3 +96,10 @@ THUMBOOT32
 - rm next meetings
   - online
   - in-person
+---
+...copying shared history...
+...saving history...truncating history files...
+...completed.
+find: invalid argument `-1d' to `-mtime'
+Deleting expired sessions...find: invalid argument `+2w' to `-mtime'
+none found.

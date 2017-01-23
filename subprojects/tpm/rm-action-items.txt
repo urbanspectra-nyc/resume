@@ -1,0 +1,236 @@
+ACTION ITEMS:
+ - Schedule two mini-sprints in jira:
+    - project backlog:
+        - tpms
+            - code pipeline diagram
+            - onboarding tpms
+        - uidevs
+            - first-null-commit
+            - team-dev-dojo
+            - onboarding uidevs
+        
+    - Project Name: codepipeline
+    - Project Name: openresume
+    - Project Name: sofiasys
+        - Sprint 1:
+          - duration
+          - start
+          - jira support requests
+          - end
+          - tag
+        - Sprint 2:
+          - duration
+          - start
+          - jira support requests
+          - end
+          - tag
+        - Sprint 3:
+          - duration
+          - start
+          - jira support requests
+          - end
+          - tag
+
+    
+ - sched two weeks => update weekly on Monday+Friday
+ - rp3 tablet
+ - win laptop
+ - 
+
+Name: Robert Menes Next Steps
+-----------------------------
+0 [ ] - Stay two weeks ahead with sched-plan-onboards-tpm-uidev:
+    - Week N: 
+        - Goals:
+        - Solo tasks:
+        - Online tpm tasks:
+        - Online work tasks:
+        - In-person tasks:
+---
+Foundations: ^
+- SUPPORT
+- SKILLS
+- SERVICES
+- SOFTWARE
+- HARDWARE
+---
+- SKILLS: 
+    - git
+    - dev ops local
+    - dev ops code pipelines
+    - bash
+    - mariadb/mysqld
+    - workflows
+    - linux
+    - ansible
+    - yaml
+    - languages
+    - decorators
+    - C/C++
+    - travis
+    - selenium
+    - jenkins
+---
+Diagrams:
+- logical diagram types
+- physical diagram types
+- legends
+- standard service inputs = call+binaries+configs
+- standard service outputs = data out + logs
+- vlan
+- thumboot
+- provisioning
+- code pipeline
+- onboarding
+- federated security matrix
+---
+- SAAS services
+      - team onboarding
+      - user onboarding
+      - foundations training
+      - project onboarding
+      - jira tpm
+- PAAS services
+      - github
+  - bitbucket
+  - gitlab
+  - travis
+  - jenkins
+  - hipchat
+- IAAS services
+  - network provisioning
+  - host provisioning
+  - storage provisioning
+    - vbox => kvm => bare metal
+    - vlan => lan => net => com/org
+---
+1 [ ] - Schedule Three Weeks
+    - Week 1 Goals:
+        - Code Pipeline
+                - Jira: teams, users, epics --< projects, issues --< tasks --< steps --< checkpoints
+                - Sprints + schedules + plans + test matrices + workflows
+                - Tasks taxonomy [categories + tags]
+                    - categories
+                        - auth
+                        - onboarding
+                        - tpm
+                        - 
+        - HipChats, each w team web dashboard?
+                    - role teams: ^
+                        - authadmin
+                        - execs
+                        - mgrs
+                        - engs
+                        - admins
+                        - devs
+                        - uidevs
+                        - tpms
+                    - role teams: ^ ??
+                        - alliances
+                        - sponsors
+                        - recruiters
+                        - clients
+                        - members
+                        - prospects
+                        - public
+                    - projects:
+                        - first-null-commits
+                        - repo-indexes
+                        - repo-skels
+                        - team-dev-dojos
+                        - custom-gitbash-encapsulations
+                        - openresumes
+                        - sofiasys
+                - travis
+                    - .travis.yml tests => team-dev-dojos-travis
+                        - smart-commit-fail-bbkt
+                        - smart-commit-pass-bbkt
+                        - smart-commit-fail-ghub
+                        - smart-commit-pass-ghub
+                        - travis-sample-test-fail-bbkt
+                        - travis-sample-test-pass-bbkt
+                        - travis-sample-test-fail-ghub
+                        - travis-sample-test-fail-ghub
+                        - travis-auto-push-bbkt
+                        - hipchat-auto-notify-bbkt
+                        - travis-auto-push-ghub
+                        - hipchat-auto-notify-ghub
+                - bbkt
+                - github
+                - domains
+                - gitlab
+                - vlan => lan => .net => .com
+
+            - foundations
+            - diagrams, vlan, thumboot
+            - onboarding jay as uidev
+            - onboarding jay as admin
+
+---
+2 [ ] - 
+    - Create urbaspectra-repository-index matrix.
+---
+3 [ ] - Hire nyc uidev with skills:
+    - site audits
+    - complete static web site specs
+    - prereq needs
+    - trainable needs
+    - prereq wants
+    - trainable wants
+
+3 [ ] - Static Site Generation (private or public?; read or write?)
+    - TEMPLATES
+        - sow
+        - sign-ons
+        - work log
+        - test results
+        - approvals (public writes)
+        - invoice
+        - sofiasys device + bid form
+        - resume
+            - rename project
+            - readme
+            - yaml
+            - html template
+            - themes
+            - svg
+        - fonts
+        - msword
+        - linkedin
+        - webresume
+        - browser test matrix
+        - uidev fixes
+        - admin fixes
+    - Mustache
+        - bash
+        - ruby
+        - python
+        - node
+        - go
+        - java
+        - uidev fixes
+        - admin fixes
+    - Ruhoh
+        - uidev fixes
+        - admin fixes
+
+3 [ ] - 
+
+Name: Robert Menes Next Steps Online
+
+---
+Name: Robert Menes Next Steps In-Person
+
+---
+Name: Onboarding Workflows
+1. Structure onboarding workflows
+2. Define onboarding processes
+    - uidevs
+    - tpms
+    - admins
+    - engineers
+3. Onboard uidevs
+        - jbari
+        - jkoller
+        - other
+---

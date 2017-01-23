@@ -1,0 +1,56 @@
+Name: SCHEDULE THREE WEEK TARGET TRAJECTORY
+-------------------------------------------
+
+Name: WEEK 1 TPM TASKS
+- onboards
+- repo-index
+- share projects
+- two mini-sprints
+- articles
+- sow => invoice
+- diagrams
+- workflows
+    - saas
+      - sow => invoice
+      - onboarding
+      - training
+      - demos
+      - barter
+    - paas
+      - uidev
+    - iaas
+      - supported operating systems:
+      - supported LAN target platforms: tpm-tablets, dev-thin-clients, dev-wkstns, hosts-vbox, hosts-kvm, hosts-bmp, clusters-vbox, clusters-kvm, clusters-bmp
+      - supported languages: python, ruby, bash, c, node, go, php
+      - federated security audits, models, tests, validations
+      - public-facing web site audits
+      - network provisioning: logical,physical
+      - host provisioning: logical,physical
+      - storage provisioning: logical,physical
+      - data service provisioning: logical,physical
+      - service api provisioning: logical,physical
+      - system/host clustering + hardware customization
+---
+Name: WEEK 1 UIDEV TASKS
+- resumes
+- first-null-commit
+- team-dev-dojos
+
+---
+Name: WEEK 1 ADMIN TASKS
+- foundations
+- code pipeline
+- domains
+---
+CODE PIPELINE TESTING
+---
+Migrate2jira => curl all apis!
+---
+projects to share:
+- openresume
+- repo-index
+- onboards-2017
+- first-null-commit
+- team-dev-dojos
+- sow2invoice
+- git-bash-aliases

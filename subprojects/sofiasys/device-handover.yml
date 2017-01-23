@@ -1,0 +1,47 @@
+---
+Name: Tablet Hand Over Steps
+- Start with Statement of Work.
+- Can we sell setup, training and support services?
+- What plaforms do we support?  What do we recommend?
+- Is all that info easily available online so we need not explain it 10,000 times?
+- Backup to isolated storage if needed.
+- Root device.  Document device rooting method.
+- Secure with standard platform constraints.
+- Elevate security with YubiKey access.
+- Remote lockout options.
+- Wipe remote options.
+- Tour Tablet Hardware + Software
+- Screenshots
+- Wipe+restore.
+- Provide private secure LAN diagram, with recommendations.
+---
+Name: Tools Per Role
+- Core
+    - file explorer
+    - browser
+    - laucher
+    - installer
+    - download
+    - convert
+    - upload
+    - print
+    - gvoice
+    - skype
+    - irc
+    - hipchat
+    - snapchat
+    - adium
+---
+- Systems Administrator
+    - curl
+    - file transfer
+- Technical Project Manager
+    - jira
+    - cacoo
+    - github
+    - bitbucket
+    - msproject
+- Sales
+- Media
+- Music
+---

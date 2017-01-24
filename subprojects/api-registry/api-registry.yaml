@@ -1,0 +1,14 @@
+Name: Local Repository Index Structure
+- Repo Owner: jjdonson@github
+- Repo Name: openresume
+- Repo Description: Static Web Resume Generator
+- Owner Email: jjdonson@gmail.com
+- Repo Origin: https://www.github.com/urbanspectra-nyc/openresume
+- Repo Access: Public
+- Repo Init Timestamp: 
+- Repo Init Checksum: 
+- Repo Last Timestamp: 
+- Repo Last Checksum: 
+---
+repo-name,repo-origin,access,status
+etc,localhost,sysroot,

@@ -49,6 +49,7 @@ Ceph is ....
     - volume
     - inode
     - block
+    - node
     - path
     - read patterns
     - write patterns
@@ -81,11 +82,15 @@ Ceph is ....
     - radosgw: app
     - rbd: host/vm
     - cephfs client
+    - FUSE
     - hash
     - ring
     - hash vs ring
     - s3 verbs
     - copy-on-write
+    - snapshots
+    - recursive statistical accounting
+    - metadata aggregations
     - Lookup Tables
     - Hash Functions
     - CRUSH Algorithm
@@ -94,10 +99,13 @@ Ceph is ....
         - pool shard targeting: CRUSH(pg, cluster state, rule set)
     - data centers
     - storage pools
+    - storage pool performance classing
+    - storage chunk
     - replicas
       - static primary
       - nomadic primary
     - Redundancy
+      - parity
       - controller replication: no
       - Clients
       - Peering

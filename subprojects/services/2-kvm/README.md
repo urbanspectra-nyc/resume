@@ -3,7 +3,7 @@ kvm 101
 
 This is where to start learning kvm.
 
-FROM   [kvm video URL]()
+FROM   [kvm video URL](https://linuxfoundation.org/linux-tutorials )
 
 TOPICS
 ------
@@ -27,8 +27,26 @@ KVM is ....
 ### 4 - KVM Concepts
     - open source code benefits
     - virtualization principles
-    - WHat is virtualBox?
-    - 
+    - virtual disks
+    - virtual machines
+    - virtualBox
+    - [qemu](http://wiki.qemu.org/download/qemu-doc.html)
+    - [physical machine]
+    - [physical host]
+    - [logical machine]
+    - [logical guests]
+    - [hypervisor]
+    - [controller]
+    - [qcow]
+    - paravirtualization: driver per guest for qemu
+    - Virtual Storage Stack:
+      - host
+      - guest
+      - image formats
+      - hardware emulation
+    - libvirt
+      - virtio-blk: paravirtualized block transport
+
 
 License
 -------

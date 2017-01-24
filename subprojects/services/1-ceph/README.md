@@ -58,6 +58,14 @@ Ceph is ....
     - striped
     - mirrored
     - single-point-of-failure
+    - replication architectures
+        - methods
+        - problems
+        - solutions
+    - clustered architectures
+        - methods
+        - problems
+        - solutions
     - storage size capacity
     - storage bandwidth capacity
     - size:bandwidth as data:process as noun:verb
@@ -77,6 +85,37 @@ Ceph is ....
     - ring
     - hash vs ring
     - s3 verbs
+    - copy-on-write
+    - Lookup Tables
+    - Hash Functions
+    - CRUSH Algorithm
+        - object name
+        - hash into placement group: hash(object) % num pg
+        - pool shard targeting: CRUSH(pg, cluster state, rule set)
+    - data centers
+    - storage pools
+    - replicas
+      - static primary
+      - nomadic primary
+    - Redundancy
+      - controller replication: no
+      - Clients
+      - Peering
+      - OSD Nodes: Manage data consistency
+      - Monitor Nodes:  Produce OSD Map
+      - Monitor Nodes:  Node Fail-Else-Change OSD Map Updates
+    - RADOS Cluster: client access is via monitors AND direct to storage
+    - librados api
+    - Recovery
+      - Parallelized Restores
+
+### 5. Ceph Diagrams
+    - Logical Models For Distributed Storage
+      - Elements
+      - Connectors
+    - Physical Models For Distributed Storage
+      - Elements
+      - Connectors
 
 License
 -------

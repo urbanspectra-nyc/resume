@@ -91,6 +91,9 @@ GIT_V=$( ${BINS[1]} --version )      || ERR_MSSG=${BINS_V_OPT[1]}
 
 # OSX RAM DISK 128MB: $ diskutil erasevolume HFS+ 'RAM Disk' `hdiutil attach -nomount ram://262144`
 
+# umount -f RAM\ Disk
+
+
 ---
 real    0m2.308s
 user    0m0.003s

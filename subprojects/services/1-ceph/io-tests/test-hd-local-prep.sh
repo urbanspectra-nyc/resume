@@ -31,3 +31,5 @@ BINS[2]=curl; BINS[3]=man; BINS[4]=dd ; BINS[5]=gzip; BINS[6]=gunzip; BINS[7]=sy
 BASH_V=$( ${BINS[0]} --version )     || ERR_MSSG=${BINS_V_OPT[0]}
 GIT_V=$( ${BINS[1]} --version )      || ERR_MSSG=${BINS_V_OPT[1]}
 
+# free space on boot disk:
+df -h | grep '/dev/disk1' | awk '{print $7}'

@@ -1,0 +1,39 @@
+Name: Local IO Test Matrix Hardware Variables.
+  - System Type: Laptop
+    - Manufacturer: Apple
+    - Model: MacBook Air
+    - Year: 
+    - Serial Number: 
+
+    - cpu:
+    - ram:
+    - BOOT:
+
+  - Local Storage Buses
+    - usb
+    - sata
+    - scsi
+    - firewire
+  - Target Disks
+  - File Systems
+---
+Name: Local IO Test Matrix Software Variables.
+  - Operating System: OS X 10.??
+  - Files
+  - 
+---
+Test Matrices
+Test Cases
+Problem Scenarios
+Reproduce Problem
+Solution Testing Methods Proposal
+Test Conditions
+Test Inputs
+Test Runs
+Test Run Expected Outcomes
+Test Run Actual Outcomes
+Precise
+Accurate
+Reproducibility
+Test Result Analysis
+Test Result Conclusions

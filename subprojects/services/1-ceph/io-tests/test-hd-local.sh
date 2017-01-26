@@ -77,5 +77,8 @@ sysbench --test=fileio --file-total-size=512M prepare
 # test modes: seqwr seqrewr seqrd rndrd rndwr rndrw
 sysbench --test=fileio --file-total-size=512M --file-test-mode=rndrw
 
-exit 0
+# Empty trash, includes all mounted volumes.
+sudo rm -rf ~/.Trash /Volumes/*/.Trashes
+
+# exit 0
 # exit 1

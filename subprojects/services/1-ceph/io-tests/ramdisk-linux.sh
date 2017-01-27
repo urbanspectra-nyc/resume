@@ -31,3 +31,7 @@ then
   echo "Delete/unmount ramdisk $2"
   umount -f $2
 fi
+
+# This is still WIP!
+# TODO: Test output of $DISK_ID
+# TODO: Cleanup of script with better commands

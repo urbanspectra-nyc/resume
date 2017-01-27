@@ -22,12 +22,10 @@ mariadb is ....
 
 [??]() is the team of engineers who support and customize mariadb.
 
-    kvm
+    mariadb
 
 ### 4 - mariadb Concepts
-    - open source code benefits
-    - virtualization principles
-    - WHat is virtualBox?
+
     - 
 
 License

@@ -10,7 +10,7 @@ then
   echo "To delete a RAMDISK -> Usage: `basename $0` delete DISK_ID"
   echo " "
   echo "Currently this script only supports one RAMDISK. Will update soon."
-  echo "DISK_ID can be shown with 'mount'. usually /dev/disk* where * is a number"
+  echo "DISK_ID can be shown with 'mount'. usually /dev/sd* where * is a letter"
   echo " "
   echo " "
   exit $E_BADARGS
@@ -18,17 +18,16 @@ fi
 
 if [ "$1" = "create" ]
 then
-  echo "Create ramdisk..."
+  echo "Creating ramdisk..."
   RAMDISK_SIZE_MB=$2
   RAMDISK_SECTORS=$((2048 * $RAMDISK_SIZE_MB))
-  DISK_ID=$(hdiutil attach -nomount ram://$RAMDISK_SECTORS)
+  DISK_ID=$(mount -t tmpfs -o size=$RAMDISK_SECTORS tmpfs /mnt/ramdisk)
   echo "Disk ID is :" $DISK_ID
-  diskutil erasevolume HFS+ "ramdisk" ${DISK_ID}
+  
 fi
 
 if [ "$1" = "delete" ]
 then
   echo "Delete/unmount ramdisk $2"
   umount -f $2
-  hdiutil detach $2
 fi

@@ -1,0 +1,32 @@
+I will show you my '168Sheet' which defines my weekly schedule for this stuff.
+
+Please schedule and plan the following:
+TO DO THIS WEEK:
+   - Schedule & plan two weeks every Sunday, updated weekly.
+
+TO DO NEXT WEEK:
+
+TO STUDY THIS WEEK:
+
+TO STUDY NEXT WEEK:
+
+
+
+hardware schematic diagram
+ramdisk-linux
+ramdisk-fact-driven
+venn diagrams
+testing of disks, systems and networks.
+
+
+
+
+- 
+
+VENN DIGRAMS:
+- power:data
+- logical:physical
+- data:process
+- model:diagram:legend
+- developer:dev ops
+- 

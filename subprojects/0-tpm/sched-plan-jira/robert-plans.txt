@@ -1,0 +1,30 @@
+Good Morning Robert.
+
+I will provide diagram for hardware schematic later today.
+That will help us review testing of disks, systems and networks.
+
+I will show you my '168Sheet' which defines my weekly schedule for this stuff.
+
+Please schedule and plan the following:
+- TO DO:
+   - schedule & plan two weeks; update weekly
+   - find new meetup location
+   - meetups to attend
+   - visit newspapers
+   - samis
+   - two bash scripts per week
+   - code pipeline
+   - vagrant
+   - tests and audits
+   - git
+   - aws / heroku / DO, gcloud
+   - d3.js: one per week
+   - foundations
+
+TO STUDY:
+- power
+- data
+- bash
+- ruby
+- mustache
+- ansible

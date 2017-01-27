@@ -2,6 +2,18 @@
 
 ARGS=2
 E_BADARGS=99
+# STARTSTAMP=$(date ??)
+
+# Reboot to set OS RAM baseline.
+echo 'System Reboot Required'
+# confirm/deny
+
+# Count procs running.
+SYS_PROC_COUNT=$( ps uawx | wc -l )
+# echo TSTAMP >> /etc/boot
+SYS_PROC_COUNT_BASELINE=$( ps uawx | wc -l )
+
+# Safe mode
 
 # What operating system are we running on?
 KERNEL=$(facter | grep 'kernel ' | awk '{print $3}')
@@ -10,36 +22,14 @@ UNAME=$(uname -a)
 # Total Physical Memory
 RAM_MB=$(free)
 
+# Total Physical Memory Used By Baselined OS
+
+# Total Physical Memory Available
+
 # Total Free MB On Boot Disk
 BOOT_FREE_MB=$(df -h | grep '/dev/disk1' | awk '{print $7}' )
 
+# Configure disk count, types, tests.
+# Preflight configs.
+# 
 
-if [ $# -ne $ARGS ] # correct number of arguments to the script;
-then
-  echo " "
-  echo "To create a RAMDISK -> Usage: `basename $0` create SIZE_IN_MB"
-  echo "To delete a RAMDISK -> Usage: `basename $0` delete DISK_ID"
-  echo " "
-  echo "Currently this script only supports one RAMDISK. Will update soon."
-  echo "DISK_ID can be shown with 'mount'. usually /dev/disk* where * is a number"
-  echo " "
-  echo " "
-  exit $E_BADARGS
-fi
-
-if [ "$1" = "create" ]
-then
-  echo "Create ramdisk..."
-  RAMDISK_SIZE_MB=$2
-  RAMDISK_SECTORS=$((2048 * $RAMDISK_SIZE_MB))
-  DISK_ID=$(hdiutil attach -nomount ram://$RAMDISK_SECTORS)
-  echo "Disk ID is :" $DISK_ID
-  diskutil erasevolume HFS+ "ramdisk" ${DISK_ID}
-fi
-
-if [ "$1" = "delete" ]
-then
-  echo "Delete/unmount ramdisk $2"
-  umount -f $2
-  hdiutil detach $2
-fi

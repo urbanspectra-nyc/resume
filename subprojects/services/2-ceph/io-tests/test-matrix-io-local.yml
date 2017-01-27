@@ -1,3 +1,45 @@
+Name: System Types
+- thin client
+- server
+- laptop
+- desktop
+- tablet
+- smartphone
+---
+Name: System Device Types
+- power supply
+- cpu
+- ram
+- hd
+- nic
+---
+Name: Disk Types + Buses
+- ssd boot: sata
+- ramdisk: ram
+- ssd thumb ext: usb
+- ssd ext: sata 
+- ssd ext: fw400
+- ssd ext: fw800
+---
+Name: Process Types
+- boot
+- reboot
+- read
+- write
+- read-write
+- execute
+- request
+- response
+---
+Name: BARE METAL DISK BENCHMARKING
+---
+Name: IO Types
+- seqwr: sequential writes
+- seqrewr: sequential rewrites
+- seqr: sequential read
+- rndrd: random read
+- rndrw: random read + random write 
+---
 Name: Local IO Test Matrix Hardware Variables.
   - System Type: Laptop
     - Manufacturer: Apple

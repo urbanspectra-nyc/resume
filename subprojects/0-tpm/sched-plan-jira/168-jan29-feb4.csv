@@ -1,4 +1,4 @@
-168 SHEET,Monday,Tuesday,Wed,Thursday,Friday,Sat,Sun,Monday,Tuesday,Wed,Thursday,Friday,Sat,Sun
+HOURS,Monday,Tuesday,Wed,Thursday,Friday,Sat,Sun,Monday,Tuesday,Wed,Thursday,Friday,Sat,Sun
 6 - 7 AM,Code review (solo),Code review (solo),Code review (solo),Code review (solo),Code review (solo),,,Code review (solo),Code review (solo),Code review (solo),Code review (solo),Code review (solo),,
 7 - 8 AM,Vids & docs (solo),Vids & docs (solo),Vids & docs (solo),Vids & docs (solo),Vids & docs (solo),,,Vids & docs (solo),Vids & docs (solo),Vids & docs (solo),Vids & docs (solo),Vids & docs (solo),,
 8 - 10 AM,"Day Job (UNAVAILABLE)
@@ -12,7 +12,7 @@
 ","Day Job (UNAVAILABLE)
 ","Day Job (UNAVAILABLE)
 ",,
-10 - 12 AM,"Day Job (UNAVAILABLE)
+10 AM - 12 PM,"Day Job (UNAVAILABLE)
 ","Day Job (UNAVAILABLE)
 ","Day Job (UNAVAILABLE)
 ","Day Job (UNAVAILABLE)
@@ -23,17 +23,19 @@
 ","Day Job (UNAVAILABLE)
 ","Day Job (UNAVAILABLE)
 ",,
-12 - 2 PM,"Online review (12:45 PM-1:20 PM)
+12 - 2 PM,"Jira Sprints & Discussion(12:45-1:20 PM)
 ","Online review (12:45 PM-1:20 PM)
 ","Online review (12:45 PM-1:20 PM)
 ","Online review (12:45 PM-1:20 PM)
 ","Online review (12:45 PM-1:20 PM)
-",,,"Online review (12:45 PM-1:20 PM)
+",,"Jira Sprints & Discussion(12:45-1:20 PM) (FALLBACK)
+","Jira Sprints & Discussion(12:45-1:20 PM)
 ","Online review (12:45 PM-1:20 PM)
 ","Online review (12:45 PM-1:20 PM)
 ","Online review (12:45 PM-1:20 PM)
 ","Online review (12:45 PM-1:20 PM)
-",,
+",,"Jira Sprints & Discussion(12:45-1:20 PM) (FALLBACK)
+"
 DELIVS,,,,,,,,,,,,,,
 2 - 4 PM,"Day Job (UNAVAILABLE)
 ","Day Job (UNAVAILABLE)
@@ -47,6 +49,10 @@ DELIVS,,,,,,,,,,,,,,
 ","Day Job (UNAVAILABLE)
 ",,
 4 - 6 PM,4:30 PM - Leave Day Job,4:30 PM - Leave Day Job,4:30 PM - Leave Day Job,4:30 PM - Leave Day Job,4:30 PM - Leave Day Job,,,4:30 PM - Leave Day Job,4:30 PM - Leave Day Job,4:30 PM - Leave Day Job,4:30 PM - Leave Day Job,4:30 PM - Leave Day Job,,
-6 - 8 PM,Available for in-person -OR- Solo work,Available for in-person -OR- Solo work,Available for in-person -OR- Solo work,Available for in-person -OR- Solo work,UNAVAILABLE,,,Available for in-person -OR- Solo work,Available for in-person -OR- Solo work,Available for in-person -OR- Solo work,Available for in-person -OR- Solo work,UNAVAILABLE,,
-8 - 10 PM,Available for in-person,Available for in-person,Available for in-person,Available for in-person,UNAVAILABLE,,,Available for in-person,Available for in-person,Available for in-person,Available for in-person,UNAVAILABLE,,
+6 - 8 PM,Available for in-person -OR- Solo work,"In-Person sessions (Uptown)
+",Available for in-person -OR- Solo work,Available for in-person -OR- Solo work,UNAVAILABLE,,,Available for in-person -OR- Solo work,"In-Person sessions (Uptown)
+",Available for in-person -OR- Solo work,Available for in-person -OR- Solo work,UNAVAILABLE,,
+8 - 10 PM,Available for in-person,"In-Person sessions (Uptown)
+",Available for in-person,Available for in-person,UNAVAILABLE,,,Available for in-person,"In-Person sessions (Uptown)
+",Available for in-person,Available for in-person,UNAVAILABLE,,
 DELIVS,,,,,,,,,,,,,,

@@ -1,0 +1,36 @@
+Name: ramdisk-linux Test Setups
+===============================
+
+- Test cases
+  - Test fails?
+  - Test passes?
+  - Distro used?
+  - bash version?
+
+- Test runs
+  - Create RAM disk
+  - Check RAM usage
+  - Copy to RAM disk
+  - Copy from RAM disk
+  - Delete RAM disk
+  - Check RAM usage
+
+
+Name: Local test machine
+========================
+
+- System type:
+  - Manufacturer
+  - Model
+  - Year
+  - Serial number:
+
+  - CPU: 
+  - RAM: 
+  - boot: 
+
+
+
+Compatibility
+Test actual outcome
+Test expected outcome

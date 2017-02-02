@@ -3,3 +3,9 @@ Please list ALLLLLLL questions first.
 then let's see what we can learn ourselves
 learning how to do this on a remote aws host ought to help?
 https://www.beyondtrust.com/resources/video/pbul-event-log/
+
+NAME:  Multi-Factor Auth
+- authFactor1:  password
+- authFactor2:  ssh key
+- authFactor3:  yubikey
+- recourse if yubi gets lost/stolen?

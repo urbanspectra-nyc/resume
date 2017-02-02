@@ -1,0 +1,56 @@
+pepwul77996:resume Mac$ gsutil
+Usage: gsutil [-D] [-DD] [-h header]... [-m] [-o] [-q] [command [opts...] args...]
+Available commands:
+  acl             Get, set, or change bucket and/or object ACLs
+  cat             Concatenate object content to stdout
+  compose         Concatenate a sequence of objects into a new composite object.
+  config          Obtain credentials and create configuration file
+  cors            Get or set a CORS JSON document for one or more buckets
+  cp              Copy files and objects
+  defacl          Get, set, or change default ACL on buckets
+  defstorageclass Get or set the default storage class on buckets
+  du              Display object size usage
+  hash            Calculate file hashes
+  help            Get help about commands and topics
+  iam             Get, set, or change bucket and/or object IAM permissions.
+  lifecycle       Get or set lifecycle configuration for a bucket
+  logging         Configure or retrieve logging on buckets
+  ls              List providers, buckets, or objects
+  mb              Make buckets
+  mv              Move/rename objects and/or subdirectories
+  notification    Configure object change notification
+  perfdiag        Run performance diagnostic
+  rb              Remove buckets
+  rewrite         Rewrite objects
+  rm              Remove objects
+  rsync           Synchronize content of two buckets/directories
+  setmeta         Set metadata on already uploaded objects
+  signurl         Create a signed url
+  stat            Display object status
+  test            Run gsutil tests
+  update          Update to the latest gsutil release
+  version         Print version info about gsutil
+  versioning      Enable or suspend versioning for one or more buckets
+  web             Set a main page and/or error page for one or more buckets
+
+Additional help topics:
+  acls            Working With Access Control Lists
+  anon            Accessing Public Data Without Credentials
+  apis            Cloud Storage APIs
+  crc32c          CRC32C and Installing crcmod
+  creds           Credential Types Supporting Various Use Cases
+  csek            Supplying Your Own Encryption Keys
+  dev             Contributing Code to gsutil
+  encoding        Filename encoding and interoperability problems
+  metadata        Working With Object Metadata
+  naming          Object and Bucket Naming
+  options         Top-Level Command-Line Options
+  prod            Scripting Production Transfers
+  projects        Working With Projects
+  retries         Retry Handling Strategy
+  security        Security and Privacy Considerations
+  subdirs         How Subdirectories Work
+  support         Google Cloud Storage Support
+  throttling      Throttling gsutil
+  versions        Object Versioning and Concurrency Control
+  wildcards       Wildcard Names

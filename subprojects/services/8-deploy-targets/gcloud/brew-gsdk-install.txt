@@ -1,0 +1,52 @@
+==> brew cask install Caskroom/cask/google-cloud-sdk
+Warning: The default Caskroom location has moved to /usr/local/Caskroom.
+
+Please migrate your Casks to the new location and delete /opt/homebrew-cask/Caskroom,
+or if you would like to keep your Caskroom at /opt/homebrew-cask/Caskroom, add the
+following to your HOMEBREW_CASK_OPTS:
+
+  --caskroom=/opt/homebrew-cask/Caskroom
+
+For more details on each of those options, see https://github.com/caskroom/homebrew-cask/issues/21913.
+==> Caveats
+google-cloud-sdk is installed at /opt/homebrew-cask/Caskroom/google-cloud-sdk/latest/google-cloud-sdk. Add your profile:
+
+      for bash users
+        source '/opt/homebrew-cask/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc'
+        source '/opt/homebrew-cask/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc'
+
+      for zsh users
+        source '/opt/homebrew-cask/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
+        source '/opt/homebrew-cask/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
+
+      for fish users
+        set fish_user_paths /opt/homebrew-cask/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin
+        set -x MANPATH /opt/homebrew-cask/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/help/man /usr/local/share/man /usr/share/man /opt/x11/share/man
+
+        Run fish_update_completions to generate completions for fish based on the man pages
+
+==> Downloading https://dl.google.com/dl/cloudsdk/release/google-cloud-sdk.tar.gz
+######################################################################## 100.0%
+==> No checksum defined for Cask google-cloud-sdk, skipping verification
+==> Running installer script google-cloud-sdk/install.sh
+==> Welcome to the Google Cloud SDK!
+==> 
+==> 
+==> Your current Cloud SDK version is: 142.0.0
+==> Installing components from version: 142.0.0
+==> 
+==> +----------------------------------------------------------------------------+
+==> |                    These components will be installed.                     |
+==> +-----------------------------------------------------+------------+---------+
+==> |                         Name                        |  Version   |   Size  |
+==> +-----------------------------------------------------+------------+---------+
+==> | BigQuery Command Line Tool                          |     2.0.24 | < 1 MiB |
+==> | BigQuery Command Line Tool (Platform Specific)      |     2.0.24 | < 1 MiB |
+==> | Cloud SDK Core Libraries (Platform Specific)        | 2016.11.07 | < 1 MiB |
+==> | Cloud Storage Command Line Tool                     |       4.22 | 2.8 MiB |
+==> | Cloud Storage Command Line Tool (Platform Specific) |       4.18 | < 1 MiB |
+==> | Default set of gcloud commands                      |            |         |
+==> +-----------------------------------------------------+------------+---------+
+==> 
+==> For the latest full release notes, please visit:
+==>   https://cloud.google.com/sdk/release_notes

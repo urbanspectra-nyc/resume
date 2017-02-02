@@ -4,9 +4,11 @@ Turn Markdown Statement of Work into HTML or PDF.
 
     Purpose:
     - Why are we doing this project? A purpose statement attempts to answer this.
+    - Example:  We are tying our shoes to prevent shoes from coming off, as well as to prevent tripping over them.
 
     Scope of Work:
     - This describes the work to be done and specifies the hardware and software involved.
+    - Example:  Shoes with lacing holes.  Shoelace quality 
 
     Location of Work:
     This describes where the work is to be performed, including the location of hardware and software and where people will meet to do the work.

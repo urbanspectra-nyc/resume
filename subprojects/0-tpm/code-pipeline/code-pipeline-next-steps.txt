@@ -1,0 +1,19 @@
+CODE PIPELINE
+- Docs => tpms uidevs, qadevs, admins
+- urbanspectra-nyc@gmail.com / admiN!35 => floor no ceiling
+- project management field mappings: roadmap
+- onboarding:
+  - tpms
+  - uidevs
+  - qadevs
+  - admins
+---
+jupiter notebooks
+---
+- code-pipeline
+- first-null-commit
+- team-dev-dojo
+- open-resume
+- pygridz
+- sofiasys
+---

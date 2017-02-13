@@ -1,0 +1,50 @@
+en:
+  vagrant_mutate:
+    errors:
+      providers_match: |-
+        Input and output provider are the same. Aborting.
+      provider_not_supported: |-
+        Vagrant-mutate does not support %{provider} for %{direction}
+      qemu_not_found: |-
+        QEMU was not found in your path
+      qemu_img_not_found: |-
+        qemu-img was not found in your path
+      box_not_found: |-
+        The box %{box} was not found
+      too_many_boxes_found: |-
+        More than one box named %{box} was found. Please specify the input provider as well.
+      extract_box_failed: |-
+        Extracting box failed with error:
+        %{error_message}
+      parse_identifier_failed: |-
+        Expected name or provider/name but you gave %{identifier}.
+        If you meant to specify a box by name fix this. If you meant to specify a box by path make sure the file exists.
+      determine_provider_failed: |-
+        Determining provider for box failed with error:
+        %{error_message}
+      load_metadata_failed: |-
+        Loading metadata for box failed with error:
+        %{error_message}
+      create_box_dir_failed: |-
+        Creating directory for box failed with error:
+        %{error_message}
+      write_metadata_failed: |-
+        Writing metadata for box failed with error:
+        %{error_message}
+      write_vagrantfile_failed: |-
+        Writing vagrantfile for box failed with error:
+        %{error_message}
+      write_disk_failed: |-
+        Writing disk image for box failed with error:
+        %{error_message}
+      parse_qemu_version_failed: |-
+        Determining the version of qemu-img installed failed
+      qemu_info_failed: |-
+          Getting information about the disk image via qemu-info failed
+      box_attribute_error: |-
+        Error determining information about the input box:
+        %{error_message}
+      url_error: |-
+          The url %{url} is not valid
+      metadata_not_found: |-
+        Unable to find metadata file for %{box}

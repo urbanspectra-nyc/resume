@@ -1,0 +1,15 @@
+glyde.com
+
+Nexus7
+- Backup to google drive.
+- Format
+- Root
+- Setup OS
+- Installs
+- Services
+- Restore
+- Secure
+
+Satish
+Darren
+Celia

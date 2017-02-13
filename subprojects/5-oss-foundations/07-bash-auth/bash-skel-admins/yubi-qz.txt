@@ -4,8 +4,40 @@ then let's see what we can learn ourselves
 learning how to do this on a remote aws host ought to help?
 https://www.beyondtrust.com/resources/video/pbul-event-log/
 
+?? What does debian crowd do to control and audit admin access?
+?? LDAP and AD integrations.
+?? How can we secure gmail account with Yubi Key(s)?
+?? Multi-lateral account governance.
+??  What if yubi gets lost or stolen?
+
+Yubi as meetup sponsor?
+
+BeyondTrust meetup sponsor?
+
 NAME:  Multi-Factor Auth
 - authFactor1:  password
 - authFactor2:  ssh key
 - authFactor3:  yubikey
 - recourse if yubi gets lost/stolen?
+
+GMAIL:  How to secure gmail account with yubikey?
+
+How to govern that account securely?
+- Unilateral Governance
+- Bilateral Governance
+- Multilateral Governance
+
+Powerbroker
+
+ROLES:
+- tpms
+- execs
+- uidevs
+- qadevs
+- admins
+  - types:
+- netadmins
+  - types:
+    - data
+    - service
+    - domain

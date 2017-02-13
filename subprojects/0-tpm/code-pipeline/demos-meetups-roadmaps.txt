@@ -1,0 +1,30 @@
+meetups:
+
+---
+demos:
+- recruiters
+- executives
+- tpms
+- uidevs
+- qadevs
+- admins
+- engineers
+---
+sponsors:
+
+---
+roadmaps:
+
+- code pipeline tpm:
+  - github
+  - jira
+  - microsoft project => pipeline sync: https://msdn.microsoft.com/en-us/library/office/jj246231.aspx
+
+- services:
+  - active directory => ldap integrations
+  - sharepoint api => gdrive sync
+
+- data:
+  - excel
+
+- operating

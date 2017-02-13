@@ -1,0 +1,43 @@
+Name: Online Philanthropy 101
+- Goals
+- Audiences
+- Questions
+- Projects
+- Diagrams
+  - Data Flow Diagrams: Workflow Interaction + Process Models
+  - Entity Relational Diagrams: Data Models
+- Tests
+- Demos
+---
+Name: Data Flow Diagram Steps
+- Roles:
+  - Donors
+  - Acceptors
+  - Beneficiaries
+  - Guarantors
+
+- Audiences
+  - churches
+  - medical research
+  - ngo
+  - schools
+
+- Targets
+- Campaigns
+  - print
+  - email
+  - web
+  - ??
+- Outreach
+- Retargeting
+- Impressions
+- Clicks (Engagement)
+- Conversions
+- 
+
+
+DONATION FORM
+- Responsive Browser Coverage
+- Multi-Lingual 
+- Denominations
+- Badges

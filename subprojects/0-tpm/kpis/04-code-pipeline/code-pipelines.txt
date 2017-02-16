@@ -1,0 +1,19 @@
+Planning Code Pipeline
+Scheduling Code Pipeline
+Paving Code Pipeline
+New Code Pipeline Projects
+Code Pipeline Demos
+Code Pipeline KPI's
+
+Name: KPI Cycle
+- Organize parallel workflows and their inter-dependencies.
+- Propose team workflows which may benefit from kpi analytics.
+- Diagram current existing (or proposed de novo) team workflows.
+- Identify team workflow inefficiencies and bottlenecks.
+- Convert those weaknesses opportunities for preventive efforts.
+- Document iterative manual test-driven efforts to be preventive.
+- Detect automation opportunities.
+- Tweak diagram to model any proposed enhancements.
+- Track KPI's + Propose KPI Weighting
+- Report On KPI's
+- Add incentives to accelerate KPI efforts.

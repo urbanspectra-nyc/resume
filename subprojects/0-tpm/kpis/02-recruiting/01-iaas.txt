@@ -1,0 +1,11 @@
+- IAAS
+  - Federated Security Services
+  - Federated Network Services
+  - Virtualized Hardware Clustering
+  - Virtualized Operating System Clustering
+  - Bare Metal Hardware Clustering
+  - Hybrid Public + Private Cloud Hosting, Including Docker Containers
+  - Clustered Data Services
+  - Stability + Recovery Fire Drills
+  - Performance Benchmarking
+  - Performance Load Testing

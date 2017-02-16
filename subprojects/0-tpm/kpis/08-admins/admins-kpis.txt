@@ -1,0 +1,17 @@
+II. Admin Team KPI's.
+
+COMMON ADMIN TEAM KPI CHALLENGE:  'Federated Secure, Flexible and Scalable Support Options'
+Admins are to provide a flexible combination of full-service and self-serve support options.
+This includes scalable security solutions that are do not interfere with getting work done, and are simple to manage.
+They must support devs across all platforms and languages.
+
+How does this impact the admin team and their ability to work effectively?
+- Admin teams can become a bottleneck for those they support in several ways.
+- Those who are able to self-serve become frustrated by their lack of autonomy.
+- Instead of there being a security-first approach, including admin governance, LAN and WAN security becomes an afterthought, at best.
+
+So, how to we confront the tendency for admins to omit quality security and support models?
+- Devise team support models that offer both full-service and self-serve options.
+- Require the admins to use the same systems that they use to support devs to build infrastructure tools.
+- Give admins incentives to assist dev teams with their KPI's, so they can be attached to revenue.
+- Support admin teams with a clear effort to prevent adverse impact to production operations, and promote early collaboration with devs.

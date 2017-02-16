@@ -1,0 +1,54 @@
+EMPLOYER:
+- Credit Suisse Bank, NYC
+
+PROJECT:
+
+ROLE TITLES:
+- Dev Ops Platform Support Engineer
+- Infrastructure Automation Engineer
+- Low-Latency Trading (LLT) High-Performance Network Application Engineer
+- Data Admin & Federated Admin Team Governance Security Engineer
+- Cloud App Testing Framework Architect
+- Technical Project Manager
+
+DELIVERABLES:
+- Technical Diagrams & Business Presentations
+
+TECHNOLOGIES:
+- PTP
+- 
+
+CHALLENGES
+- Highly heterogenous (RHEL 5 Linux / Win2k8) hosted external LAN.
+- Hard deadline for post-migration decommissions, else must sign another multi-million-dollar hosting contract.
+- Multi-department and multi-vendor migration, while deployed apps changed constantly and BAU could not be disrupted.
+- New LLT network was still being built out, and their world-class engineers had only begun to support this environment.
+- Migration enhancements were pre-ordained and not tested.
+- Development teams had no way to see their application logs in realtime during UAT and production deployments.
+- Windows Server 2012 
+- 
+
+ACHIEVEMENTS
+
+COLLABORATIONS
+- Rates Trader Teams (hybrids of automated algos and manual trader control)
+- Equities Trader Teams
+- Equities Quant Dev Teams
+- Trading App Dev Teams (C++, Java, Python, C#/.net, Perl)
+- 7Ticks App Hosting Engineers
+- Credit Suisse LLT Application Support Engineers
+- Credit Suisse LLT Network Support Engineers
+- Credit Suisse Corporate Engineering Teams
+- Credit Suisse Corporate Accounting Teams
+- Credit Suisse Corporate Legal Teams
+- Credit Suisse Chief Technical Officer, North America
+
+PAYOFFS
+
+---
+Name: Proposed Structure
+- State problems assigned.
+- State additional challenges
+- Describe what I achieved, and how so.
+- Elaborate upon collaborations.
+- Detail payoffs to organization.

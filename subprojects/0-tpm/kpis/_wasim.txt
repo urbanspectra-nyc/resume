@@ -1,0 +1,27 @@
+
+
+
+How to discuss current and prior roles?
+- Operations Sys Admin and DBA?
+- Data Modeling and Data Engineering?
+- Dev Ops Team Support
+---
+Name: WASIM's PROPOSED FORMAT
+- State problems assigned.
+- State additional challenges.
+- Describe what I achieved, and how so.
+- Elaborate upon collaborations.
+- Detail payoffs to organization.
+---
+Name: UIDEV TEAM KPIs
+- Browser Coverage
+- 
+-—-
+
+
+
+
+UIDEVS
+QADEVS
+ADMINS
+ENGINEERS

@@ -1,0 +1,52 @@
+EMPLOYER:
+- Bank Of America, NYC
+
+PROJECT:
+- Dev Project Hosting With OpenShift On Bare-Metal OpenStack & Amazon Web Services (aws).
+  - Application Containers
+  - Micro-Service Containers
+  - Operating System Containers
+
+ROLE TITLES:
+- Infrastructure Automation Engineer
+- Database-As-A-Service Engineer
+- Data Admin & Federated Admin Team Governance Security Engineer
+- Dev Ops Platform Support Engineer
+- Cloud Application Architect
+- Technical Diagram & Business Presentation Designer
+
+DELIVERABLES:
+- Assist with rapidly deriving concrete business value from three years of steady greenfield infrastructure team investments.
+- Test infrastructure build outs and dev support platforms towards minimal disparity.  Automate where possible.
+- Give maximum value to Windows Devs (80% of their dev teams) and support Linux and Windows as First-Class Server Hosts.
+- Support migration of app development and app admin teams to new dev platform infrastructure.
+- Provide intelligent defaults with regard to security and support models to assist both dev teams and admin teams.
+- Provide scalable solutions for stability, security and performance, and help admin teams become more test-driven.
+- Offer both full-service and self-service support options to dev teams and also to app admin teams.
+- Support dev desktops, thin clients and server platforms.  Hybridize offerings of virtualized and bare metal hosts.
+- DBAAS.  Block+Object-Storage-as-a-Service.  Software defined networking (SDN) solutions testing: basics and Nuage.
+
+CHALLENGES
+- Bank had spent several years doing R&D infrastructure without delivering development team platform solutions.
+- Many features of the "Code Pipeline" were new to most devs, including ansible, git, gitlab, travis, jenkins, selenium.
+- Most devs and admins are NOT command-line capable, so they needed dev ops support and tooling from infrastructure team.
+
+
+ACHIEVEMENTS
+- Dev Team KPI's
+- Admin Team KPI's
+- Migration KPI's
+
+COLLABORATIONS
+
+
+PAYOFFS
+
+
+---
+Name: Proposed Structure
+- State problems assigned.
+- State additional challenges
+- Describe what I achieved, and how so.
+- Elaborate upon collaborations.
+- Detail payoffs to organization.

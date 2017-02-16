@@ -1,0 +1,28 @@
+I. Dev Team KPI's.
+
+COMMON DEV TEAM KPI CHALLENGE:  'Code Bloat'
+
+While it is an easy measure to track, I rarely see any concerns raised about the size of a code base.
+Adding devs without setting terms of the effectiveness of the development team only adds to these problems.
+
+** How does this impact the dev team and their ability to work effectively? **
+
+The larger the code base for a given app, the harder it is to:
+
+- Manage it, requiring more and more devs.
+
+- Support it, requiring more and more engineers.
+
+- Run it, as code bloat requires additional hardware.
+
+- Change it or build upon it, as we would need a solid and tight "first-floor" prior to building "second-floor".
+
+So, how to we confront the tendency for app code to bloat?
+
+a.  Track its size, historically and going forward.
+
+b.  Evaluate data service processing which offload those processing burdens from the application code.
+
+c.  Start to offer added incentives for app dev efforts that eliminate old code going forwards.
+
+d.  Use test driven approaches to maximize the code quality, and automate them into the dev team workflows.

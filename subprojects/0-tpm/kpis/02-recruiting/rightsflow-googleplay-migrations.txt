@@ -2,26 +2,51 @@ EMPLOYER:
 - GooglePlay / RightsFlow, NYC
 
 PROJECT:
+GooglePlay had purchased this media rights management platform the prior year.
+This was a hybrid deployment into:
+- Google Cloud App Engine (python apps)
+- Bare Metal Database Services
+- Bare Metal Clustered Block and Object Storage
 
-ROLE TITLES:
-- Technical Project Manager
+ROLE & TITLES HELD BY ME:
+- Data Systems Architect & Engineer
 - Hands-On Data Systems Testing Engineer
-
+- Hands-On Technical Project Manager
+- Dev Team Operations Support Engineer
 
 DELIVERABLES:
+- Migrate entire RightsFlow data center and applications into Google-managed infrastructure.
+- Improve applications to support both python 2 and 3.  Deal with ongoing app changes from dev.
+- Push a great deal of application logic to the database, to eliminate about 45% of python codebase.
+- Get access to production hosts so that devs can assist during releases and deployments.
 
 CHALLENGES
+- All deliverables needed to comply with dev team and admin team Google support and security rules.
+- Very technically challenging due to ongoing app code changes.
+- Very politically difficult, because this company was used to having full control of their infrastructure.
+- Database requirements included upgrading every DBMS to the current version.
+- Database requirements included fixing many broken replication chains, and refactoring database schema models.
+- Database requirements included making MySQL and Postgres as Oracle-Like as possible:
+  - SQL-Mode = ‘Traditional’
+  - Data Integrity Mode = ‘STRICT’
+  - Exceptions to data integrity rules were handled with database automation.
 
 ACHIEVEMENTS
+- Migrated entire team code pipeline to jira and github.
+- Trained both dev team and admin team in test-driven development using git for all code versioning.
+- Migrated all data and apps to new infrastructure on time and at vastly better quality.
+- Started to use docker containers for python 3 apps.
+- Leveraged processing micro-services and security through google’s cloud service: appEngine
+- Leveraged bare metal hosting for all database services.
+- Ensured that there was no adverse impact to business-as-usual.
+
 
 COLLABORATIONS
+GooglePlay CFO
+GooglePlay Operations IT
+RightFlow CTO
+RightFlow CFO
+
 
 PAYOFFS
-
 ---
-Name: Proposed Structure
-- State problems assigned.
-- State additional challenges
-- Describe what I achieved, and how so.
-- Elaborate upon collaborations.
-- Detail payoffs to organization.

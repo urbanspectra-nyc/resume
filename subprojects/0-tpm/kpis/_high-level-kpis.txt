@@ -1,0 +1,47 @@
+KEY PERFORMANCE INDICATORS = KPI’s
+
+
+EVERY migration offered chances to:
+- Enhance destination infrastructure across environments, from dev ops to production.
+- Improve and test data service architecture and data quality, reducing the size of the code base.
+- Improve and test federated security model, including goevrnance of app users, dev teams and admin teams.
+- Analyze and propose workflow enhancements to eliminate inefficiencies and bottlenecks.
+- Make each of these changes with NO adverse impact to business-as-usual.
+
+
+I. Dev Team KPI's.
+
+COMMON DEV TEAM KPI CHALLENGE:  'Code Bloat'
+While it is an easy measure to track, I rarely see any concerns raised about the size of a code base.
+Adding devs without setting terms of the effectiveness of the development team only adds to these problems.
+
+How does this impact the dev team and their ability to work effectively?
+The larger the code base for a given app, the harder it is to:
+- Manage it, requiring more and more devs.
+- Support it, requiring more and more engineers.
+- Run it, as code bloat requires additional hardware.
+- Change it or build upon it, as we would need a solid and tight "first-floor" prior to building "second-floor".
+
+So, how to we confront the tendency for app code to bloat?
+a.  Track its size, historically and going forward.
+b.  Evaluate data service processing which offload those processing burdens from the application code.
+c.  Start to offer added incentives for app dev efforts that eliminate old code going forwards.
+d.  Use test driven approaches to maximize the code quality, and automate them into the dev team workflows.
+
+---
+II. Admin Team KPI's.
+
+COMMON ADMIN TEAM KPI CHALLENGE:  'Federated Secure, Flexible and Scalable Support Options'
+Admins are to provide a flexible combination of full-service and self-serve support options.
+This includes scalable security solutions that do not interfere with getting work done, and are simple to manage as well as extend.  They must support devs across all platforms and languages.
+
+How does this impact the admin team and their ability to work effectively?
+- Admin teams can become a bottleneck for those they support in several ways.
+- Those who are able to self-serve become frustrated by their lack of autonomy.
+- Instead of there being a security-first approach, including admin governance, LAN and WAN security becomes an afterthought, at best.
+
+So, how to we confront the tendency for admins to omit quality security and support models?
+- Devise team support models that offer both full-service and self-serve options.
+- Require the admins to use the same systems that they use to support devs to build infrastructure tools.
+- Give admins incentives to assist dev teams with their KPI's, so they can be attached to revenue.
+- Support admin teams with a clear effort to prevent adverse impact to production operations, and promote early collaboration with devs.

@@ -15,17 +15,21 @@ DELIVERABLES:
 - Technical Diagrams & Business Presentations
 
 TECHNOLOGIES:
-- PTP
-- 
+- PTP time protocol, service plus hardware for low-latency network point-to-point performance analytics.
+- Artifactory
+- TeamCity
+- Ansible / Puppet
+- Gitbash for Windows
 
 CHALLENGES
 - Highly heterogenous (RHEL 5 Linux / Win2k8) hosted external LAN.
-- Hard deadline for post-migration decommissions, else must sign another multi-million-dollar hosting contract.
+- Hard near term deadline for post-migration decommissions, else must sign another multi-million-dollar hosting contract.
 - Multi-department and multi-vendor migration, while deployed apps changed constantly and BAU could not be disrupted.
 - New LLT network was still being built out, and their world-class engineers had only begun to support this environment.
 - Migration enhancements were pre-ordained and not tested.
 - Development teams had no way to see their application logs in realtime during UAT and production deployments.
-- Windows Server 2012 
+- Windows Server 2012 was required upgrade, and that OS version had a broken IP stack.  [Utter nightmare.]
+- RHEL 5 => RHEL 6 was required upgrade, which was also causing some admin support concerns.
 - 
 
 ACHIEVEMENTS

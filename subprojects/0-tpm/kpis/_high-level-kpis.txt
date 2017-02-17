@@ -1,13 +1,11 @@
 KEY PERFORMANCE INDICATORS = KPI’s
 
-
 EVERY migration offered chances to:
 - Enhance destination infrastructure across environments, from dev ops to production.
 - Improve and test data service architecture and data quality, reducing the size of the code base.
 - Improve and test federated security model, including goevrnance of app users, dev teams and admin teams.
 - Analyze and propose workflow enhancements to eliminate inefficiencies and bottlenecks.
 - Make each of these changes with NO adverse impact to business-as-usual.
-
 
 I. Dev Team KPI's.
 

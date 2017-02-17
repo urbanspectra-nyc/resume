@@ -1,0 +1,59 @@
+How to discuss my current and prior roles?
+- Operations Sys Admin & DBA
+- Data Modeling & Data Engineering, Including Federated Enterprise Security Solutions
+- Dev Ops Team Suppor
+- Admin Team Support
+
+---
+
+Name: Software Technology Teams
+- technical project managers
+- user interface developers
+- dev team leaders
+- testing engineers
+- dev ops engineers
+- administrators
+  - network admins
+  - system admins
+  - data admins
+- architects
+- chief engineers
+---
+Name: UIDEV TEAM KPIs
+- Marketing Campaign KPI's
+- Sprint & Project KPI's
+- Web App Prototyping
+- Selenium
+- Browser Coverage
+- Multi-Denominational & Multi-Lingual Templates
+- Click Stream Analytics
+  - Web Traffic
+- Automated QA Microservices
+- Size of Code Base
+- Search Engine Optimization
+- Supported File Formats
+- Maintaining Docs
+- Style Guides
+- Pattern Libraries
+  - Visual Patterns
+  - Functional Patterns
+---
+
+How many LAN hosts / data sizes ?  Where?
+How many WAN hosts / data sizes ?  Where?
+
+What languages do they code in?
+Size of tech team.
+Is this a new role?
+
+How do they define dev ops?
+How would they measure dev ops success?
+
+---
+Name: WASIM's PROPOSED FORMAT
+- State problems assigned.
+- State additional challenges.
+- Describe what I achieved, and how so.
+- Elaborate upon collaborations.
+- Detail payoffs to organization.
+---

@@ -2,8 +2,9 @@ EMPLOYER:
 - Credit Suisse Bank, NYC
 
 PROJECT:
+Migrate all trading apps from external vendor into new internal high-speed low latency network, else cloud.
 
-ROLE TITLES:
+ROLE & TITLES HELD BY ME:
 - Dev Ops Platform Support Engineer
 - Infrastructure Automation Engineer
 - Low-Latency Trading (LLT) High-Performance Network Application Engineer
@@ -14,15 +15,8 @@ ROLE TITLES:
 DELIVERABLES:
 - Technical Diagrams & Business Presentations
 
-TECHNOLOGIES:
-- PTP time protocol, service plus hardware for low-latency network point-to-point performance analytics.
-- Artifactory
-- TeamCity
-- Ansible / Puppet
-- Gitbash for Windows
-
 CHALLENGES
-- Highly heterogenous (RHEL 5 Linux / Win2k8) hosted external LAN.
+- Highly heterogenous (Linux/Win2k8) hosted external LAN with naked access to trading exchanges in NYC and Chicago.
 - Hard near term deadline for post-migration decommissions, else must sign another multi-million-dollar hosting contract.
 - Multi-department and multi-vendor migration, while deployed apps changed constantly and BAU could not be disrupted.
 - New LLT network was still being built out, and their world-class engineers had only begun to support this environment.
@@ -31,6 +25,12 @@ CHALLENGES
 - Windows Server 2012 was required upgrade, and that OS version had a broken IP stack.  [Utter nightmare.]
 - RHEL 5 => RHEL 6 was required upgrade, which was also causing some admin support concerns.
 - 
+TECHNOLOGIES:
+- PTP time protocol, service plus hardware for low-latency network point-to-point performance analytics.
+- Artifactory
+- TeamCity
+- Ansible / Puppet
+- Gitbash for Windows
 
 ACHIEVEMENTS
 

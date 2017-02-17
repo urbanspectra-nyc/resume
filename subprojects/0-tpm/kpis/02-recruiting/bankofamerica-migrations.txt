@@ -2,7 +2,7 @@ EMPLOYER:
 - Bank Of America, NYC
 
 PROJECT:
-- Dev Project Hosting With OpenShift On Bare-Metal OpenStack & Amazon Web Services (aws).
+- Dev App & Project Hosting With OpenShift On Bare-Metal OpenStack & Amazon Web Services (aws).
   - Docker App Containers: python, node, ruby, java, .net, c++
   - Micro-Service Containers: Google Stronghold Security
   - Operating System Containers: CoreOS
@@ -33,6 +33,17 @@ CHALLENGES
 - Many features of the "Code Pipeline" were new to most devs, including ansible, git, gitlab, travis, jenkins, selenium.
 - Most devs and admins are NOT command-line capable, so they needed dev ops support and tooling from infrastructure team.
 
+TECHNOLOGIES:
+- Automated Host Deployments To Bare Metal:
+    - Linux Server 
+    - Windows Server 
+- RedHat Secure Enterprise Linux 7 KVM Host Virtualization
+- RedHat Ceph Clustering For Network Attached Storage
+  - HP 3Par
+  - Dell IDRAC
+- Aquasec Container Security
+
+- Openstack
 
 ACHIEVEMENTS
 - Dev Team KPI's

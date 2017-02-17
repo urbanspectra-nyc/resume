@@ -1,11 +1,41 @@
+
+If client expresses ANY interest in my resume, then PLEASE ask:
+- What appears worth further investigation?  Why?
+- What problems are they experiencing that I may have seen and solved in prior roles?
+---
 How to discuss my current and prior roles?
 - Operations Sys Admin & DBA
-- Data Modeling & Data Engineering, Including Federated Enterprise Security Solutions
-- Dev Ops Team Suppor
-- Admin Team Support
-
+- Data Modeling & Data Engineering, Includes Federated Enterprise Security Solutions
+- Dev Team Support & Engineering
+- Admin Team Support & Engineering
 ---
+TO GET THRU HR:
 
+Linux / Windows Server ?
+How many LAN hosts / data sizes ?  Where?
+How many WAN hosts / data sizes ?  Where?
+
+What percent of their data processing uses unstructured data?
+
+What percent of their data processing uses structured data?
+
+What languages do they code in?
+Size of tech team in last few years.
+Size of code bases?
+Data sizes & security.
+
+Is this a new role?
+
+How do they define dev ops?
+What do they use for technical project management?
+What do they use for automated testing?
+What do they use for configuration management?
+What do they use for orchestration?
+
+How would they measure dev ops success?
+Infrastructure costs and revenue challenges.
+Data engineering opportunities?
+---
 Name: Software Technology Teams
 - technical project managers
 - user interface developers
@@ -37,17 +67,6 @@ Name: UIDEV TEAM KPIs
 - Pattern Libraries
   - Visual Patterns
   - Functional Patterns
----
-
-How many LAN hosts / data sizes ?  Where?
-How many WAN hosts / data sizes ?  Where?
-
-What languages do they code in?
-Size of tech team.
-Is this a new role?
-
-How do they define dev ops?
-How would they measure dev ops success?
 
 ---
 Name: WASIM's PROPOSED FORMAT

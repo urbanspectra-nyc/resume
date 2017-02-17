@@ -2,16 +2,41 @@ EMPLOYER:
 - The Economist Group, NYC
 
 PROJECT:
+- Migrate all of software development ops from bare metal to Amazon Web Services (aws).
+- Define terms of testing to migrate production operations to either AWS or Rackspace.
+- Review external hosting options for content delivery network (CDN).
 
-ROLE TITLES:
+ROLE & TITLES HELD BY ME:
+- Dev Ops Engineer
+- Technical Project Manager
+- Cloud Architect
 
 DELIVERABLES:
+- Migrate all svn code repos to git/github, travis, hipchat, jenkins and jira.
+- Make sure that dev and admin teams were leveraging git/github in a test-driven and collaborative fashion.
 
 CHALLENGES
+- Ensure that all coding efforts continued uninterrupted.
+- Supported mobile web team to better leverage responsive web pages in the near term.
+- Support multi-national teams of admins, developers and ui devs.
+
+TECHNOLOGIES:
+- PHP / Drupal 7
+- MySQL RDBMS
+- Ubuntu Linux
 
 ACHIEVEMENTS
+- Scripted audits for global tracking of web site performance at the WAN, host and service level.
+- Planned, organized, engineered and scheduled migrations of hundreds of apps and microservices.
+- Completed migration of all of dev team operations infrastructure.
+- Completed migration of most crucial portions of admin team production operations infrastructure.
 
 COLLABORATIONS
+- UK HQ Managers
+- UK HQ Dev Teams
+- NYC IT Managers
+- NYC Web Site Development Teams
+- NYC Web Site Admin Teams
 
 PAYOFFS
 

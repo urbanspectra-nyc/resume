@@ -3,10 +3,11 @@ EMPLOYER:
 
 PROJECT:
 GooglePlay had purchased this media rights management platform the prior year.
-This was a hybrid deployment into:
+They had been rapidly expanding their media rights data service platform offerings
+This was a hybrid deployment from RightsFlow bare metal hosting into:
 - Google Cloud App Engine (python apps)
-- Bare Metal Database Services
-- Bare Metal Clustered Block and Object Storage
+- Google Bare Metal Database Services
+- Google Bare Metal Clustered Block and Object Storage Services
 
 ROLE & TITLES HELD BY ME:
 - Data Systems Architect & Engineer
@@ -21,32 +22,58 @@ DELIVERABLES:
 - Get access to production hosts so that devs can assist during releases and deployments.
 
 CHALLENGES
+- Very politically difficult, because company was used to having full control of their infrastructure.
 - All deliverables needed to comply with dev team and admin team Google support and security rules.
 - Very technically challenging due to ongoing app code changes.
-- Very politically difficult, because this company was used to having full control of their infrastructure.
-- Database requirements included upgrading every DBMS to the current version.
-- Database requirements included fixing many broken replication chains, and refactoring database schema models.
-- Database requirements included making MySQL and Postgres as Oracle-Like as possible:
-  - SQL-Mode = ‘Traditional’
-  - Data Integrity Mode = ‘STRICT’
-  - Exceptions to data integrity rules were handled with database automation.
+- Database requirements included proving the following to google corporate data admins:
+  - Fixing many broken database replication chains.
+  - Upgrading every DBMS to the current version.
+  - Refactoring database schema models to segment applications into microservices.
+  - Making MySQL/MariaDB and Postgres as Oracle-like as possible:
+      - UTF8 Character Set Support
+      - SQL-Mode = ‘Traditional’
+      - Data Integrity Mode = ‘STRICT’
+      - Avoid unnecessary data locks to improve performance.
+      - Data integrity exceptions handled by database automation.
+      - Devise architectures and tools to prevent adverse impact to data services.
+      - Monitor data systems, data instances and data streams.
+
+TECHNOLOGIES:
+- Team & Project Management
+    - Jira
+    - Github/Gitlab
+    - Travis
+    - Jenkins
+- Software
+    - Google Cloud appEngine
+    - Google Kubernetes
+    - Transactional Data Service Platforms
+    - ETL Data Service Platforms
+    - Ansible + YubiKeys + powerbroker
+    - ManageIQ
+- Hardware
+    - Local SSD RAID & Dedicated iSCSI NAS
+    - InfiniBand Network Bus
 
 ACHIEVEMENTS
+- Trained both dev team and admin team in test-driven approaches using git for all code versioning.
 - Migrated entire team code pipeline to jira and github.
-- Trained both dev team and admin team in test-driven development using git for all code versioning.
 - Migrated all data and apps to new infrastructure on time and at vastly better quality.
 - Started to use docker containers for python 3 apps.
 - Leveraged processing micro-services and security through google’s cloud service: appEngine
 - Leveraged bare metal hosting for all database services.
 - Ensured that there was no adverse impact to business-as-usual.
 
-
 COLLABORATIONS
 GooglePlay CFO
-GooglePlay Operations IT
-RightFlow CTO
-RightFlow CFO
+GooglePlay Operations IT Data Engineers
+RightsFlow CTO
+RightsFlow CFO
+RightsFlow Legal Services Team
+RightsFlow Developers & Engineers
 
 
 PAYOFFS
+
+
 ---

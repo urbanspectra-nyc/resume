@@ -1,0 +1,23 @@
+Name:  Admins Team Workflows
+- Admin Types:
+  - net admins
+  - sys admins
+  - data admins
+- Resource Allocations:
+  - logical
+  - physical
+- Discovery, Reset
+- Configure Platforms
+- Provisioning
+- Build
+- Tag
+- Release
+- Deploy
+- Security
+  - multi-factor auth
+- Governance
+  - network level control of elevated user access
+  - network level auditing of elevated user access
+  - multi-admin hosts
+  - multi-lateral admin
+  - multi-factor auth4admins

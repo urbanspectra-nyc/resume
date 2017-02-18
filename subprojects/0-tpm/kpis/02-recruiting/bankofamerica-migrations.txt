@@ -15,7 +15,7 @@ ROLE & TITLES HELD BY ME:
 - Dev Ops Platform Support Engineer
 - Technical Diagram & Business Presentation Designer
 
-DELIVERABLES: ??  By tier?
+DELIVERABLES:
 - Monetize over three years of steady greenfield infrastructure team investments.
 - Test infrastructure build outs and dev support platforms towards minimal disparity.  Automate where possible.
 - Support migration of app dev and admin teams to new platform infrastructure.
@@ -26,7 +26,7 @@ DELIVERABLES: ??  By tier?
 - Support dev desktops, thin clients and server platforms.  Hybridize offerings of virtualized and bare metal hosts.
 - DBAAS.  Block+Object-Storage-as-a-Service.  Kubernestes on CoreOS and Ceph Storage 
 - Software defined networking (SDN) solutions testing: OpenShift basics and Nuage.
-- Worked with legal risk team to raise and justofy application admin security exceptions for UAT host access.
+- Worked with legal risk team to raise and justify application admin security exceptions for UAT host access.
 
 CHALLENGES
 - Bank had spent several years doing R&D infrastructure without delivering development team platform solutions.
@@ -34,27 +34,45 @@ CHALLENGES
 - Most devs and admins are NOT command-line capable, so they needed dev ops support and tooling from infrastructure team.
 
 TECHNOLOGIES:
-- Automated Host Deployments To Bare Metal:
-    - Linux Server 
-    - Windows Server 
+- Automated Host Deployments To Bare Metal:  Linux and WIndows Server
+- RedHat CloudForms Undercloud and Overcloud Network Management Platform
 - RedHat Secure Enterprise Linux 7 KVM Host Virtualization
-- RedHat Ceph Clustering For Network Attached Storage
-  - HP 3Par
-  - Dell IDRAC
-- Aquasec Container Security
+- RedHat Ceph Clustering For Network Attached Storage: HP 3Par, Dell IDRAC
+- Aquasec Container Security & Artifactory & GitLab
+- Openstack Internal Cloud Services Using Ansible for Configuration Management on Linux and Windows
+- OpenShift / CoreOS / Kubernetes / Docker 1.3
+- Openstack on OpenShift @ AWS
 
-- Openstack
 
-ACHIEVEMENTS
+ACHIEVEMENTS:
 - Dev Team KPI's
+  - Supported dev teams with equal facility regardless of what they ran locally and as a server, bare-metal or virtualized.  
+  - Improved all dev workflows using test-driven approaches to application development, releases and deployments.
+  - Improved 
 - Admin Team KPI's
+  - Day 1: Rapid configuration and deployment of networks, hosts and services.
+  - Day 2: Onboarding application development teams and app admin support teams.
+		  Self-service & full-service support models.
+  - Day 3:  Data is now being hosted that requires security and availability guarantees.
 - Migration KPI's
 
-COLLABORATIONS
 
+
+COLLABORATIONS
+- Many IT VP’s who report to directly to corporate IT CTO
+- Systems Engineering Teams
+- Network Services Engineering Teams
+- Database Services Engineering Teams
+- Application Engineers
+- Admin Support Teams Across All Lines of Business (LOB’s)
+- Development Teams
 
 PAYOFFS
-
+- Enhanced destination infrastructure across environments, from dev ops to production.
+- Improved and test data service architecture and data quality, reducing the size of the code base.
+- Tested proven federated security models, including governance of app users, dev teams and admin teams.
+- Analyzed and proposed workflow enhancements to eliminate inefficiencies and bottlenecks.
+- Made each of these changes with NO adverse impact to business-as-usual.
 
 ---
 Name: Proposed Structure
@@ -63,3 +81,4 @@ Name: Proposed Structure
 - Describe what I achieved, and how so.
 - Elaborate upon collaborations.
 - Detail payoffs to organization.
+

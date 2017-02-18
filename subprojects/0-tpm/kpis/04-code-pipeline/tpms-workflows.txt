@@ -1,0 +1,39 @@
+Name: Technical Project Management Workflows
+
+- Demo Code Pipeline To Business
+  - First Time Setup of Code Pipeline
+  - Test-Driven Team Initiatives
+  - Team KPI's
+  - Integration Point Syncs:
+    - Jira
+    - GitHub/GitLab
+    - Microsoft Project
+
+
+- New Instances + Multi-Factor Auth Security
+  - Jira
+  - Github / Gitlab
+
+- New Chat Rooms
+- New Epics
+- New Projects
+- New Project Requirements
+- New Project Test Cases
+    - Functional Testing
+    - Unit Testing
+- New Teams
+- New Meetings
+- New Workfows
+- New Services
+- New Diagrams
+- New Resources
+  - Logical
+  - Physical
+---
+FIRST NULL COMMIT
+
+
+---
+TEAM DEV DOJO
+
+---

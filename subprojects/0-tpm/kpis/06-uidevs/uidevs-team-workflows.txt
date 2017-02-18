@@ -1,0 +1,51 @@
+Name: User Interface Development Team Workflows
+- First Null Commit
+- Team Dev Dojo
+- OSS Barter
+- Responsive Web Pages
+- Browser Coverage
+- Web Page Generation
+- Web Page Promo, Tracking, KPI's
+- Site Structuring
+  - site maps
+  - file types
+    - binary
+    - yaml
+    - svg
+    - fonts
+    - png
+    - text
+      - yaml
+      - ascii
+      - utf8 etc
+      - namespaces
+  - templates
+    - where else are templates at work?
+    - templating engines
+    - browser engines
+    - urls + aliasing
+    - multi-lingual
+    - multi-denominational
+
+
+    - 
+- Web Site Generation
+- Code generation
+- Namespaces
+- KPI's??
+
+    - binary
+      - bash
+      - git
+      - httpd
+      - mysqld
+      - man
+      - gcc
+      - curl
+      - facter
+      - php
+      - javac
+      - java
+      - ssh
+      - python => ansible
+      - lib-virt

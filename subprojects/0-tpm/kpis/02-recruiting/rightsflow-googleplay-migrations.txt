@@ -1,9 +1,9 @@
-EMPLOYER:
+EMPLOYER:  
 - GooglePlay / RightsFlow, NYC
 
 PROJECT:
 GooglePlay had purchased this media rights management platform the prior year.
-They had been rapidly expanding their media rights data service platform offerings
+They had been rapidly expanding their media rights data service platform offerings.
 This was a hybrid deployment from RightsFlow bare metal hosting into:
 - Google Cloud App Engine (python apps)
 - Google Bare Metal Database Services
@@ -21,7 +21,7 @@ DELIVERABLES:
 - Push a great deal of application logic to the database, to eliminate about 45% of python codebase.
 - Get access to production hosts so that devs can assist during releases and deployments.
 
-CHALLENGES
+CHALLENGES:
 - Very politically difficult, because company was used to having full control of their infrastructure.
 - All deliverables needed to comply with dev team and admin team Google support and security rules.
 - Very technically challenging due to ongoing app code changes.
@@ -39,12 +39,8 @@ CHALLENGES
       - Monitor data systems, data instances and data streams.
 
 TECHNOLOGIES:
-- Team & Project Management
-    - Jira
-    - Github/Gitlab
-    - Travis
-    - Jenkins
-- Software
+- Team & Project Management: Jira, Github/Gitlab, Travis, Jenkins
+- Software:
     - Google Cloud appEngine
     - Google Kubernetes
     - Transactional Data Service Platforms
@@ -54,6 +50,7 @@ TECHNOLOGIES:
 - Hardware
     - Local SSD RAID & Dedicated iSCSI NAS
     - InfiniBand Network Bus
+
 
 ACHIEVEMENTS
 - Trained both dev team and admin team in test-driven approaches using git for all code versioning.
@@ -74,6 +71,14 @@ RightsFlow Developers & Engineers
 
 
 PAYOFFS
-
+- Hands-on preventive engineering and automated testing made life more predictable.
+- Technology standards and best-practices reduce costs.
+- KPI’s remain flexible to maintain and foster best team practices.
+- Improved revenue streams.
+- Organized workflows to adopt better test-driven approaches.
+- Secured all data in a reliable and scalable way.
+- Non-disruptive to business-as-usual.
 
 ---
+
+

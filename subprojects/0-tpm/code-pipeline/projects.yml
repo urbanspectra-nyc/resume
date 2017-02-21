@@ -1,0 +1,43 @@
+---
+Name: Code Pipeline Services
+- jira
+- hipchat
+- bitbucket
+- bamboo
+- github
+- travis
+- gmail
+- gdocs
+- cacoo
+- search
+- USWiki
+- onboarding
+- deploy2host
+- support ladder roles
+- security
+---
+Name: Code Pipelines
+- Public Demo Code Pipeline (.com)
+  - widening scope with integration points
+- Working Code Pipeline  (.net)
+- Admin Governance (.lan)
+---
+Name: Epics --< Projects ==> Roadmaps
+- projects:
+  - stronghold
+  - barter
+  - pygridz
+  - urbanspectra.{com,net,lan}
+---
+- templates:
+  - kpis
+    - quantity
+    - quality
+    - criteria
+  - sofiasys systems
+  - sofiasys bids
+  - docs2web
+  - openresume
+  - events
+  - sow-invoice
+  -- 

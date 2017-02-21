@@ -1,0 +1,78 @@
+---
+Name: sofiasys sitemap
+- sofiasys nyc home page
+  - about sofiasys nyc
+    - mission
+    - sponsors
+    - teams
+    - demos
+    - contact
+  - services
+      - hardware setups + testing
+      - software setups + testing
+      - data security + testing
+      - hosted services
+      - cloud training
+  - bundles
+  - inventory
+    - system types
+      - laptops
+      - desktops
+      - thin clients
+      - tablets
+      - smartphones
+---
+Name: System Interchange Sources
+- facter
+- glyde
+- macsales
+- apple
+---
+Name: sofiasys generic local system atributes
+- zipcodes
+- make
+- model
+- year
+- cost
+- price
+- facts:
+  - hardware
+  - software
+  - data
+  - security
+---
+Name: sofiasys local system bid
+- system types
+  - laptops
+  - desktops
+  - thin clients
+  - tablets
+- zipcodes
+- make
+- model
+- year
+- price
+---
+Name: sofiasys device types
+- iBeeks
+- usb thumb drives
+- bluetooth keyboards
+---
+Name: sofiasys bundles
+- hardware
+- software
+- services, includes rental and leasing
+- training
+---
+Name: sofiasys audiences
+- clients
+- execs
+- marketing
+- recruiters
+- tpms
+- media
+- uidevs
+- qadevs
+- admins
+- engineers
+---
